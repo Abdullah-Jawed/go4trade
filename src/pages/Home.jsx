@@ -4,6 +4,7 @@ import videoPoster from '../assets/images/video-dummy.png';
 import video_icon from '../assets/images/play-icon.png'
 import { BubbleButton } from '../components/common';
 import { Badge } from '../components/common';
+import HighlightBox from '../components/HighlightBox';
 
 const Home = () => {
   return (
@@ -40,27 +41,21 @@ const Home = () => {
             <Badge className='mx-auto mb-4'>️Key Highlights</Badge>
             <h2>Change the way you trade</h2>
           </div>
-          <div className='grid max-w-[984px] h-[793px] mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 highlighs-box'>
-            <div class="text">
-              <h6 className='text-[22px] text-[#F8F6FF] font-medium capitalize'>Risk-Free Trading</h6>
-              <p className='text-[18px] font-light text-[#CCCCCC]'>Trade with simulated capital and keep real profits.</p>
-            </div>
-            <div class="p-4">
-              <h6>Risk-Free Trading</h6>
-              <p>Trade with simulated capital and keep real profits.</p>
-            </div>
-            <div class="p-4">
-              <h6>Risk-Free Trading</h6>
-              <p>Trade with simulated capital and keep real profits.</p>
-            </div>
-            <div class="p-4">
-              <h6>Risk-Free Trading</h6>
-              <p>Trade with simulated capital and keep real profits.</p>
-            </div>  
+          <HighlightBox />
+        </div>
+      </section>
+
+      <section className='steps'>
+        <div className="container">
+          <div className="heading text-center">
+            <Badge className='mx-auto mb-4'>️Steps</Badge>
+            <h2>Switch to Go4Trades <br />
+              In 3 Steps</h2>
+            <p className='text-[#CCCCCC] text-[20px] font-extralight'>Join a prop firm designed for the next-generation of traders. Take the <br /> challenge, prove your skills, and keep 90% of your profits.</p>
           </div>
         </div>
       </section>
-    </>
+    </> 
   )
 }
 

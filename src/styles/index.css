@@ -110,7 +110,8 @@ h1 {
   letter-spacing: -4px;
   line-height: 120%;
 }
-h2{
+
+h2 {
   @apply text-[#FCFCFC] font-medium text-[45px] capitalize;
 }
 
@@ -144,29 +145,85 @@ h2{
   @apply relative p-[16px] rounded-[20px] transition relative;
   background: linear-gradient(180deg, rgba(65, 255, 174, 0.14) 0%, rgba(0, 19, 36, 0.14) 66.5%, rgba(0, 19, 32, 0.14) 89.5%);
 }
-.video-btn{
-  @apply rounded-[50%] w-[64px] h-[64px] text-center outline-1 outline-[var(--light-blue)] outline-offset-[0px]  absolute top-1/2 left-1/2 -translate-1/2 cursor-pointer;
+
+.video-btn {
+  @apply rounded-[50%] w-[64px] h-[64px] text-center outline-1 outline-[var(--light-blue)] outline-offset-[0px] absolute top-1/2 left-1/2 -translate-1/2 cursor-pointer;
   background: linear-gradient(90deg, #004986 0%, #001220 100%);
   animation: outline-pulse 1.5s linear infinite;
 }
-.video-btn img{
+
+.video-btn img {
   @apply mx-auto;
 }
 
-.highlighs-box{
+.highlighs-box {
+  @apply relative;
   background-image: url('../assets/images/net.png');
-  background-position: center;
-  background-size: cover;
+  background-position: 47% 61%;
+  background-size: contain;
+}
+
+.highlighs-box .item-2 {
+  background: linear-gradient(53.18deg, rgba(0, 73, 134, 0.7) 4.25%, rgba(1, 17, 31, 0.1) 38.54%);
+}
+
+.highlighs-box .item-3 {
+  background: linear-gradient(233.18deg, rgba(0, 73, 134, 0.7) 4.25%, rgba(1, 17, 31, 0.1) 38.54%);
+}
+
+.highlighs-box .glow-image span:nth-child(2) {
+  @apply absolute w-[100%] h-[100%] top-1/2 left-1/2 -translate-1/2 bg-[#80DBB4CC] rounded-[50%] border-3 border-[#80dbb4] -z-1 blur-[0px];
+}
+
+.highlighs-box .glow-image span:nth-child(3) {
+  @apply absolute w-[100%] h-[100%] top-1/2 left-1/2 -translate-1/2 bg-[#80DBB4CC] rounded-[50%] border-3 border-[#80dbb4] -z-1 blur-[0px];
+  content: "";
+}
+
+.highlighs-box .glow-image span:nth-child(4) {
+  @apply absolute w-[100%] h-[100%] top-1/2 left-1/2 -translate-1/2 bg-[#80DBB4CC] rounded-[50%] border-3 border-[#80dbb4] -z-1 blur-[0px];
+  content: "";
+}
+
+.steps{
+  @apply py-[4rem]
 }
 
 
+@keyframes pluses {
+  100% {
+    width: 250%;
+    height: 250%;
+    opacity: 0;
+    backdrop-filter: blur(20px);
+  }
+}
+
+@keyframes pluses-1 {
+  100% {
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+    backdrop-filter: blur(20px);
+  }
+}
+
+@keyframes pluses-2 {
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    backdrop-filter: blur(20px);
+  }
+}
 
 @keyframes outline-pulse {
-  100%{
+  100% {
     outline-offset: 15px;
     outline-color: #004a8600;
   }
 }
+
 @keyframes custom_badge {
   100% {
     background-position: 130px;
