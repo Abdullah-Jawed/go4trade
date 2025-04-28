@@ -90,7 +90,7 @@ body {
   @apply max-w-[740px] mx-auto justify-between;
 }
 
-.mobile-navs{
+.mobile-navs {
   @apply w-full absolute top-full left-0 right-0;
   background: var(--primary-theme);
 }
@@ -110,18 +110,22 @@ h1 {
   letter-spacing: -4px;
   line-height: 120%;
 }
+h2{
+  @apply text-[#FCFCFC] font-medium text-[45px] capitalize;
+}
 
 .my-btn {
   @apply rounded-[60px] py-[14px] px-[32px] font-medium text-[16px] cursor-pointer border-2 border-[var(--light-blue)]
 }
 
 .custom-badge {
-  @apply relative p-[1px] rounded-[0.9em] transition;
+  @apply relative p-[1px] rounded-[0.9em] transition w-max;
   background: linear-gradient(90.61deg, #004986 7.4%, #80DBB4 27.77%, #2F2F2F 42.85%, #001220 71.34%, #004986 97.83%);
   transition: all 0.4s ease;
   animation-play-state: paused;
 }
-.custom-badge:hover{
+
+.custom-badge:hover {
   animation: custom_badge 1s linear infinite;
 }
 
@@ -132,16 +136,55 @@ h1 {
 }
 
 
+.video-section {
+  @apply py-[4rem] mt-[4rem]
+}
 
+.video-box {
+  @apply relative p-[16px] rounded-[20px] transition relative;
+  background: linear-gradient(180deg, rgba(65, 255, 174, 0.14) 0%, rgba(0, 19, 36, 0.14) 66.5%, rgba(0, 19, 32, 0.14) 89.5%);
+}
+.video-btn{
+  @apply rounded-[50%] w-[64px] h-[64px] text-center outline-1 outline-[var(--light-blue)] outline-offset-[0px]  absolute top-1/2 left-1/2 -translate-1/2 cursor-pointer;
+  background: linear-gradient(90deg, #004986 0%, #001220 100%);
+  animation: outline-pulse 1.5s linear infinite;
+}
+.video-btn img{
+  @apply mx-auto;
+}
+
+.highlighs-box{
+  background-image: url('../assets/images/net.png');
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+@keyframes outline-pulse {
+  100%{
+    outline-offset: 15px;
+    outline-color: #004a8600;
+  }
+}
 @keyframes custom_badge {
-    100%{
-      background-position: 130px;
-    }
+  100% {
+    background-position: 130px;
+  }
 }
+
 @keyframes bubbleMove {
-  0% { transform: translateY(0); opacity: 0.5; }
-  100% { transform: translateY(-100px); opacity: 0; }
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
 }
+
 .animate-bubble {
   animation: bubbleMove linear forwards;
 }
