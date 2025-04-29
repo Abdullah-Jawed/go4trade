@@ -68,33 +68,33 @@ const Drawsvg = () => {
             </div>
             <div ref={pinContainer} className="mt-20 mb-40 relative h-screen w-full flex items-center justify-center">
 
-                <svg
-                    width="910"
-                    height="373"
-                    viewBox="0 0 910 373"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        ref={pathRef}
-                        d="M0.5 1.5C322 1.5 896.238 26.5 908 169.5C919.762 312.5 660 359.5 483 368.5C341.4 375.7 292 368.5 292 368.5"
-                        stroke="url(#paint0_linear_227_1299)"
-                        strokeWidth="1.5"
-                    />
+                {/* <svg width="910" height="373" viewBox="0 0 910 373" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path ref={pathRef} d="M0.5 1.5C322 1.5 896.238 26.5 908 169.5C919.762 312.5 660 359.5 483 368.5C341.4 375.7 292 368.5 292 368.5" stroke="url(#paint0_linear_3_732)" stroke-width="1.5" />
                     <defs>
-                        <linearGradient
-                            id="paint0_linear_227_1299"
-                            x1="530"
-                            y1="39"
-                            x2="315"
-                            y2="372"
-                            gradientUnits="userSpaceOnUse"
-                        >
-                            <stop stopColor="#004986" />
-                            <stop offset="1" stopColor="#01111F" />
+                        <linearGradient id="paint0_linear_3_732" x1="530" y1="39" x2="315" y2="372" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#004986" />
+                            <stop offset="1" stop-color="#01111F" />
+                        </linearGradient>
+                    </defs>
+                </svg> */}
+
+
+                <svg width="910" height="373" viewBox="0 0 910 373" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path ref={pathRef} d="M0.5 1.5C322 1.5 896.238 26.5 908 169.5C919.762 312.5 660 359.5 483 368.5C341.4 375.7 292 368.5 292 368.5" stroke="url(#paint0_linear_2006_920)" stroke-width="1.5" />
+                    <path d="M353.5 12.0005C353.5 12.0005 504 20.0005 621.5 39.5005" stroke="url(#paint1_linear_2006_920)" stroke-width="3" />
+                    <defs>
+                        <linearGradient id="paint0_linear_2006_920" x1="530" y1="39" x2="315" y2="372" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#004986" />
+                            <stop offset="1" stop-color="#01111F" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_2006_920" x1="353.296" y1="14.5365" x2="621.77" y2="36.1379" gradientUnits="userSpaceOnUse">
+                            <stop offset="0.000924955" stop-color="#004986" stop-opacity="0" />
+                            <stop offset="0.575" stop-color="#80DBB4" />
+                            <stop offset="1" stop-color="#004986" stop-opacity="0" />
                         </linearGradient>
                     </defs>
                 </svg>
+
 
             </div>
         </section>
