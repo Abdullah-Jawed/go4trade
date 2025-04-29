@@ -1,5 +1,6 @@
 import React from 'react'
 import { bannerVideo } from '../assets';
+import { VideoSectionVideo } from '../assets';
 import videoPoster from '../assets/images/video-dummy.png';
 import video_icon from '../assets/images/play-icon.png'
 import { BubbleButton } from '../components/common';
@@ -30,7 +31,7 @@ const Home = () => {
       <section className='video-section'>
         <div className="container px-[10px] lg:px-10">
           <div className="video-box">
-            <img src={videoPoster} alt="" className='w-full' />
+            <video src={VideoSectionVideo} autoPlay muted loop playsInline className='w-full'></video>
             <button className='video-btn'><img src={video_icon} alt="video icon" /></button>
           </div>
         </div>
