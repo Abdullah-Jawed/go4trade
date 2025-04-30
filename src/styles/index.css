@@ -12,6 +12,7 @@
   --bg-blue-gradient: radial-gradient(54.49% 54.49% at 50% 100%, #0065BB 0%, #01111F 100%);
   --light-blue: #004986;
   --light-teal: #80DBB4;
+  --Body-Text-color: #CCCCCC;
 
 }
 
@@ -185,10 +186,38 @@ h2 {
   content: "";
 }
 
-.steps{
+.steps {
   @apply py-[4rem]
 }
 
+.text-box {
+  @apply absolute w-max text-white max-w-[384px] top-[-28%] left-[6px] pl-[30px];
+}
+.text-box.box-2{
+  @apply right-[-6%] left-auto max-w-[277px];
+}
+.text-box.box-3{
+  @apply left-[46%] top-auto bottom-0 max-w-[277px];
+}
+.text-box::after {
+  @apply absolute w-[1px] h-[200%] left-[0] top-0;
+  content: "";
+  border: 1.5px solid;
+  border-image-source: linear-gradient(104deg, #0068C0 0%, #01111F 100%);
+  border-image-slice: 1;
+}
+
+.text-box h5 {
+  @apply text-[#F8F6FF] text-[22px] font-medium;
+}
+
+.text-box p {
+  @apply text-[var(--Body-Text-color)] font-extralight;
+}
+
+.text-box h5 svg {
+  @apply inline-block align-baseline mr-[3px];
+}
 
 @keyframes pluses {
   100% {
