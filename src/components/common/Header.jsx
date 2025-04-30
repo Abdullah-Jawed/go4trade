@@ -2,7 +2,7 @@ import { useState, React } from 'react'
 import { navs } from '../../utils/statics';
 import { logo } from '../../assets'
 import { Link } from 'react-router-dom'
-import { Button } from './';
+import { BubbleButton, Button } from './';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,7 +17,7 @@ const Header = () => {
             <img src={logo} alt="logo" />
           </div>
           <div className='grow lg:block hidden'>
-            <ul className='all-center primary-navs '>
+            <ul className='all-center primary-navs'>
               {navs.map((nav) => (
                 <li key={nav.id}>
                   <Link
@@ -47,7 +47,7 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <Button className="btn btn-primary bg-green-gradient primary-theme">Get Funded</Button>
+            <BubbleButton className="btn btn-primary bg-green-gradient primary-theme hidden lg:block">Get Funded</BubbleButton>
           </div>
         </div>
       </div>

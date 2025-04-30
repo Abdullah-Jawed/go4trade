@@ -7,6 +7,8 @@ import { BubbleButton } from '../components/common';
 import { Badge } from '../components/common';
 import HighlightBox from '../components/HighlightBox';
 import Drawsvg from '../components/Drawsvg';
+import ConstarAnim from '../components/ConstarAnim';
+import AcedemySec from '../components/AcedemySec';
 
 const Home = () => {
   return (
@@ -38,7 +40,7 @@ const Home = () => {
       </section>
 
       <section className='key-highlights'>
-        <div className="container">
+        <div className="container px-[30px]">
           <div className="heading text-center">
             <Badge className='mx-auto mb-4'>️Key Highlights</Badge>
             <h2>Change the way you trade</h2>
@@ -49,6 +51,11 @@ const Home = () => {
 
 
       <Drawsvg />
+
+
+      <ConstarAnim />
+
+      <AcedemySec />
 
     </>
   )

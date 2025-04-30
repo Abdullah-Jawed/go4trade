@@ -24,20 +24,21 @@ const HighlightBox = () => {
             tl.to('.glow-image span:nth-child(4)', {
                 width: '280%',
                 height: '280%',
+
                 opacity: 0,
-                duration: 3.5,
+                duration: 3,
             }, 0);
             tl.to('.glow-image span:nth-child(3)', {
                 width: '210%',
                 height: '210%',
                 opacity: 0,
-                duration: 3.5,
+                duration: 3,
             }, 0);
             tl.to('.glow-image span:nth-child(2)', {
                 width: '150%',
                 height: '150%',
                 opacity: 0,
-                duration: 3.5,
+                duration: 3,
             }, 0);
 
 
@@ -50,38 +51,49 @@ const HighlightBox = () => {
 
 
     return (
-        <div ref={container} className='grid max-w-[984px] h-[793px] mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 highlighs-box'>
-            <div className="text flex justify-center items-center item-1">
-                <div className='max-w-[193px] text-center'>
-                    <h6 className='text-[22px] text-[#F8F6FF] font-medium capitalize'>Risk-Free Trading</h6>
-                    <p className='text-[18px] font-light text-[#CCCCCC]'>Trade with simulated capital and keep real profits.</p>
-                </div>
-            </div>
-            <div className="text flex justify-center items-center item-2">
-                <div className='max-w-[193px] text-center'>
-                    <h6 className='text-[22px] text-[#F8F6FF] font-medium capitalize'>Risk-Free Trading</h6>
-                    <p className='text-[18px] font-light text-[#CCCCCC]'>Trade with simulated capital and keep real profits.</p>
-                </div>
-            </div>
-            <div className="text flex justify-center items-center item-3">
-                <div className='max-w-[193px] text-center'>
-                    <h6 className='text-[22px] text-[#F8F6FF] font-medium capitalize'>Risk-Free Trading</h6>
-                    <p className='text-[18px] font-light text-[#CCCCCC]'>Trade with simulated capital and keep real profits.</p>
-                </div>
-            </div>
-            <div className="text flex justify-center items-center item-4">
-                <div className='max-w-[193px] text-center'>
-                    <h6 className='text-[22px] text-[#F8F6FF] font-medium capitalize'>Risk-Free Trading</h6>
-                    <p className='text-[18px] font-light text-[#CCCCCC]'>Trade with simulated capital and keep real profits.</p>
+        <div ref={container} className='grid max-w-[984px] md:h-[793px] mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-2 highlighs-box'>
+            <div className='m-glow-image md:hidden'>
+                <div className="glow-image relative w-max h-max top-1/2 left-1/2 -translate-1/2">
+                    <img src={glow_image} alt="image" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
 
-            <div className="glow-image absolute top-1/2 left-1/2 -translate-1/2">
+            <div className="glow-image hidden md:block absolute top-1/2 left-1/2 -translate-1/2">
                 <img src={glow_image} alt="image" />
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+
+            <div className="text flex md:justify-center items-center item-1 mb-4">
+                <div className='md:max-w-[193px] md:text-center'>
+                    <h6 className='text-[22px] text-[#F8F6FF] font-medium capitalize mb-3'>Risk-Free Trading</h6>
+                    <p className='text-[18px] font-light text-[#CCCCCC]'>Trade with simulated capital and keep real profits.</p>
+                </div>
+            </div>
+            <div className="text flex md:justify-center items-center item-2 mb-4">
+                <div className='md:max-w-[193px] md:text-center'>
+                    <h6 className='text-[22px] text-[#F8F6FF] font-medium capitalize mb-3'>Weekly Payouts</h6>
+                    <p className='text-[18px] font-light text-[#CCCCCC]'>Get paid fast, no waiting</p>
+                </div>
+            </div>
+            <div className="text flex md:justify-center items-center item-3 mb-4">
+                <div className='md:max-w-[193px] md:text-center'>
+                    <h6 className='text-[22px] text-[#F8F6FF] font-medium capitalize mb-3'>Keep 90% of Profits</h6>
+                    <p className='text-[18px] font-light text-[#CCCCCC]'>Your Wins, your money</p>
+                </div>
+            </div>
+            <div className="text flex md:justify-center items-center item-4 mb-4">
+                <div className='md:max-w-[193px] md:text-center'>
+                    <h6 className='text-[22px] text-[#F8F6FF] font-medium capitalize mb-3'>KHDA-Certified Education</h6>
+                    <p className='text-[18px] font-light text-[#CCCCCC]'>Learn from the best.</p>
+                </div>
+            </div>
+
+
         </div>
     )
 }

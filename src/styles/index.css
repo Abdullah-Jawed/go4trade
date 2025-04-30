@@ -13,13 +13,15 @@
   --light-blue: #004986;
   --light-teal: #80DBB4;
   --Body-Text-color: #CCCCCC;
+  --base-color: #01111F;
+
 
 }
 
 html,
 body {
   font-family: "Lexend", sans-serif;
-  background-color: #01111F;
+  background-color: var(--base-color);
 }
 
 .container {
@@ -107,13 +109,13 @@ body {
 }
 
 h1 {
-  @apply text-[35px] md:text-[60px] lg:text-[72px] text-white font-bold capitalize;
+  @apply text-[52px] md:text-[60px] lg:text-[72px] text-white font-bold capitalize;
   letter-spacing: -4px;
   line-height: 120%;
 }
 
 h2 {
-  @apply text-[#FCFCFC] font-medium text-[45px] capitalize;
+  @apply text-[#FCFCFC] font-medium text-[34px] md:text-[45px] capitalize;
 }
 
 .my-btn {
@@ -159,18 +161,27 @@ h2 {
 
 .highlighs-box {
   @apply relative;
-  background-image: url('../assets/images/net.png');
-  background-position: 47% 61%;
-  background-size: contain;
 }
 
-.highlighs-box .item-2 {
-  background: linear-gradient(53.18deg, rgba(0, 73, 134, 0.7) 4.25%, rgba(1, 17, 31, 0.1) 38.54%);
+@media (min-width: 768px) {
+  .highlighs-box {
+    @apply relative;
+    background-image: url('../assets/images/net.png');
+    background-position: 47% 61%;
+    background-size: contain;
+  }
+
+  .highlighs-box .item-2 {
+    background: linear-gradient(53.18deg,
+        rgba(0, 73, 134, 0.7) 4.25%,
+        rgba(1, 17, 31, 0.1) 38.54%);
+  }
+
+  .highlighs-box .item-3 {
+    background: linear-gradient(233.18deg, rgba(0, 73, 134, 0.7) 4.25%, rgba(1, 17, 31, 0.1) 38.54%);
+  }
 }
 
-.highlighs-box .item-3 {
-  background: linear-gradient(233.18deg, rgba(0, 73, 134, 0.7) 4.25%, rgba(1, 17, 31, 0.1) 38.54%);
-}
 
 .highlighs-box .glow-image span:nth-child(2) {
   @apply absolute w-[100%] h-[100%] top-1/2 left-1/2 -translate-1/2 bg-[#80DBB4CC] rounded-[50%] border-3 border-[#80dbb4] -z-1 blur-[0px];
@@ -186,21 +197,30 @@ h2 {
   content: "";
 }
 
+.m-glow-image {
+  background-image: url('../assets/images/m-glow.png');
+  background-position: center;
+  @apply h-[587px];
+}
+
 .steps {
   @apply py-[4rem]
 }
 
 .text-box {
-  @apply absolute w-max text-white max-w-[384px] top-[-28%] left-[6px] pl-[30px];
+  @apply lg:absolute text-white lg:max-w-[384px] top-[-28%] left-[6px] lg:pl-[30px] mb-[2rem] lg:mb-0;
 }
-.text-box.box-2{
-  @apply right-[-6%] left-auto max-w-[277px];
+
+.text-box.box-2 {
+  @apply right-[-6%] left-auto lg:max-w-[277px];
 }
-.text-box.box-3{
-  @apply left-[46%] top-auto bottom-0 max-w-[277px];
+
+.text-box.box-3 {
+  @apply left-[46%] top-auto bottom-0 lg:max-w-[277px];
 }
+
 .text-box::after {
-  @apply absolute w-[1px] h-[200%] left-[0] top-0;
+  @apply absolute w-[1px] h-[200%] left-[0] top-0 hidden lg:block;
   content: "";
   border: 1.5px solid;
   border-image-source: linear-gradient(104deg, #0068C0 0%, #01111F 100%);
@@ -208,16 +228,31 @@ h2 {
 }
 
 .text-box h5 {
-  @apply text-[#F8F6FF] text-[22px] font-medium;
+  @apply text-[#F8F6FF] text-[22px] md:text-[35px] lg:text-[22px] xl:text-[22px] font-medium;
 }
 
 .text-box p {
-  @apply text-[var(--Body-Text-color)] font-extralight;
+  @apply text-[var(--Body-Text-color)] text-[18px] md:text-[20px] lg:text-[14px] font-extralight;
 }
 
 .text-box h5 svg {
   @apply inline-block align-baseline mr-[3px];
 }
+
+
+.acedemy-box {
+  @apply bg-[var(--base-color)] border-1 border-[#002E55] p-[20px] px-[30px] rounded-[12px]
+}
+.acedemy-box .text p{
+  @apply text-[var(--Body-Text-color)] font-light text-[18px] xl:text-[22px];
+  line-height: 150%;
+}
+.acedemy-box .image-box{
+  background-image: url('../assets/images/Group.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 
 @keyframes pluses {
   100% {

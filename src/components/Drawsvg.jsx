@@ -18,7 +18,11 @@ const Drawsvg = () => {
         if (typeof window === "undefined") return;
 
         let ctx = gsap.context(() => {
-            gsap.set('.text-box', { opacity: 0, y: "20%" })
+            const isDesktop = window.innerWidth > 1024;
+
+            if (isDesktop) {
+                gsap.set('.text-box', { opacity: 0, y: "30%" })
+            }
             gsap.set([containerRef.current, pinContainer.current], { opacity: 1 });
 
             if (window.DrawSVGPlugin) {
@@ -29,11 +33,11 @@ const Drawsvg = () => {
                 scrollTrigger: {
                     trigger: containerRef.current,
                     start: "10% top",
-                    end: "+=1600",
+                    end: isDesktop ? "+=4000" : "bottom",
                     scrub: true,
-                    pin: pinContainer.current,
+                    pin: isDesktop ? pinContainer.current : false, 
                     onRefreshInit: self => {
-                        self.end = self.start + 1600;
+                        self.end = self.start + (isDesktop ? 4000 : 0);
                     }
                 }
             });
@@ -45,31 +49,55 @@ const Drawsvg = () => {
                 });
             }
 
-            master.to(box1.current, {
-                y: "-20%",
-                duration: 0.09, // Near-instant (not scrubbed)
-                opacity: 1,
-                ease: "none",
-            }, 0.01); 
+            if (isDesktop) {
+                master.to(box1.current, {
+                    y: "-0%",
+                    duration: 0.09,
+                    opacity: 1,
+                    ease: "none",
+                }, 0.01);
+    
+                master.to(box2.current, {
+                    y: "-0%",
+                    duration: 0.09,
+                    opacity: 1,
+                    ease: "none"
+                }, 0.20);
+    
+                master.to(box1.current, {
+                    y: "20%",
+                    duration: 0.09,
+                    opacity: 0,
+                    ease: "none",
+                }, 0.20);
+    
+                master.to(box3.current, {
+                    y: "-20%",
+                    duration: 0.09,
+                    opacity: 1,
+                    ease: "none"
+                }, 0.7);
+    
+                master.to(box2.current, {
+                    y: "20%",
+                    duration: 0.09,
+                    opacity: 0,
+                    ease: "none"
+                }, 0.7);
+            }
 
-            master.to(box2.current, {
-                y: "-20%",
-                duration: 0.09, // Near-instant (not scrubbed)
-                opacity: 1,
-                ease: "none"
-            }, 0.15); 
-
-            master.to(box3.current, {
-                y: "-20%",
-                duration: 0.09, // Near-instant (not scrubbed)
-                opacity: 1,
-                ease: "none"
-            }, 0.7); 
+            const handleResize = () => {
+                ScrollTrigger.refresh();
+            };
 
             setTimeout(() => {
                 ScrollTrigger.refresh();
                 requestAnimationFrame(() => ScrollTrigger.refresh());
             }, 100);
+
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
 
         }, containerRef);
 
@@ -86,8 +114,8 @@ const Drawsvg = () => {
                     <p className='text-[#CCCCCC] text-[20px] font-extralight'>Join a prop firm designed for the next-generation of traders. Take the <br /> challenge, prove your skills, and keep 90% of your profits.</p>
                 </div>
             </div>
-            <div ref={pinContainer} className="mt-20 mb-40 relative max-w-[910px] mx-auto w-full flex items-center justify-center">
-                <svg width="910" height="373" viewBox="0 0 910 373" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div ref={pinContainer} className="mt-20  relative max-w-[910px] mx-auto w-[90%] lg:w-full lg:flex items-center justify-center">
+                <svg className="w-full absolute lg:relative" height="373" viewBox="0 0 910 373" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path ref={pathRef} d="M0.5 1.5C322 1.5 896.238 26.5 908 169.5C919.762 312.5 660 359.5 483 368.5C341.4 375.7 292 368.5 292 368.5" stroke="url(#paint0_linear_2006_920)" strokeWidth="1.5" />
                     <path d="M353.5 12.0005C353.5 12.0005 504 20.0005 621.5 39.5005" stroke="url(#paint1_linear_2006_920)" strokeWidth="3" />
                     <defs>
@@ -132,7 +160,7 @@ const Drawsvg = () => {
                 </div>
 
 
-                <img src={Dotsimage} alt="image" className="absolute -top[1px] w-[76%] left-0" />
+                <img src={Dotsimage} alt="image" className="absolute -top[1px] w-[76%] left-0 hidden lg:block" />
             </div>
         </section>
 
