@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Badge } from "./common";
 import { Dotsimage } from "../assets";
+import SectionHeading from "./common/SectionHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,7 +36,7 @@ const Drawsvg = () => {
                     start: "10% top",
                     end: isDesktop ? "+=4000" : "bottom",
                     scrub: true,
-                    pin: isDesktop ? pinContainer.current : false, 
+                    pin: isDesktop ? pinContainer.current : false,
                     onRefreshInit: self => {
                         self.end = self.start + (isDesktop ? 4000 : 0);
                     }
@@ -56,28 +57,28 @@ const Drawsvg = () => {
                     opacity: 1,
                     ease: "none",
                 }, 0.01);
-    
+
                 master.to(box2.current, {
                     y: "-0%",
                     duration: 0.09,
                     opacity: 1,
                     ease: "none"
                 }, 0.20);
-    
+
                 master.to(box1.current, {
                     y: "20%",
                     duration: 0.09,
                     opacity: 0,
                     ease: "none",
                 }, 0.20);
-    
+
                 master.to(box3.current, {
                     y: "-20%",
                     duration: 0.09,
                     opacity: 1,
                     ease: "none"
                 }, 0.7);
-    
+
                 master.to(box2.current, {
                     y: "20%",
                     duration: 0.09,
@@ -107,12 +108,9 @@ const Drawsvg = () => {
     return (
         <section className='steps overflow-hidden relative' ref={containerRef}>
             <div className="container">
-                <div className="heading text-center">
-                    <Badge className='mx-auto mb-4'>️Steps</Badge>
-                    <h2>Switch to Go4Trades <br />
-                        In 3 Steps</h2>
-                    <p className='text-[#CCCCCC] text-[20px] font-extralight'>Join a prop firm designed for the next-generation of traders. Take the <br /> challenge, prove your skills, and keep 90% of your profits.</p>
-                </div>
+
+                <SectionHeading badge="️Steps" heading={`Switch to Go4Trades <br /> In 3 Steps`} para="Join a prop firm designed for the next-generation of traders. Take the <br /> challenge, prove your skills, and keep 90% of your profits." />
+
             </div>
             <div ref={pinContainer} className="mt-20  relative max-w-[910px] mx-auto w-[90%] lg:w-full lg:flex items-center justify-center">
                 <svg className="w-full absolute lg:relative" height="373" viewBox="0 0 910 373" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,18 +143,18 @@ const Drawsvg = () => {
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.5 4V7.5H4V8.5H7.5V12H8.5V8.5H12V7.5H8.5V4H7.5Z" fill="#004986" />
                         </svg>
-                        Learn and Grow
+                        Prove Your Skills
                     </h5>
-                    <p>Learn through KHDA-certified programs and sharpen your skills with simulated capital.</p>
+                    <p>Hit the targets and show you’ve got what it takes.</p>
                 </div>
                 <div className="text-box box-3" ref={box3}>
                     <h5>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.5 4V7.5H4V8.5H7.5V12H8.5V8.5H12V7.5H8.5V4H7.5Z" fill="#004986" />
                         </svg>
-                        Learn and Grow
+                        Get Funded & Keep 90%
                     </h5>
-                    <p>Learn through KHDA-certified programs and sharpen your skills with simulated capital.</p>
+                    <p>Trade live and cash in your profits.</p>
                 </div>
 
 

@@ -241,8 +241,9 @@ h2 {
 
 
 .acedemy-box {
-  @apply bg-[var(--base-color)] border-1 border-[#002E55] p-[20px] px-[30px] rounded-[12px]
+  @apply bg-[var(--base-color)] border-1 border-[#002E55] p-[20px] px-[30px] rounded-[12px] relative;
 }
+
 .acedemy-box .text p{
   @apply text-[var(--Body-Text-color)] font-light text-[18px] xl:text-[22px];
   line-height: 150%;

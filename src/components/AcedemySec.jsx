@@ -9,6 +9,7 @@ import acedemy6 from '../assets/images/acedemy1.png'
 import acedemy7 from '../assets/images/acedemy2.png'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SectionHeading from "./common/SectionHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,11 +75,8 @@ const AcedemySec = () => {
     return (
         <section className='acedemy pb-[30px] -mt-[33%] relative z-10'>
             <div className="container px-[10px] lg:px-10">
-                <div className="heading text-center mb-15">
-                    <Badge className='mx-auto mb-4'>Academy</Badge>
-                    <h2>Do more with your spare time</h2>
-                    <p className='text-[#CCCCCC] text-[20px] font-extralight'>We’re one of the few platforms licensed by KHDA in Dubai, ensuring top-tier educational resources.</p>
-                </div>
+                
+                <SectionHeading badge="Academy" heading="Do more with your spare time" para="We’re one of the few platforms licensed by KHDA in Dubai, ensuring top-tier educational resources." />
 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2" ref={containerRef}>
                     <div className="acedemy-box">

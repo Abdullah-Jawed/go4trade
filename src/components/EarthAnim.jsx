@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
-import { ConStarImg } from '../assets';
+import { EarthImg } from '../assets';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadFull } from "tsparticles";
-import { ParticleOptions } from "../assets";
+import { EarthParticle } from "../assets";
 
-const ConstarAnim = () => {
+const EarthAnim = () => {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
@@ -17,24 +17,24 @@ const ConstarAnim = () => {
 
     // Your downloaded options from TS Particles website
 
-    const particlesOptions = ParticleOptions;
+    const particlesOptions = EarthParticle;
 
     return (
         <div className="container relative max-w-max w-full">
             {init ? (
                 <Particles
-                    id="tsparticles"
+                    id="tsparticles3"
                     init={initParticlesEngine}
                     options={particlesOptions}
-                    className="absolute w-full h-[30%] top-[34%] -translate-y-1/2 z-10"
+                    className="absolute w-full h-[62%] top-[31%] -translate-y-1/2 z-10"
                 />
             ) : ''}
 
             <div className="image relative flex items-center justify-center">
-                <img src={ConStarImg} className='mx-auto' alt="image" />
+                <img src={EarthImg} className='mx-auto' alt="image" />
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default ConstarAnim;
+export default EarthAnim

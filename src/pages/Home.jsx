@@ -9,6 +9,8 @@ import HighlightBox from '../components/HighlightBox';
 import Drawsvg from '../components/Drawsvg';
 import ConstarAnim from '../components/ConstarAnim';
 import AcedemySec from '../components/AcedemySec';
+import SectionHeading from '../components/common/SectionHeading';
+import EarthAnim from '../components/EarthAnim';
 
 const Home = () => {
   return (
@@ -42,8 +44,9 @@ const Home = () => {
       <section className='key-highlights'>
         <div className="container px-[30px]">
           <div className="heading text-center">
-            <Badge className='mx-auto mb-4'>️Key Highlights</Badge>
-            <h2>Change the way you trade</h2>
+
+            <SectionHeading badge="Key Highlights" heading="Change the way you trade" />
+
           </div>
           <HighlightBox />
         </div>
@@ -56,6 +59,8 @@ const Home = () => {
       <ConstarAnim />
 
       <AcedemySec />
+
+      <EarthAnim />
 
     </>
   )
