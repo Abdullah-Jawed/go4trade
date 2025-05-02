@@ -15,7 +15,6 @@
   --Body-Text-color: #CCCCCC;
   --base-color: #01111F;
 
-
 }
 
 html,
@@ -253,6 +252,21 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.countryslider{
+  @apply relative;
+}
+.countryslider::after{
+  @apply absolute top-1/2 -translate-y-1/2 left-0 h-[110%] w-[44px] blur-[10px] z-[2];
+  background: linear-gradient(90deg, #01111F -10.23%, rgba(1, 17, 31, 0) 81.63%);
+  content: "";
+}
+.countryslider::before{
+  @apply absolute top-1/2 -translate-y-1/2 right-0 h-[110%] w-[44px] blur-[10px] z-[2];
+  background: linear-gradient(90deg, #001C35 -66.63%, rgba(1, 17, 31, 0) 107.95%);
+  content: "";
+}
+
 
 
 @keyframes pluses {

@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@tsparticles/react": "^3.0.0",
     "gsap": "^3.12.7",
     "gsap-trial": "^3.12.7",

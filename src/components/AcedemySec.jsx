@@ -86,11 +86,11 @@ const AcedemySec = () => {
                             <img src={acedemy7} className='absolute top-[14%] left-[11%] w-[11%] z-[2]' alt="image" />
 
                             <svg className='absolute top-[29%] left-[20%] w-[14%] h-auto' width="91" height="65" viewBox="0 0 91 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M90.748 63.6825H41.8413C36.1873 63.6825 31.6039 59.0991 31.6039 53.4451V24.1866C31.6039 20.4933 29.6146 17.0863 26.3982 15.271L0.317469 0.551758" stroke="#004986" stroke-width="0.853119" />
+                                <path d="M90.748 63.6825H41.8413C36.1873 63.6825 31.6039 59.0991 31.6039 53.4451V24.1866C31.6039 20.4933 29.6146 17.0863 26.3982 15.271L0.317469 0.551758" stroke="#004986" strokeWidth="0.853119" />
                             </svg>
 
                             <svg className='absolute top-[16%] right-[28%] w-[6%] h-auto' width="39" height="81" viewBox="0 0 39 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 80H27.7626C33.4166 80 38 75.4166 38 69.7626V0" stroke="#004986" stroke-width="0.853119" />
+                                <path d="M0 80H27.7626C33.4166 80 38 75.4166 38 69.7626V0" stroke="#004986" strokeWidth="0.853119" />
                             </svg>
 
 
@@ -107,16 +107,16 @@ const AcedemySec = () => {
                             <img src={acedemy4} className='absolute bottom-[17%] left-[12%] w-[11%] z-[2]' alt="image" />
 
                             <svg className='absolute top-[16%] right-[23%] w-[16%] h-auto' viewBox="0 0 82 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.921875 80H70.6845C76.3384 80 80.9219 75.4166 80.9219 69.7626V0" stroke="#004986" stroke-width="0.853119" />
+                                <path d="M0.921875 80H70.6845C76.3384 80 80.9219 75.4166 80.9219 69.7626V0" stroke="#004986" strokeWidth="0.853119" />
                             </svg>
 
 
                             <svg className='absolute top-[19%] left-[24%] w-[15%] h-auto' viewBox="0 0 76 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M75.9902 64H37.1755C31.5216 64 26.9381 59.4165 26.9381 53.7626V24.0435C26.9381 20.6515 25.258 17.4798 22.452 15.5742L0.990233 1" stroke="#004986" stroke-width="0.853119" />
+                                <path d="M75.9902 64H37.1755C31.5216 64 26.9381 59.4165 26.9381 53.7626V24.0435C26.9381 20.6515 25.258 17.4798 22.452 15.5742L0.990233 1" stroke="#004986" strokeWidth="0.853119" />
                             </svg>
 
                             <svg className='absolute bottom-[28%] left-[22%] w-[23%] h-auto' viewBox="0 0 135 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M133.912 0V10.7626C133.912 16.4165 129.329 21 123.675 21H0.912109" stroke="#004986" stroke-width="0.853119" />
+                                <path d="M133.912 0V10.7626C133.912 16.4165 129.329 21 123.675 21H0.912109" stroke="#004986" strokeWidth="0.853119" />
                             </svg>
 
 

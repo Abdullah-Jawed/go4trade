@@ -3,6 +3,7 @@ import { EarthImg } from '../assets';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadFull } from "tsparticles";
 import { EarthParticle } from "../assets";
+import { EarthVid } from "../assets";
 
 const EarthAnim = () => {
     const [init, setInit] = useState(false);
@@ -31,6 +32,7 @@ const EarthAnim = () => {
             ) : ''}
 
             <div className="image relative flex items-center justify-center">
+                {/* <video src={EarthVid} className="mx-auto" loop autoPlay muted playsInline></video> */}
                 <img src={EarthImg} className='mx-auto' alt="image" />
             </div>
         </div>

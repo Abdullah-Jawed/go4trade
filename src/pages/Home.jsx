@@ -11,6 +11,7 @@ import ConstarAnim from '../components/ConstarAnim';
 import AcedemySec from '../components/AcedemySec';
 import SectionHeading from '../components/common/SectionHeading';
 import EarthAnim from '../components/EarthAnim';
+import CountrySlider from '../components/CountrySlider';
 
 const Home = () => {
   return (
@@ -61,6 +62,15 @@ const Home = () => {
       <AcedemySec />
 
       <EarthAnim />
+
+      <section className='trade'>
+        <div className="container px-[10px] lg:px-10">
+          <SectionHeading className="flex items-center text-left gap-6" heading="Trade with the World. Win Together." para="We’re more than a prop trading firm. <br /> We’re a global trading community. Join thousands of traders in multiple
+languages, all connected in one space." />
+
+          <CountrySlider />
+        </div>
+      </section>
 
     </>
   )
