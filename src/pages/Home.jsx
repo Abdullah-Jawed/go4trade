@@ -12,6 +12,8 @@ import AcedemySec from '../components/AcedemySec';
 import SectionHeading from '../components/common/SectionHeading';
 import EarthAnim from '../components/EarthAnim';
 import CountrySlider from '../components/CountrySlider';
+import WhatsAppicon from '../components/common/WhatsAppicon';
+import CardAnim from '../components/common/CardAnim';
 
 const Home = () => {
   return (
@@ -63,12 +65,68 @@ const Home = () => {
 
       <EarthAnim />
 
-      <section className='trade'>
+      <section className='trade mt-[-7%] relative z-[2]'>
         <div className="container px-[10px] lg:px-10">
-          <SectionHeading className="flex items-center text-left gap-6" heading="Trade with the World. Win Together." para="We’re more than a prop trading firm. <br /> We’re a global trading community. Join thousands of traders in multiple
-languages, all connected in one space." />
+          <SectionHeading className="flex items-center flex-col md:flex-row text-center md:text-left gap-6" heading="Trade with the World. Win Together." para="We’re more than a prop trading firm. <br /> We’re a global trading community. Join thousands of traders in multiple
+                languages, all connected in one space." />
 
           <CountrySlider />
+
+          <div className="grid lg:grid-cols-2 my-10 gap-6">
+
+            <div className='social-box min-h-[290px] base-color rounded-[12px] border-[#002E55] border-1 p-[25px] flex flex-col justify-end'>
+              <h5 className='text-[#CCCCCC] text-[22px] font-medium mb-4'>We’re here for you</h5>
+
+              <div className="flex gap-12">
+
+                <div className="count">
+                  <h6 className='text-[20px] font-medium text-[#CCCCCC]'>$105M+</h6>
+                  <p className='text-[14px] font-extralight text-[#CCCCCC]'>Total Rewards</p>
+                </div>
+
+                <div className="count">
+                  <h6 className='text-[20px] font-medium text-[#CCCCCC]'>$105M+</h6>
+                  <p className='text-[14px] font-extralight text-[#CCCCCC]'>Total Rewards</p>
+                </div>
+
+                <div className="count">
+                  <h6 className='text-[20px] font-medium text-[#CCCCCC]'>$105M+</h6>
+                  <p className='text-[14px] font-extralight text-[#CCCCCC]'>Total Rewards</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div className='grid md:grid-cols-2 gap-6'>
+
+              <div className='social-box min-h-[290px] base-color rounded-[12px] border-[#002E55] border-1 p-[25px] flex flex-col justify-end discord'>
+                <h6 className='text-[20px] font-medium text-[#CCCCCC]'>Connect with fellow traders</h6>
+              </div>
+
+              <div className='social-box min-h-[290px] base-color rounded-[12px] border-[#002E55] border-1 p-[25px] flex flex-col justify-end whatsapp'>
+                <h6 className='text-[20px] font-medium text-[#CCCCCC] mb-2'>Instant support</h6>
+                <BubbleButton className="btn btn-primary bg-green-gradient primary-theme hidden lg:block">
+                  <WhatsAppicon />
+
+                  Chat Now
+                </BubbleButton>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className='cards py-[4rem]'>
+        <div className="container px-[10px] lg:px-10">
+          <SectionHeading className="mb-[20px]" badge="Go4trades cards" heading="Spend Your Profits Anytime, Anywhere" para="Trade. Earn. Spend. Get your exclusive Go4Trades Card for fast, seamless withdrawals." />
+          <div className="text-center">
+            <BubbleButton className='my-btn text-white font-medium bg-blue-gradient hover:opacity-60 transition'>Reserve your spot</BubbleButton>
+          </div>
+
+
+         <CardAnim />
         </div>
       </section>
 

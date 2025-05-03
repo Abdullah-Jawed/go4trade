@@ -18,6 +18,14 @@ const CountrySlider = () => {
                 autoScroll: {
                     speed: 1,
                 },
+                breakpoints: {
+                    1024: {
+                        perPage: 3,
+                    },
+                    500: {
+                        perPage: 2,
+                    },
+                }
             }}
             extensions={{ AutoScroll }}
             aria-label="country slider">
