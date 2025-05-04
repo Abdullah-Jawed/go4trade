@@ -74,7 +74,7 @@ const AcedemySec = () => {
 
     return (
         <section className='acedemy pb-[30px] -mt-[33%] relative z-10'>
-            <div className="container px-[10px] lg:px-10">
+            <div className="container">
                 
                 <SectionHeading badge="Academy" heading="Do more with your spare time" para="We’re one of the few platforms licensed by KHDA in Dubai, ensuring top-tier educational resources." />
 

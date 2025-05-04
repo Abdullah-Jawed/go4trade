@@ -11,9 +11,15 @@ import Card1 from '../assets/images/visa-signature-thumbnail.png';
 import Card2 from '../assets/images/visa-gold.png';
 import Card3 from '../assets/images/visa_silver.png';
 import Card4 from '../assets/images/pngwing.com.png';
+import SecurityVideo from '../assets/videos/q-ba39153a.webm';
+import LockImg from '../assets/images/lock.png';
+import WhatsAppIcon from '../assets/images/whats-icon.png';
+import DiscordIcon from '../assets/images/discord-icon.png';
+import FooterBg from '../assets/images/footer-bg.png';
 
 import ParticleOptions from './js/particle.json';
 import EarthParticle from './js/particle1.json';
+import FooterParticle from './js/particle2.json';
 export  {
   logo,
   bannerVideo,
@@ -29,5 +35,11 @@ export  {
   Card1,
   Card2,
   Card3,
-  Card4
+  Card4,
+  SecurityVideo,
+  LockImg,
+  WhatsAppIcon,
+  DiscordIcon,
+  FooterBg,
+  FooterParticle
 }
