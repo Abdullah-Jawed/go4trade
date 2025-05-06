@@ -29,11 +29,6 @@ const Lighting = () => {
       render();
     });
 
-    function files(index) {
-      var data = CanvasImages;
-      return data.split("\n")[index];
-    }
-
     const imagesMap = import.meta.glob(
       '/src/assets/videos/b6067b334642251abe22df21005877d2135ff056_000/*.jpg',
       { eager: true, as: 'url' }
@@ -81,39 +76,81 @@ const Lighting = () => {
 
     const ctx = gsap.context(() => {
 
-      const tl = gsap.timeline({
+      gsap.set(text2.current, {
+        opacity: 0,
+      });
+      gsap.set(section, {
+        opacity: 0,
+      })
+
+      gsap.to(imageSeq, {
+        frame: frameCount - 1,
+        snap: "frame",
+        ease: "none",
         scrollTrigger: {
           scrub: 2,
           trigger: canvas,
           start: "top 0%",
           end: "+=3000",
         },
-      });
-
-      tl.to(imageSeq, {
-        frame: frameCount - 1,
-        snap: "frame",
-        ease: "none",
         onUpdate: render
       });
 
-      // tl.to(text1.current, { opacity: 0, duration: 1 }, 0.01); // at 50%
-      // tl.to(text2.current, { opacity: 1, duration: 1 }, 0.01); // also at 50%
-
-      gsap.to(canvas, {
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: 'top 0%',
-          ease: "none"
-        },
-      });
-
-      ScrollTrigger.create({
-        trigger: section,
-        pin: true,
-        anticipatePin: true,
-        start: "bottom 100%",
-        end: "+=3000",
+          pin: true,
+          anticipatePin: true,
+          start: "bottom 100%",
+          end: "+=3000",
+          scrub: true,
+          onUpdate: (self) => {
+            if (self.progress.toFixed(1) == '0.5' && self.direction == 1) {
+              gsap.to(text1.current, {
+                opacity: 0,
+                duration: .7,
+              });
+              gsap.to(text2.current, {
+                opacity: 1,
+                duration: .7,
+              });
+            }
+            else if (self.progress.toFixed(1) == '0.5' && self.direction == -1) {
+              gsap.to(text1.current, {
+                opacity: 1,
+                duration: .7,
+              });
+              gsap.to(text2.current, {
+                opacity: 0,
+                duration: .7,
+              });
+            }
+          },
+          onEnter: () => {
+            gsap.to(section, {
+              opacity: 1,
+              duration: 0.6,
+            });
+          },
+          onEnterBack: () => {
+            gsap.to(section, {
+              opacity: 1,
+              duration: 0.6,
+            });
+          },
+          onLeave: () => {
+            gsap.to(section, {
+              opacity: 0,
+              duration: 0.6,
+            });
+          },
+          onLeaveBack: () => {
+            gsap.to(section, {
+              opacity: 0,
+              duration: 0.6,
+            });
+          }
+        }
       });
 
     });
@@ -128,7 +165,7 @@ const Lighting = () => {
         <h1>Looking for a sign?</h1>
       </div>
       <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text2}>
-        <h1>Looking for a </h1>
+        <h1>Another Text will appear here. </h1>
       </div>
       <img src={LightingBlur} alt="image" className="absolute top-0 left-0 w-full h-[102%]" />
       <canvas id="" ref={canvasRef}></canvas>
