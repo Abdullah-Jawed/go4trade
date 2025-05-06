@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <footer className='footer pb-5'>
+      <footer className='footer pb-5 mt-[-7%]'>
         <div className="container px-8 lg:px-10">
 
           <div className="flex mb-[3rem]">

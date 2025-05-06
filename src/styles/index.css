@@ -89,7 +89,7 @@ body {
 
 /* custom components */
 .header {
-  @apply text-white py-4 px-6 fixed w-full top-0 z-50 shadow-lg bg-[#00132499];
+  @apply text-white py-4 px-6 absolute w-full top-0 z-50 shadow-lg bg-[#00132499];
 }
 
 .primary-navs {
@@ -335,6 +335,9 @@ h2 {
   svg{
     @apply mx-auto;
   }
+}
+#lightCanvas{
+  mix-blend-mode: color-dodge;
 }
 
 

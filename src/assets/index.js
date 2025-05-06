@@ -4,7 +4,6 @@ import VideoSectionVideo from './videos/banner-video.mp4';
 import Dotsimage from './images/dots.png';
 import ConStarImg from './images/cone-star.png';
 import EarthImg from './images/earth.png';
-import EarthVid from './videos/854518-hd_1920_1080_30fps.mp4';
 import DiscordImg from '../assets/images/discord.png';
 import WhatsappImg from '../assets/images/whatsapp.png';
 import Card1 from '../assets/images/visa-signature-thumbnail.png';
@@ -16,6 +15,7 @@ import LockImg from '../assets/images/lock.png';
 import WhatsAppIcon from '../assets/images/whats-icon.png';
 import DiscordIcon from '../assets/images/discord-icon.png';
 import FooterBg from '../assets/images/footer-bg.png';
+import LightingBlur from '../assets/images/lighting-blur.png';
 
 import ParticleOptions from './js/particle.json';
 import EarthParticle from './js/particle1.json';
@@ -29,7 +29,6 @@ export  {
   ParticleOptions,
   EarthImg,
   EarthParticle,
-  EarthVid,
   DiscordImg,
   WhatsappImg,
   Card1,
@@ -41,5 +40,6 @@ export  {
   WhatsAppIcon,
   DiscordIcon,
   FooterBg,
-  FooterParticle
+  FooterParticle,
+  LightingBlur
 }

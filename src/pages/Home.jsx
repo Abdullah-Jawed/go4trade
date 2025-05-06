@@ -15,6 +15,8 @@ import CountrySlider from '../components/CountrySlider';
 import WhatsAppicon from '../components/common/WhatsAppicon';
 import CardAnim from '../components/common/CardAnim';
 import JoinBox from '../components/common/JoinBox';
+import Lighting from '../components/Lighting';
+import Getimage from '../components/Getimage';
 
 const Home = () => {
   return (
@@ -131,7 +133,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='security relative z-[3] py-[8rem]'>
+      <section className='security relative z-[3] py-[8rem] mb-[5rem]'>
         <video src={SecurityVideo} autoPlay muted playsInline loop className='opacity-85 absolute top-0 left-0 w-full h-full object-cover z-[-1] object-center'></video>
         <div className="container">
           <div className='w-full'>
@@ -141,17 +143,18 @@ const Home = () => {
         </div>
       </section>
 
+      <Lighting />
+
       <section className='join-us py-[4rem]'>
         <div className="container">
           <div className='grid md:grid-cols-2 gap-6'>
 
-           <JoinBox heading="Join us on Whatsapp Channel" para="Get insights from other users about Go4trades and our experience" img={WhatsAppIcon} link="#" />
-           <JoinBox heading="Join Discord Community" para="Get insights from other users about Go4trades and our experience" img={DiscordIcon} link="#" />
+            <JoinBox heading="Join us on Whatsapp Channel" para="Get insights from other users about Go4trades and our experience" img={WhatsAppIcon} link="#" />
+            <JoinBox heading="Join Discord Community" para="Get insights from other users about Go4trades and our experience" img={DiscordIcon} link="#" />
 
           </div>
         </div>
       </section>
-
     </>
   )
 }
