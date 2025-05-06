@@ -34,6 +34,18 @@ const Lighting = () => {
       return data.split("\n")[index];
     }
 
+    const imagesMap = import.meta.glob(
+      '/src/assets/videos/b6067b334642251abe22df21005877d2135ff056_000/*.jpg',
+      { eager: true, as: 'url' }
+    );
+
+    const imagePaths = Object.entries(imagesMap)
+      .sort(([a], [b]) => {
+        const getIndex = str => parseInt(str.match(/\((\d+)\)/)?.[1] || 0, 10);
+        return getIndex(a) - getIndex(b);
+      })
+      .map(([_, path]) => path);
+
     const frameCount = 300;
     const images = [];
 
@@ -43,10 +55,10 @@ const Lighting = () => {
 
     for (let i = 0; i < frameCount; i++) {
       const img = new Image();
-      img.src = files(i);
-      // img.style.mixBlendMode = 'color-dodge';
+      img.src = imagePaths[i];
       images.push(img);
     }
+
 
 
     function ScaleImage(img, ctx) {
