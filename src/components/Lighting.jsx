@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { LightingBlur } from "../assets";
+import { LightingBlur, logo } from "../assets";
 import { CanvasImages } from "../utils/statics";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -13,7 +13,12 @@ const Lighting = () => {
   const text1 = useRef(null);
   const text2 = useRef(null);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+
   useEffect(() => {
+
+    document.body.style.overflow = "hidden";
 
     const canvas = canvasRef.current;
     const section = sectionRef.current;
@@ -48,10 +53,27 @@ const Lighting = () => {
       frame: 1
     }
 
+
+
+    let loadedImages = 0;
+
+    const handleImageLoad = () => {
+      loadedImages++;
+      if (loadedImages === imagePaths.length - 1) {
+        setIsLoading(false);
+        document.body.style.overflow = "auto";
+
+
+      }
+      console.log(loadedImages);
+    };
+
     for (let i = 0; i < frameCount; i++) {
       const img = new Image();
       img.src = imagePaths[i];
       images.push(img);
+
+      img.onload = handleImageLoad;
     }
 
 
@@ -160,16 +182,21 @@ const Lighting = () => {
 
 
   return (
-    <section ref={sectionRef} className="overflow-hidden h-screen relative bg-[#01111F]">
-      <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text1}>
-        <h1>Looking for a sign?</h1>
+    <>
+      <div className={`preloader fixed h-full w-full bg-[#01111F] top-0 left-0 flex items-center justify-center z-[9999] ${ (isLoading) ? 'block' : 'hidden' }`}>
+        <img src={logo} alt="logo" />
       </div>
-      <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text2}>
-        <h1>Another Text will appear here. </h1>
-      </div>
-      <img src={LightingBlur} alt="image" className="absolute top-0 left-0 w-full h-[102%]" />
-      <canvas id="" ref={canvasRef}></canvas>
-    </section>
+      <section ref={sectionRef} className="overflow-hidden h-screen relative bg-[#01111F]">
+        <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text1}>
+          <h1>Looking for a sign?</h1>
+        </div>
+        <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text2}>
+          <h1>Another Text will appear here. </h1>
+        </div>
+        <img src={LightingBlur} alt="image" className="absolute top-0 left-0 w-full h-[102%]" />
+        <canvas id="" ref={canvasRef}></canvas>
+      </section>
+    </>
   );
 };
 
