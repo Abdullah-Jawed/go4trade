@@ -61,11 +61,9 @@ const Lighting = () => {
       loadedImages++;
       if (loadedImages === imagePaths.length - 1) {
         setIsLoading(false);
-        document.body.style.overflow = "auto";
-
-
+        document.body.style.overflow = "unset";
+        ScrollTrigger.refresh();
       }
-      console.log(loadedImages);
     };
 
     for (let i = 0; i < frameCount; i++) {
@@ -174,6 +172,8 @@ const Lighting = () => {
           }
         }
       });
+
+      ScrollTrigger.refresh();
 
     });
 
