@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  @apply mx-auto px-6 lg:px-10;
+  @apply mx-auto px-4 sm:px-6 lg:px-10;
 }
 
 .all-center {
@@ -89,7 +89,7 @@ body {
 
 /* custom components */
 .header {
-  @apply text-white py-4 px-6 absolute w-full top-0 z-50 shadow-lg bg-[#00132499];
+  @apply text-white py-4 absolute w-full top-0 z-50 shadow-lg bg-[#00132499];
 }
 
 .primary-navs {
@@ -112,13 +112,16 @@ body {
 }
 
 h1 {
-  @apply text-[52px] md:text-[60px] lg:text-[72px] text-white font-bold capitalize;
+  @apply text-[45px] sm:text-[52px] md:text-[60px] lg:text-[72px] text-white font-bold capitalize;
   letter-spacing: -4px;
   line-height: 120%;
 }
 
 h2 {
-  @apply text-[#FCFCFC] font-medium text-[34px] md:text-[45px] capitalize;
+  @apply text-[#FCFCFC] font-medium text-[27px] sm:text-[34px] md:text-[45px] capitalize;
+}
+.heading p{
+  @apply text-[17px] md:text-[20px];
 }
 
 .my-btn {
@@ -340,6 +343,17 @@ h2 {
   mix-blend-mode: color-dodge;
 }
 
+.package-box.gradient{
+  background: linear-gradient(183.15deg, #004986 -10.77%, #01182B 10.53%, #01111F 16.36%, #01111F 41.27%, #01111F 84.84%);
+  @apply border-[#004986];
+}
+.challenges .includes{
+  @apply relative;
+}
+.challenges .includes::after{
+  @apply absolute top-1/2 -translate-y-1/2 right-0 w-[calc(100%-270px)] h-[1px] bg-[#004986];
+  content: "";
+}
 
 
 @keyframes circle {

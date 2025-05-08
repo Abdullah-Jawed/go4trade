@@ -46,7 +46,7 @@ const Lighting = () => {
       })
       .map(([_, path]) => path);
 
-    const frameCount = 300;
+    const frameCount = 150;
     const images = [];
 
     const imageSeq = {
@@ -59,7 +59,7 @@ const Lighting = () => {
 
     const handleImageLoad = () => {
       loadedImages++;
-      if (loadedImages === imagePaths.length - 1) {
+      if (loadedImages === 150 - 1) {
         setIsLoading(false);
         document.body.style.overflow = "unset";
         ScrollTrigger.refresh();
@@ -111,7 +111,7 @@ const Lighting = () => {
           scrub: 2,
           trigger: canvas,
           start: "top 0%",
-          end: "+=3000",
+          end: "+=1500",
         },
         onUpdate: render
       });
@@ -122,7 +122,7 @@ const Lighting = () => {
           pin: true,
           anticipatePin: true,
           start: "bottom 100%",
-          end: "+=3000",
+          end: "+=1500",
           scrub: true,
           onUpdate: (self) => {
             if (self.progress.toFixed(1) == '0.5' && self.direction == 1) {

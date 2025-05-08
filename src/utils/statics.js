@@ -54,6 +54,61 @@ export const FooterLegal = [
   { name: "Risk Disclosure Statement", link: "#" },
 ]
 
+export const packagesData = [
+  {
+    step: "1-Step",
+    price: "$55",
+    accounts: "8k Account",
+    list: [
+      { key: "Profit Target in %", value: "10" },
+      { key: "Leverage", value: "30" },
+      { key: "Max Drawdown in %", value: "8" },
+      { key: "Daily Drawdown in %", value: "8" },
+      { key: "Profit share from chall. phase", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+    ]
+  },
+  {
+    gradient: 1,
+    step: "2-Step",
+    price: "$55",
+    accounts: "8k Account",
+    list: [
+      { key: "Profit Target in %", value: "10" },
+      { key: "Leverage", value: "30" },
+      { key: "Max Drawdown in %", value: "8" },
+      { key: "Daily Drawdown in %", value: "8" },
+      { key: "Profit share from chall. phase", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+    ]
+  },
+  {
+    step: "Instant",
+    price: "$55",
+    accounts: "8k Account",
+    list: [
+      { key: "Profit Target in %", value: "10" },
+      { key: "Leverage", value: "30" },
+      { key: "Max Drawdown in %", value: "8" },
+      { key: "Daily Drawdown in %", value: "8" },
+      { key: "Profit share from chall. phase", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+      { key: "More item will be here", value: "8" },
+    ]
+  },
+]
+
 export const CanvasImages = `
 /src/assets/videos/b6067b334642251abe22df21005877d2135ff056_000/(1).jpg
 /src/assets/videos/b6067b334642251abe22df21005877d2135ff056_000/(2).jpg

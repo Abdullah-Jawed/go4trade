@@ -25,6 +25,9 @@ const CountrySlider = () => {
                     500: {
                         perPage: 2,
                     },
+                    400: {
+                        perPage: 1,
+                    },
                 }
             }}
             extensions={{ AutoScroll }}

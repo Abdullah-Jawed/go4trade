@@ -20,7 +20,7 @@ const ConstarAnim = () => {
     const particlesOptions = ParticleOptions;
 
     return (
-        <div className="container relative max-w-max w-full px-0">
+        <div className="container relative max-w-max w-full !px-0">
             {init ? (
                 <Particles
                     id="tsparticles"

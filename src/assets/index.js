@@ -16,10 +16,12 @@ import WhatsAppIcon from '../assets/images/whats-icon.png';
 import DiscordIcon from '../assets/images/discord-icon.png';
 import FooterBg from '../assets/images/footer-bg.png';
 import LightingBlur from '../assets/images/lighting-blur.png';
+import ChallengesImg from '../assets/images/challanges.png';
 
 import ParticleOptions from './js/particle.json';
 import EarthParticle from './js/particle1.json';
 import FooterParticle from './js/particle2.json';
+import ChallengesParticle from './js/particle3.json';
 export  {
   logo,
   bannerVideo,
@@ -41,5 +43,7 @@ export  {
   DiscordIcon,
   FooterBg,
   FooterParticle,
-  LightingBlur
+  LightingBlur,
+  ChallengesImg,
+  ChallengesParticle
 }

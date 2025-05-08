@@ -6,6 +6,7 @@ const BubbleButton = ({
   className = "",
   bubbleSpeed = 5000,
   maxBubbles = 20, // Maximum bubbles allowed at any time
+  parent_Class = "",
 }) => {
   const [bubbles, setBubbles] = useState([]);
   const bubblesInterval = useRef(null);
@@ -70,7 +71,7 @@ const BubbleButton = ({
   }, []);
 
   return (
-    <div className="relative inline-block">
+    <div className={`relative inline-block ${parent_Class}`}>
       <button
         ref={buttonRef}
         className={`btn relative overflow-hidden ${className}`}
