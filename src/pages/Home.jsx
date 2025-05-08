@@ -170,7 +170,7 @@ const Home = () => {
 
       <Lighting />
 
-      <section className='join-us py-[4rem]'>
+      <section className='join-us py-[4rem] mt-[6rem]'>
         <div className="container">
           <div className='grid md:grid-cols-2 gap-6'>
 
