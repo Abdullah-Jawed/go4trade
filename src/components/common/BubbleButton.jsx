@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 
 const BubbleButton = ({
+  Tag = "button",
+  href = "",
   children = "Button",
   bubbleColor = "white",
   className = "",
@@ -72,7 +74,8 @@ const BubbleButton = ({
 
   return (
     <div className={`relative inline-block ${parent_Class}`}>
-      <button
+      <Tag
+       {...(href ? { href } : {})}
         ref={buttonRef}
         className={`btn relative overflow-hidden ${className}`}
         onMouseEnter={startBubbles}
@@ -93,7 +96,7 @@ const BubbleButton = ({
             }}
           />
         ))}
-      </button>
+      </Tag>
     </div>
   );
 };

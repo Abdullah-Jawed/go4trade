@@ -60,10 +60,6 @@ const Lighting = () => {
     const handleImageLoad = () => {
       loadedImages++;
       if (loadedImages === 11 - 1) {
-        console.log(loadedImages);
-        console.log(images);
-        
-        
         setIsLoading(false);
         document.body.style.overflow = "unset";
         ScrollTrigger.refresh();

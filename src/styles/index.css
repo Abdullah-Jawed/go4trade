@@ -354,6 +354,12 @@ h2 {
   @apply absolute top-1/2 -translate-y-1/2 right-0 w-[calc(100%-270px)] h-[1px] bg-[#004986];
   content: "";
 }
+.package-navs ul .bg-border{
+  @apply absolute top-0 left-0 h-full w-[50%] rounded-full border-1 border-[#004986] z-[-1];
+  background: linear-gradient(94.58deg, #01111F 6.76%, #002E55 25.53%, #684BD3 56.29%, #01111F 98.93%);
+  content: "";
+  transition: all .5s;
+}
 
 
 @keyframes circle {

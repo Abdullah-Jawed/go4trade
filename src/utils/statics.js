@@ -56,55 +56,345 @@ export const FooterLegal = [
 
 export const packagesData = [
   {
-    step: "1-Step",
-    price: "$55",
-    accounts: "8k Account",
-    list: [
-      { key: "Profit Target in %", value: "10" },
-      { key: "Leverage", value: "30" },
-      { key: "Max Drawdown in %", value: "8" },
-      { key: "Daily Drawdown in %", value: "8" },
-      { key: "Profit share from chall. phase", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
+    buttonName: "$8000",
+    packages: [
+      {
+        step: "1-Step",
+        price: "$55",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        gradient: 1,
+        step: "2-Step",
+        price: "$55",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        step: "Instant",
+        price: "$55",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
     ]
   },
   {
-    gradient: 1,
-    step: "2-Step",
-    price: "$55",
-    accounts: "8k Account",
-    list: [
-      { key: "Profit Target in %", value: "10" },
-      { key: "Leverage", value: "30" },
-      { key: "Max Drawdown in %", value: "8" },
-      { key: "Daily Drawdown in %", value: "8" },
-      { key: "Profit share from chall. phase", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
+    buttonName: "$15,000",
+    packages: [
+      {
+        step: "1-Step",
+        price: "$59",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        gradient: 1,
+        step: "2-Step",
+        price: "$59",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        step: "Instant",
+        price: "$59",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
     ]
   },
   {
-    step: "Instant",
-    price: "$55",
-    accounts: "8k Account",
-    list: [
-      { key: "Profit Target in %", value: "10" },
-      { key: "Leverage", value: "30" },
-      { key: "Max Drawdown in %", value: "8" },
-      { key: "Daily Drawdown in %", value: "8" },
-      { key: "Profit share from chall. phase", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
-      { key: "More item will be here", value: "8" },
+    buttonName: "$35,000",
+    packages: [
+      {
+        step: "1-Step",
+        price: "$60",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        gradient: 1,
+        step: "2-Step",
+        price: "$60",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        step: "Instant",
+        price: "$60",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+    ]
+  },
+  {
+    buttonName: "$50,000",
+    packages: [
+      {
+        step: "1-Step",
+        price: "$61",
+        accounts: "9k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        gradient: 1,
+        step: "2-Step",
+        price: "$61",
+        accounts: "9k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        step: "Instant",
+        price: "$61",
+        accounts: "9k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+    ]
+  },
+  {
+    buttonName: "$100,000",
+    packages: [
+      {
+        step: "1-Step",
+        price: "$62",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        gradient: 1,
+        step: "2-Step",
+        price: "$62",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        step: "Instant",
+        price: "$62",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+    ]
+  },
+  {
+    buttonName: "$200,000",
+    packages: [
+      {
+        step: "1-Step",
+        price: "$63",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        gradient: 1,
+        step: "2-Step",
+        price: "$63",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
+      {
+        step: "Instant",
+        price: "$63",
+        accounts: "8k Account",
+        list: [
+          { key: "Profit Target in %", value: "10" },
+          { key: "Leverage", value: "30" },
+          { key: "Max Drawdown in %", value: "8" },
+          { key: "Daily Drawdown in %", value: "8" },
+          { key: "Profit share from chall. phase", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+          { key: "More item will be here", value: "8" },
+        ]
+      },
     ]
   },
 ]

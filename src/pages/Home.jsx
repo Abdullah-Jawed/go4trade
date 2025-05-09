@@ -16,10 +16,8 @@ import WhatsAppicon from '../components/common/WhatsAppicon';
 import CardAnim from '../components/common/CardAnim';
 import JoinBox from '../components/common/JoinBox';
 import Lighting from '../components/Lighting';
-import Getimage from '../components/Getimage';
-import PackagesBox from '../components/common/PackagesBox';
-import { packagesData } from '../utils/statics';
 import ChallemgesAnim from '../components/ChallemgesAnim';
+import ChallengesSec from '../components/ChallengesSec';
 
 const Home = () => {
   return (
@@ -37,7 +35,7 @@ const Home = () => {
           <h1 className='mb-9'>
             A place where dreams <br /> meet reality
           </h1>
-          <BubbleButton className='my-btn text-white font-medium bg-blue-gradient hover:opacity-60 transition'>Try now</BubbleButton>
+          <BubbleButton Tag='a' href='#' className='my-btn text-white font-medium bg-blue-gradient hover:opacity-60 transition inline-block'>Try now</BubbleButton>
         </div>
       </section>
 
@@ -66,25 +64,7 @@ const Home = () => {
 
       <ChallemgesAnim />
 
-      <section className='challenges relative z-[3] py-[5rem] mt-[-15%]'>
-        <div className="container">
-          <SectionHeading badge="Challenges" heading="Three Ways to Win" para="Simulated capital, real rewards. Take on the challenge, prove your skills, and keep <br /> 90% of your profits. No hidden fees, no unnecessary risks" />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start mb-5">
-            {packagesData.map((item, index) => (
-              <PackagesBox className={`${(item.gradient) ? 'gradient' : ''}`} key={index} data={item} />
-            ))}
-          </div>
-          <p className='includes mb-3 text-[#004986] font-medium text-[20px] uppercase mb-0'>All Plans Include</p>
-          
-          <div className="flex gap-x-6 flex-wrap">
-            <p className='text-[#FCFCFC] font-extralight text-[20px]'>Trading Period <strong className='ml-2 font-semibold'>Unlimited</strong></p>
-            <p className='text-[#FCFCFC] font-extralight text-[20px]'>Minimum Trading Days <strong className='ml-2 font-semibold'>8</strong></p>
-            <p className='text-[#FCFCFC] font-extralight text-[20px]'>Expert Advisor <strong className='ml-2 font-semibold'>Yes</strong></p>
-            <p className='text-[#FCFCFC] font-extralight text-[20px]'>Trade Copiers <strong className='ml-2 font-semibold'>Yes</strong></p>
-          </div>
-        </div>
-      </section>
+      <ChallengesSec />
 
 
       <ConstarAnim />
