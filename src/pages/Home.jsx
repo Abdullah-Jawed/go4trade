@@ -21,8 +21,8 @@ import VideoSec from '../components/VideoSec';
 const Home = () => {
   return (
     <>
-      <section className='hero-banner bg-[#01111F]'>
-        <video autoPlay muted loop playsInline src={bannerVideo} className='w-full h-full object-bottom object-cover'></video>
+      <section className='hero-banner bg-[#01111F] flex items-center'>
+        <video autoPlay muted loop playsInline src={bannerVideo} className='w-full h-[70%] md:h-full object-bottom object-cover'></video>
 
         <div className="container px-[10px] text-center absolute left-0 top-1/2 transform -translate-y-1/2 right-0">
           <div className="all-center flex-wrap gap-6 mb-8">
