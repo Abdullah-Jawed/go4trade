@@ -25,7 +25,7 @@ const ChallemgesAnim = () => {
                     id="tsparticles5"
                     init={initParticlesEngine}
                     options={particlesOptions}
-                    className="absolute w-full h-[62%] top-[31%] left-0 -translate-y-1/2 z-10"
+                    className="absolute w-full h-[62%] top-[84%] left-0 -translate-y-1/2 z-10"
                 />
             ) : ''}
 

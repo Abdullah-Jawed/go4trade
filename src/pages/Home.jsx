@@ -1,8 +1,6 @@
 import React from 'react'
 import { bannerVideo, DiscordIcon, LockImg, SecurityVideo, WhatsAppIcon } from '../assets';
 import { VideoSectionVideo } from '../assets';
-import videoPoster from '../assets/images/video-dummy.png';
-import video_icon from '../assets/images/play-icon.png'
 import { BubbleButton } from '../components/common';
 import { Badge } from '../components/common';
 import HighlightBox from '../components/HighlightBox';
@@ -18,12 +16,13 @@ import JoinBox from '../components/common/JoinBox';
 import Lighting from '../components/Lighting';
 import ChallemgesAnim from '../components/ChallemgesAnim';
 import ChallengesSec from '../components/ChallengesSec';
+import VideoSec from '../components/VideoSec';
 
 const Home = () => {
   return (
     <>
       <section className='hero-banner bg-[#01111F]'>
-        <video autoPlay muted loop playsInline src={bannerVideo} className='w-full h-full object-top object-cover'></video>
+        <video autoPlay muted loop playsInline src={bannerVideo} className='w-full h-full object-bottom object-cover'></video>
 
         <div className="container px-[10px] text-center absolute left-0 top-1/2 transform -translate-y-1/2 right-0">
           <div className="all-center flex-wrap gap-6 mb-8">
@@ -39,14 +38,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='video-section'>
-        <div className="container">
-          <div className="video-box">
-            <video src={VideoSectionVideo} autoPlay muted loop playsInline className='w-full'></video>
-            <button className='video-btn'><img src={video_icon} alt="video icon" /></button>
-          </div>
-        </div>
-      </section>
+      <VideoSec />
 
       <section className='key-highlights'>
         <div className="container">
@@ -150,7 +142,7 @@ const Home = () => {
 
       <Lighting />
 
-      <section className='join-us py-[4rem] mt-[6rem]'>
+      <section className='join-us py-[4rem]'>
         <div className="container">
           <div className='grid md:grid-cols-2 gap-6'>
 

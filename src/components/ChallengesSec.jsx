@@ -17,11 +17,11 @@ const ChallengesSec = () => {
 
 
     return (
-        <section className='challenges relative z-[3] py-[5rem] mt-[-15%]' ref={container}>
+        <section className='challenges relative z-[10] py-[5rem] pb-5 mt-[-15%]' ref={container}>
             <div className="container">
                 <SectionHeading badge="Challenges" heading="Three Ways to Win" para="Simulated capital, real rewards. Take on the challenge, prove your skills, and keep <br /> 90% of your profits. No hidden fees, no unnecessary risks" />
 
-                <div className="package-navs max-w-[830px] w-full border-1 border-[#004986] rounded-full mx-auto mb-9 p-1">
+                <div className="package-navs max-w-[830px] w-full border-1 border-[#004986] rounded-full mx-auto mb-9">
                     <ul className='flex items-center justify-between relative z-[2]'>
                         {packagesData.map((item, index) => (
                             <li key={index} className='w-full'><button id={`button-${index}`} onClick={() => setActiveIndex(index)} type='button' className={`text-[18px] text-[#FFFFFF] font-normal cursor-pointer rounded-full w-full py-3 transition ${activeIndex === index

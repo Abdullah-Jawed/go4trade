@@ -149,25 +149,25 @@ const Lighting = () => {
           onEnter: () => {
             gsap.to(section, {
               opacity: 1,
-              duration: 0.6,
+              duration: 0.4,
             });
           },
           onEnterBack: () => {
             gsap.to(section, {
               opacity: 1,
-              duration: 0.6,
+              duration: 0.4,
             });
           },
           onLeave: () => {
             gsap.to(section, {
               opacity: 0,
-              duration: 0.6,
+              duration: 0.4,
             });
           },
           onLeaveBack: () => {
             gsap.to(section, {
               opacity: 0,
-              duration: 0.6,
+              duration: 0.4,
             });
           }
         }

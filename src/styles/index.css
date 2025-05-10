@@ -108,7 +108,10 @@ body {
 }
 
 .hero-banner {
-  @apply h-screen min-h-[700px] relative;
+  @apply h-[110vh] min-h-[700px] relative;
+}
+.hero-banner video{
+  mix-blend-mode: lighten;
 }
 
 h1 {
@@ -133,6 +136,7 @@ h2 {
   background: linear-gradient(90.61deg, #004986 7.4%, #80DBB4 27.77%, #2F2F2F 42.85%, #001220 71.34%, #004986 97.83%);
   transition: all 0.4s ease;
   animation-play-state: paused;
+  user-select: none;
 }
 
 .custom-badge:hover {
@@ -147,13 +151,29 @@ h2 {
 
 
 .video-section {
-  @apply py-[4rem] mt-[4rem]
+  @apply pb-[4rem] mt-[-5%] relative z-[9] overflow-hidden;
 }
 
 .video-box {
-  @apply relative p-[16px] rounded-[20px] transition relative;
+  @apply relative p-[16px] rounded-[20px] transition relative z-[2];
   background: linear-gradient(180deg, rgba(65, 255, 174, 0.14) 0%, rgba(0, 19, 36, 0.14) 66.5%, rgba(0, 19, 32, 0.14) 89.5%);
 }
+.video-box video{
+  object-fit: cover;
+}
+
+.video-box::before{
+  @apply absolute top-0 left-[-10%] w-[270px] h-[493px] z-[-1];
+  content: "";
+  background-image: url('../assets/images/video-before.png');
+}
+
+.video-box::after{
+  @apply absolute top-0 right-[-10%] w-[270px] h-[493px] z-[-1];
+  content: "";
+  background-image: url('../assets/images/video-after.png');
+}
+
 
 .video-btn {
   @apply rounded-[50%] w-[64px] h-[64px] text-center outline-1 outline-[var(--light-blue)] outline-offset-[0px] absolute top-1/2 left-1/2 -translate-1/2 cursor-pointer;
@@ -359,6 +379,12 @@ h2 {
   background: linear-gradient(94.58deg, #01111F 6.76%, #002E55 25.53%, #684BD3 56.29%, #01111F 98.93%);
   content: "";
   transition: all .5s;
+}
+.cards{
+  background-image: url('../assets/images/card-bg.png');
+  background-position: top;
+  background-size: 100% 89%;
+  background-repeat: no-repeat;
 }
 
 
