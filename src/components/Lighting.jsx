@@ -121,7 +121,7 @@ const Lighting = () => {
           trigger: section,
           pin: true,
           anticipatePin: true,
-          start: "bottom 100%",
+          start: "98% 100%",
           end: "+=1500",
           scrub: true,
           onUpdate: (self) => {
@@ -186,7 +186,7 @@ const Lighting = () => {
       <div className={`preloader fixed h-full w-full bg-[#01111F] top-0 left-0 flex items-center justify-center z-[9999] ${ (isLoading) ? 'block' : 'hidden' }`}>
         <img src={logo} alt="logo" />
       </div>
-      <section ref={sectionRef} className="overflow-hidden h-screen relative bg-[#01111F]">
+      <section ref={sectionRef} className="overflow-hidden h-screen w-full relative bg-[#01111F]">
         <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text1}>
           <h1>Looking for a sign?</h1>
         </div>
@@ -194,7 +194,7 @@ const Lighting = () => {
           <h1>Another Text will appear here. </h1>
         </div>
         <img src={LightingBlur} alt="image" className="absolute top-0 left-0 w-full h-[102%]" />
-        <canvas id="" ref={canvasRef}></canvas>
+        <canvas id="" ref={canvasRef} className="w-full"></canvas>
       </section>
     </>
   );

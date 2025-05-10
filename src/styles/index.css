@@ -110,7 +110,8 @@ body {
 .hero-banner {
   @apply h-[110vh] min-h-[700px] relative;
 }
-.hero-banner video{
+
+.hero-banner video {
   mix-blend-mode: lighten;
 }
 
@@ -123,7 +124,8 @@ h1 {
 h2 {
   @apply text-[#FCFCFC] font-medium text-[27px] sm:text-[34px] md:text-[45px] capitalize;
 }
-.heading p{
+
+.heading p {
   @apply text-[17px] md:text-[20px];
 }
 
@@ -151,24 +153,25 @@ h2 {
 
 
 .video-section {
-  @apply pb-[4rem] mt-[-5%] relative z-[9] overflow-hidden;
+  @apply pb-[4rem] mt-[-1%] relative z-[9] overflow-hidden;
 }
 
 .video-box {
   @apply relative p-[16px] rounded-[20px] transition relative z-[2];
   background: linear-gradient(180deg, rgba(65, 255, 174, 0.14) 0%, rgba(0, 19, 36, 0.14) 66.5%, rgba(0, 19, 32, 0.14) 89.5%);
 }
-.video-box video{
+
+.video-box video {
   object-fit: cover;
 }
 
-.video-box::before{
+.video-box::before {
   @apply absolute top-0 left-[-10%] w-[270px] h-[493px] z-[-1];
   content: "";
   background-image: url('../assets/images/video-before.png');
 }
 
-.video-box::after{
+.video-box::after {
   @apply absolute top-0 right-[-10%] w-[270px] h-[493px] z-[-1];
   content: "";
   background-image: url('../assets/images/video-after.png');
@@ -189,12 +192,30 @@ h2 {
   @apply relative;
 }
 
+.challange-box {
+  @apply relative p-0.5 overflow-hidden rounded-[13px];
+}
+
+.challange-box::after {
+  @apply absolute top-1/2 left-1/2 -translate-1/2 w-[150%] h-[246%] bg-red-500 z-[-1] opacity-0;
+  background: linear-gradient(97.52deg, #80DBB4 0.95%, #003460 37.65%, #684BD3 54.41%, #002E55 98.59%);
+  transition: all .5s;
+  content: "";
+}
+.challange-box:hover::after{
+  @apply opacity-100;
+  animation: circle 5s linear infinite;
+}
+.challange-box:hover div{
+  background: linear-gradient(278.11deg, #01111F 68.28%, #044985 97.91%);
+}
+
 @media (min-width: 768px) {
   .highlighs-box {
     @apply relative;
     background-image: url('../assets/images/net.png');
-    background-position: 47% 61%;
-    background-size: contain;
+    background-position: 47% 49%;
+    background-size: 85%;
   }
 
   .highlighs-box .item-2 {
@@ -340,47 +361,58 @@ h2 {
   @apply absolute top-0 left-0 w-[6px] h-[6px] bg-emerald-400 rounded-full;
   content: "";
 }
-.join-box .image-group .dots span:nth-child(2){
+
+.join-box .image-group .dots span:nth-child(2) {
   @apply bottom-0 top-[unset];
 }
-.join-box .image-group .dots span:nth-child(3){
+
+.join-box .image-group .dots span:nth-child(3) {
   @apply bottom-1/2 top-[unset] left-[unset] right-[-20%];
 }
-.footer-input{
+
+.footer-input {
   @apply border-1 border-[var(--light-blue)] bg-[#00498633] rounded-[12px] px-[1.2rem] py-[.7rem] w-full text-[16px] text-[#FCFCFC] outline-0;
 }
-.footer-input::placeholder{
+
+.footer-input::placeholder {
   @apply text-[#0059A5] font-light;
 }
-.footer-btn{
+
+.footer-btn {
   @apply rounded-[12px] text-[#FCFCFC] h-full w-[48px] text-center cursor-pointer;
   background: linear-gradient(139.17deg, #1469B1 35.2%, #002E55 95.79%);
-  svg{
+
+  svg {
     @apply mx-auto;
   }
 }
-#lightCanvas{
+
+#lightCanvas {
   mix-blend-mode: color-dodge;
 }
 
-.package-box.gradient{
+.package-box.gradient {
   background: linear-gradient(183.15deg, #004986 -10.77%, #01182B 10.53%, #01111F 16.36%, #01111F 41.27%, #01111F 84.84%);
   @apply border-[#004986];
 }
-.challenges .includes{
+
+.challenges .includes {
   @apply relative;
 }
-.challenges .includes::after{
+
+.challenges .includes::after {
   @apply absolute top-1/2 -translate-y-1/2 right-0 w-[calc(100%-270px)] h-[1px] bg-[#004986];
   content: "";
 }
-.package-navs ul .bg-border{
+
+.package-navs ul .bg-border {
   @apply absolute top-0 left-0 h-full w-[50%] rounded-full border-1 border-[#004986] z-[-1];
   background: linear-gradient(94.58deg, #01111F 6.76%, #002E55 25.53%, #684BD3 56.29%, #01111F 98.93%);
   content: "";
   transition: all .5s;
 }
-.cards{
+
+.cards {
   background-image: url('../assets/images/card-bg.png');
   background-position: top;
   background-size: 100% 89%;
@@ -389,10 +421,20 @@ h2 {
 
 
 @keyframes circle {
-  100%{
+  100% {
     transform: rotate(1turn);
   }
 }
+
+@keyframes circle2 {
+  0%{
+    transform: rotate(0) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
 @keyframes pluses {
   100% {
     width: 250%;

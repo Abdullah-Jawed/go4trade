@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import PackagesBox from './common/PackagesBox'
 import SectionHeading from './common/SectionHeading'
 import { packagesData } from '../utils/statics'
+import TickSvg from './common/TickSvg'
 
 const ChallengesSec = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -21,10 +22,34 @@ const ChallengesSec = () => {
             <div className="container">
                 <SectionHeading badge="Challenges" heading="Three Ways to Win" para="Simulated capital, real rewards. Take on the challenge, prove your skills, and keep <br /> 90% of your profits. No hidden fees, no unnecessary risks" />
 
-                <div className="package-navs max-w-[830px] w-full border-1 border-[#004986] rounded-full mx-auto mb-9">
-                    <ul className='flex items-center justify-between relative z-[2]'>
+                <div className='max-w-[830px] mx-auto mb-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+                    <div className='challange-box w-full'>
+                        <div className='border-1 border-[#002E55] rounded-[12px] py-4 px-5 bg-[#01111F]'>
+                            <h6 className='text-white text-[18px] font-medium mb-2'>Two-Phase Challenge</h6>
+                            <p className='text-[#CCCCCC] text-[14px] font-extralight mb-1.5'><TickSvg /> Build your strategy</p>
+                            <p className='text-[#CCCCCC] text-[14px] font-extralight'><TickSvg /> Controlled risk</p>
+                        </div>
+                    </div>
+                    <div className='challange-box w-full'>
+                        <div className='border-1 border-[#002E55] rounded-[12px] py-4 px-5 bg-[#01111F]'>
+                            <h6 className='text-white text-[18px] font-medium mb-2'>Two-Phase Challenge</h6>
+                            <p className='text-[#CCCCCC] text-[14px] font-extralight mb-1.5'><TickSvg /> Build your strategy</p>
+                            <p className='text-[#CCCCCC] text-[14px] font-extralight'><TickSvg /> Controlled risk</p>
+                        </div>
+                    </div>
+                    <div className='challange-box w-full'>
+                        <div className='border-1 border-[#002E55] rounded-[12px] py-4 px-5 bg-[#01111F]'>
+                            <h6 className='text-white text-[18px] font-medium mb-2'>Two-Phase Challenge</h6>
+                            <p className='text-[#CCCCCC] text-[14px] font-extralight mb-1.5'><TickSvg /> Build your strategy</p>
+                            <p className='text-[#CCCCCC] text-[14px] font-extralight'><TickSvg /> Controlled risk</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="package-navs max-w-[830px] w-full mx-auto mb-9 flex overflow-x-auto">
+                    <ul className='flex items-center justify-between relative min-w-max w-full shrink-0 z-[2] border-1 border-[#004986] rounded-full'>
                         {packagesData.map((item, index) => (
-                            <li key={index} className='w-full'><button id={`button-${index}`} onClick={() => setActiveIndex(index)} type='button' className={`text-[18px] text-[#FFFFFF] font-normal cursor-pointer rounded-full w-full py-3 transition ${activeIndex === index
+                            <li key={index} className='w-full'><button id={`button-${index}`} onClick={() => setActiveIndex(index)} type='button' className={`text-[18px] text-[#FFFFFF] font-normal cursor-pointer rounded-full w-full py-3 px-4 transition ${activeIndex === index
                                 ? 'active'
                                 : ''
                                 }`}>{item.buttonName}</button></li>

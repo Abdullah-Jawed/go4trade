@@ -51,7 +51,7 @@ const HighlightBox = () => {
 
 
     return (
-        <div ref={container} className='grid max-w-[984px] md:h-[793px] mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-2 highlighs-box'>
+        <div ref={container} className='grid max-w-[984px] md:h-[600px] mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-2 highlighs-box'>
             <div className='m-glow-image md:hidden'>
                 <div className="glow-image relative w-max h-max top-1/2 left-1/2 -translate-1/2">
                     <img src={glow_image} alt="image" />
