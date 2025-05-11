@@ -1,0 +1,284 @@
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SectionHeading from "./common/SectionHeading";
+import { BubbleButton } from "./common";
+import { StarImg, TestiImg } from "../assets";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const TestimonialsSec = () => {
+    const mainContainer = useRef(null);
+    const pathRef = useRef(null);
+    const pathRef1 = useRef(null);
+    const pathRef2 = useRef(null);
+    const pathRef3 = useRef(null);
+    const pathRef4 = useRef(null);
+    const pathRef5 = useRef(null);
+    const textBox = useRef(null);
+    const box1 = useRef(null);
+    const box2 = useRef(null);
+    const box3 = useRef(null);
+    const box4 = useRef(null);
+
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+
+            gsap.set(textBox.current, { opacity: 0, y: "20%" });
+
+            gsap.set([ box1.current,
+                box2.current,
+                box3.current,
+                box4.current], { opacity: 0 })
+
+            if (window.DrawSVGPlugin) {
+                gsap.registerPlugin(window.DrawSVGPlugin);
+            }
+
+            const master = gsap.timeline({
+                scrollTrigger: {
+                    trigger: mainContainer.current,
+                    start: "top top",
+                    end: "+=4000",
+                    scrub: 2,
+                    pin: true,
+                    markers: true,
+                    onEnter: () => {
+                        gsap.to(textBox.current, { opacity: 1, y: "0%", duration: 0.5, })
+                        gsap.to([ box1.current,
+                            box2.current,
+                            box3.current,
+                            box4.current], { opacity: 1, duration: 0.5 })
+                    },
+                    onLeave: () => {
+                        gsap.to(textBox.current, { opacity: 0, y: "20%", duration: 0.5, })
+                        gsap.to([ box1.current,
+                            box2.current,
+                            box3.current,
+                            box4.current], { opacity: 0, duration: 0.5 })
+                    },
+                    onLeaveBack: () => {
+                        gsap.to(textBox.current, { opacity: 0, y: "20%", duration: 0.5, })
+                        gsap.to([ box1.current,
+                            box2.current,
+                            box3.current,
+                            box4.current], { opacity: 0, duration: 0.5 })
+                    },
+                    onEnterBack: () => {
+                        gsap.to(textBox.current, { opacity: 1, y: "0%", duration: 0.5, })
+                        gsap.to([ box1.current,
+                            box2.current,
+                            box3.current,
+                            box4.current], { opacity: 1, duration: 0.5 });
+                    }
+                }
+            });
+
+            if (window.DrawSVGPlugin && pathRef.current) {
+
+                master.from(
+                    [pathRef.current,
+                    pathRef1.current,
+                    pathRef2.current,
+                    pathRef3.current,
+                    pathRef4.current,
+                    pathRef5.current,]
+                    , {
+                        drawSVG: "90% 70%",
+                        duration: 1,
+                    }, "one");
+
+                    master.fromTo(box1.current, {
+                        translateY: "130%",
+                    }, {
+                        translateY: "20%",
+                        translateZ: "-150px",
+                        rotateY: "30deg",
+                        rotateZ: "-9deg",
+                    }, "one");
+
+                    master.fromTo(box2.current, {
+                        translateY: "130%",
+                    }, {
+                        translateY: "-40%",
+                        translateZ: "-150px",
+                        rotateY: "10deg",
+                        rotateZ: "2deg",
+                    }, "one");
+
+
+                    master.fromTo(box3.current, {
+                        translateY: "130%",
+                    }, {
+                        translateY: "-20%",
+                        translateZ: "-150px",
+                        rotateY: "-10deg",
+                        rotateZ: "-2deg",
+                    }, "one");
+
+                    master.fromTo(box4.current, {
+                        translateY: "130%",
+                    }, {
+                        translateY: "-40%",
+                        translateZ: "-150px",
+                        rotateY: "-10deg",
+                        rotateZ: "9deg",
+                    }, "one");
+
+            }
+        }, mainContainer);
+
+        return () => ctx.revert();
+
+    }, []);
+
+    return (
+        <section className='testimonial py-[5rem] relative' ref={mainContainer}>
+            <div className="container perspective-[1000px]">
+
+                <div className='flex justify-between max-w-[1123px] w-full mx-auto'>
+                    <svg width="486" height="670" viewBox="0 0 486 670" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.8" filter="url(#filter0_f_2048_969)">
+                            <path ref={pathRef} d="M452.665 5C467.106 119.44 519.548 492.049 409 585C298.452 677.951 166.336 659.658 4 659.658" stroke="url(#paint0_linear_2048_969)" stroke-width="8" />
+                        </g>
+                        <path ref={pathRef1} d="M452.665 5C467.106 119.44 519.548 492.049 409 585C298.452 677.951 166.336 659.658 4 659.658" stroke="url(#paint1_linear_2048_969)" />
+                        <defs>
+                            <filter id="filter0_f_2048_969" x="0" y="0.499023" width="485.76" height="668.617" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_2048_969" />
+                            </filter>
+                            <linearGradient id="paint0_linear_2048_969" x1="391.415" y1="-19.4872" x2="247.019" y2="662.792" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0064B9" />
+                                <stop offset="1" stop-color="#01111F" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_2048_969" x1="391.415" y1="-19.4872" x2="247.019" y2="662.792" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0064B9" />
+                                <stop offset="1" stop-color="#01111F" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <svg width="17" height="701" viewBox="0 0 17 701" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_f_2060_972)">
+                            <path ref={pathRef2} d="M8.5 4V697" stroke="url(#paint0_linear_2060_972)" stroke-width="8" />
+                        </g>
+                        <path ref={pathRef3} d="M8.5 4V697" stroke="url(#paint1_linear_2060_972)" />
+                        <defs>
+                            <filter id="filter0_f_2060_972" x="0.5" y="0" width="16" height="701" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_2060_972" />
+                            </filter>
+                            <linearGradient id="paint0_linear_2060_972" x1="9" y1="4" x2="9" y2="697" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0064B9" />
+                                <stop offset="1" stop-color="#01111F" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_2060_972" x1="9" y1="4" x2="9" y2="697" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0064B9" />
+                                <stop offset="1" stop-color="#01111F" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <svg width="496" height="680" viewBox="0 0 496 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.8" filter="url(#filter0_f_2060_973)">
+                            <path ref={pathRef4} d="M38.0948 10C23.6539 124.44 -28.7881 497.049 81.7598 590C192.308 682.951 324.424 664.658 486.76 664.658" stroke="url(#paint0_linear_2060_973)" stroke-width="8" />
+                        </g>
+                        <path ref={pathRef5} d="M38.0948 10C23.6539 124.44 -28.7881 497.049 81.7598 590C192.308 682.951 324.424 664.658 486.76 664.658" stroke="url(#paint1_linear_2060_973)" />
+                        <defs>
+                            <filter id="filter0_f_2060_973" x="-0.000244141" y="0.499023" width="495.76" height="678.617" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="4.5" result="effect1_foregroundBlur_2060_973" />
+                            </filter>
+                            <linearGradient id="paint0_linear_2060_973" x1="99.3444" y1="-14.4872" x2="243.74" y2="667.792" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0064B9" />
+                                <stop offset="1" stop-color="#01111F" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_2060_973" x1="99.3444" y1="-14.4872" x2="243.74" y2="667.792" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0064B9" />
+                                <stop offset="1" stop-color="#01111F" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div className="div box-wrapper absolute top-0 left-1/2 -translate-x-1/2 max-w-[1223px] w-full h-full flex items-start justify-between perspective-[1000px]">
+
+                    <div className="testi-box p-5 px-6 max-w-[243px] rounded-[12px]" ref={box1}>
+                        <div className="name flex items-center gap-4 mb-4">
+                            <img src={TestiImg} alt="image" />
+                            <div>
+                                <h6 className="text-[#FCFCFC] font-semibold text-[18px] mb-0 leading-[18px]">Alexandra</h6>
+                                <p className="text-[#FCFCFC] font-extralight text-[14px]">@seanrose</p>
+                            </div>
+                        </div>
+                        <div className="text">
+                            <p className="text-[#A0A0A0] font-extralight text-[14px] mb-4">Joining Go4Trades changed my trading game! The support and flexibility are unmatched.</p>
+                            <p className="text-[#F8F8F8] text-[14px] font-medium mb-4">Alex M.</p>
+
+                            <img src={StarImg} alt="image" />
+                        </div>
+                    </div>
+
+                    <div className="testi-box p-5 px-6 max-w-[243px] rounded-[12px]" ref={box2}>
+                        <div className="name flex items-center gap-4 mb-4">
+                            <img src={TestiImg} alt="image" />
+                            <div>
+                                <h6 className="text-[#FCFCFC] font-semibold text-[18px] mb-0 leading-[18px]">Alexandra</h6>
+                                <p className="text-[#FCFCFC] font-extralight text-[14px]">@seanrose</p>
+                            </div>
+                        </div>
+                        <div className="text">
+                            <p className="text-[#A0A0A0] font-extralight text-[14px] mb-4">Joining Go4Trades changed my trading game! The support and flexibility are unmatched.</p>
+                            <p className="text-[#F8F8F8] text-[14px] font-medium mb-4">Alex M.</p>
+
+                            <img src={StarImg} alt="image" />
+                        </div>
+                    </div>
+
+                    <div className="testi-box p-5 px-6 max-w-[243px] rounded-[12px]" ref={box3}>
+                        <div className="name flex items-center gap-4 mb-4">
+                            <img src={TestiImg} alt="image" />
+                            <div>
+                                <h6 className="text-[#FCFCFC] font-semibold text-[18px] mb-0 leading-[18px]">Alexandra</h6>
+                                <p className="text-[#FCFCFC] font-extralight text-[14px]">@seanrose</p>
+                            </div>
+                        </div>
+                        <div className="text">
+                            <p className="text-[#A0A0A0] font-extralight text-[14px] mb-4">Joining Go4Trades changed my trading game! The support and flexibility are unmatched.</p>
+                            <p className="text-[#F8F8F8] text-[14px] font-medium mb-4">Alex M.</p>
+
+                            <img src={StarImg} alt="image" />
+                        </div>
+                    </div>
+
+                    <div className="testi-box p-5 px-6 max-w-[243px] rounded-[12px]" ref={box4}>
+                        <div className="name flex items-center gap-4 mb-4">
+                            <img src={TestiImg} alt="image" />
+                            <div>
+                                <h6 className="text-[#FCFCFC] font-semibold text-[18px] mb-0 leading-[18px]">Alexandra</h6>
+                                <p className="text-[#FCFCFC] font-extralight text-[14px]">@seanrose</p>
+                            </div>
+                        </div>
+                        <div className="text">
+                            <p className="text-[#A0A0A0] font-extralight text-[14px] mb-4">Joining Go4Trades changed my trading game! The support and flexibility are unmatched.</p>
+                            <p className="text-[#F8F8F8] text-[14px] font-medium mb-4">Alex M.</p>
+
+                            <img src={StarImg} alt="image" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className="text text-center absolute top-[60%] left-1/2 -translate-1/2" ref={textBox}>
+                    <SectionHeading badge="Wall of love" heading="What Traders Are Saying" para="Simplicity is easy when you just skip tons of mission-critical features." className="!mb-5" />
+                    <BubbleButton Tag='a' href='#' className='my-btn text-white font-medium bg-blue-gradient hover:opacity-60 transition inline-block'>Review us on Trust index</BubbleButton>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default TestimonialsSec

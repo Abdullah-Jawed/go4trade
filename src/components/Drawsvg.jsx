@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Badge } from "./common";
 import { Dotsimage } from "../assets";
 import SectionHeading from "./common/SectionHeading";
 

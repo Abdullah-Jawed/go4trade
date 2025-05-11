@@ -202,11 +202,13 @@ h2 {
   transition: all .5s;
   content: "";
 }
-.challange-box:hover::after{
+
+.challange-box:hover::after {
   @apply opacity-100;
   animation: circle 5s linear infinite;
 }
-.challange-box:hover div{
+
+.challange-box:hover div {
   background: linear-gradient(278.11deg, #01111F 68.28%, #044985 97.91%);
 }
 
@@ -419,6 +421,22 @@ h2 {
   background-repeat: no-repeat;
 }
 
+.testi-box {
+  @apply relative overflow-hidden;
+  /* background: linear-gradient(179.83deg, #01111F 37.69%, #031F37 220.85%); */
+}
+
+.testi-box::before {
+  @apply absolute top-0 left-0 w-full h-full z-[-1];
+  background: linear-gradient(180deg, #02203B 45%, #0065BB 100%);
+  content: "";
+}
+
+.testi-box::after{
+  @apply absolute inset-[1px] z-[-1] rounded-[12px];
+  background: linear-gradient(179.83deg, #01111F 37.69%, #031F37 220.85%);
+  content: "";
+}
 
 @keyframes circle {
   100% {
@@ -427,9 +445,10 @@ h2 {
 }
 
 @keyframes circle2 {
-  0%{
+  0% {
     transform: rotate(0) translate(-50%, -50%);
   }
+
   100% {
     transform: rotate(360deg) translate(-50%, -50%);
   }

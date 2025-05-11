@@ -17,6 +17,7 @@ import Lighting from '../components/Lighting';
 import ChallemgesAnim from '../components/ChallemgesAnim';
 import ChallengesSec from '../components/ChallengesSec';
 import VideoSec from '../components/VideoSec';
+import TestimonialsSec from '../components/TestimonialsSec';
 
 const Home = () => {
   return (
@@ -129,6 +130,8 @@ const Home = () => {
           <CardAnim />
         </div>
       </section>
+
+      <TestimonialsSec />
 
       <section className='security relative z-[3] py-[8rem] mb-[5rem]'>
         <video src={SecurityVideo} autoPlay muted playsInline loop className='opacity-85 absolute top-0 left-0 w-full h-full object-cover z-[-1] object-center'></video>

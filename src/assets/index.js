@@ -17,6 +17,8 @@ import DiscordIcon from '../assets/images/discord-icon.png';
 import FooterBg from '../assets/images/footer-bg.png';
 import LightingBlur from '../assets/images/lighting-blur.png';
 import ChallengesImg from '../assets/images/challanges.png';
+import TestiImg from '../assets/images/test-img.png';
+import StarImg from '../assets/images/stars.png';
 
 import ParticleOptions from './js/particle.json';
 import EarthParticle from './js/particle1.json';
@@ -45,5 +47,7 @@ export  {
   FooterParticle,
   LightingBlur,
   ChallengesImg,
-  ChallengesParticle
+  ChallengesParticle,
+  TestiImg,
+  StarImg
 }
