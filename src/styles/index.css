@@ -197,7 +197,7 @@ h2 {
 }
 
 .challange-box::after {
-  @apply absolute top-1/2 left-1/2 -translate-1/2 w-[150%] h-[246%] bg-red-500 z-[-1] opacity-0;
+  @apply absolute top-1/2 left-1/2 -translate-1/2 w-[150%] h-[385%] bg-red-500 z-[-1] opacity-0;
   background: linear-gradient(97.52deg, #80DBB4 0.95%, #003460 37.65%, #684BD3 54.41%, #002E55 98.59%);
   transition: all .5s;
   content: "";
