@@ -42,7 +42,6 @@ const TestimonialsSec = () => {
                     end: "+=4000",
                     scrub: 2,
                     pin: true,
-                    markers: true,
                     onEnter: () => {
                         gsap.to(textBox.current, { opacity: 1, y: "0%", duration: 0.5, })
                         gsap.to([ box1.current,

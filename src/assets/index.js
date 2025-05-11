@@ -10,7 +10,7 @@ import Card1 from '../assets/images/visa-signature-thumbnail.png';
 import Card2 from '../assets/images/visa-gold.png';
 import Card3 from '../assets/images/visa_silver.png';
 import Card4 from '../assets/images/pngwing.com.png';
-import SecurityVideo from '../assets/videos/q-ba39153a.webm';
+import SecurityVideo from '../assets/videos/q-ba39153a.mp4';
 import LockImg from '../assets/images/lock.png';
 import WhatsAppIcon from '../assets/images/whats-icon.png';
 import DiscordIcon from '../assets/images/discord-icon.png';
