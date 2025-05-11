@@ -120,8 +120,8 @@ const Lighting = () => {
         scrollTrigger: {
           trigger: section,
           pin: true,
-          anticipatePin: true,
-          start: "98% 100%",
+          // anticipatePin: true,
+          start: "bottom 100%",
           end: "+=1500",
           scrub: true,
           onUpdate: (self) => {
@@ -183,7 +183,7 @@ const Lighting = () => {
 
   return (
     <>
-      <div className={`preloader fixed h-full w-full bg-[#01111F] top-0 left-0 flex items-center justify-center z-[9999] ${ (isLoading) ? 'block' : 'hidden' }`}>
+      <div className={`preloader fixed h-[100dvh] w-full bg-[#01111F] top-0 left-0 flex items-center justify-center z-[9999] ${ (isLoading) ? 'block' : 'hidden' }`}>
         <img src={logo} alt="logo" />
       </div>
       <section ref={sectionRef} className="overflow-hidden h-screen w-full relative bg-[#01111F]">
