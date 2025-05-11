@@ -134,7 +134,7 @@ const Home = () => {
       <TestimonialsSec />
 
       <section className='security relative z-[3] py-[8rem] mb-[5rem]'>
-        <video src={SecurityVideo} autoPlay muted playsInline loop className='opacity-85 absolute top-0 left-0 w-full h-full object-cover z-[-1] object-center'></video>
+        <video src={SecurityVideo} autoPlay muted playsInline preload='metadata' loop className='opacity-85 absolute top-0 left-0 w-full h-full object-cover z-[-1] object-center'></video>
         <div className="container">
           <div className='w-full'>
             <img src={LockImg} className='mx-auto mb-6' alt="image" />
