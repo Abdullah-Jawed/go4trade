@@ -87,45 +87,43 @@ const TestimonialsSec = () => {
                         drawSVG: "90% 70%",
                         duration: 1,
                     }, "one");
-
-                    master.fromTo(box1.current, {
-                        translateY: "130%",
-                    }, {
-                        translateY: "20%",
-                        translateZ: "-150px",
-                        rotateY: "30deg",
-                        rotateZ: "-9deg",
-                    }, "one");
-
-                    master.fromTo(box2.current, {
-                        translateY: "130%",
-                    }, {
-                        translateY: "-40%",
-                        translateZ: "-150px",
-                        rotateY: "10deg",
-                        rotateZ: "2deg",
-                    }, "one");
-
-
-                    master.fromTo(box3.current, {
-                        translateY: "130%",
-                    }, {
-                        translateY: "-20%",
-                        translateZ: "-150px",
-                        rotateY: "-10deg",
-                        rotateZ: "-2deg",
-                    }, "one");
-
-                    master.fromTo(box4.current, {
-                        translateY: "130%",
-                    }, {
-                        translateY: "-40%",
-                        translateZ: "-150px",
-                        rotateY: "-10deg",
-                        rotateZ: "9deg",
-                    }, "one");
-
             }
+            master.fromTo(box1.current, {
+                translateY: "130%",
+            }, {
+                translateY: "20%",
+                translateZ: "-150px",
+                rotateY: "30deg",
+                rotateZ: "-9deg",
+            }, "one");
+
+            master.fromTo(box2.current, {
+                translateY: "130%",
+            }, {
+                translateY: "-40%",
+                translateZ: "-150px",
+                rotateY: "10deg",
+                rotateZ: "2deg",
+            }, "one");
+
+
+            master.fromTo(box3.current, {
+                translateY: "130%",
+            }, {
+                translateY: "-20%",
+                translateZ: "-150px",
+                rotateY: "-10deg",
+                rotateZ: "-2deg",
+            }, "one");
+
+            master.fromTo(box4.current, {
+                translateY: "130%",
+            }, {
+                translateY: "-40%",
+                translateZ: "-150px",
+                rotateY: "-10deg",
+                rotateZ: "9deg",
+            }, "one");
         }, mainContainer);
 
         return () => ctx.revert();
