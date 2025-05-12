@@ -1,11 +1,14 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import SectionHeading from "./common/SectionHeading";
 import { BubbleButton } from "./common";
 import { StarImg, TestiImg } from "../assets";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(DrawSVGPlugin);
+
 
 const TestimonialsSec = () => {
     const mainContainer = useRef(null);
@@ -32,10 +35,6 @@ const TestimonialsSec = () => {
             box2.current,
             box3.current,
             box4.current], { opacity: 0 })
-
-            if (window.DrawSVGPlugin) {
-                gsap.registerPlugin(window.DrawSVGPlugin);
-            }
 
             const master = gsap.timeline({
                 scrollTrigger: {
@@ -75,25 +74,23 @@ const TestimonialsSec = () => {
                 }
             });
 
-            if (window.DrawSVGPlugin && pathRef.current) {
-
-                master.from(
-                    [pathRef.current,
-                    pathRef1.current,
-                    pathRef2.current,
-                    pathRef3.current,
-                    pathRef4.current,
-                    pathRef5.current,]
-                    , {
-                        drawSVG: "90% 70%",
-                        duration: 1,
-                    }, "one");
-            }
+            master.from(
+                [pathRef.current,
+                pathRef1.current,
+                pathRef2.current,
+                pathRef3.current,
+                pathRef4.current,
+                pathRef5.current,]
+                , {
+                    drawSVG: "90% 70%",
+                    duration: 1,
+                }, "one");
+                
             master.fromTo(box1.current, {
                 translateY: "130%",
             }, {
-                translateY: windowWidth ? "20%" : "-60%" ,
-                translateZ: windowWidth ? "-150px" : "-250px" ,
+                translateY: windowWidth ? "20%" : "-60%",
+                translateZ: windowWidth ? "-150px" : "-250px",
                 rotateY: "30deg",
                 rotateZ: "-9deg",
             }, "one");
@@ -101,7 +98,7 @@ const TestimonialsSec = () => {
             master.fromTo(box2.current, {
                 translateY: "130%",
             }, {
-                translateY: windowWidth ? "-40%" :"-60%" ,
+                translateY: windowWidth ? "-40%" : "-60%",
                 translateZ: windowWidth ? "-150px" : "-250px",
                 rotateY: "10deg",
                 rotateZ: "2deg",
@@ -125,6 +122,14 @@ const TestimonialsSec = () => {
                 rotateY: "-10deg",
                 rotateZ: "9deg",
             }, "one");
+
+            master.to(mainContainer.current, {
+                scale: 2,
+                z: 350,
+                transformOrigin: "center center",
+                ease: "power1.inOut",
+                opacity: 0,
+            });
         }, mainContainer);
 
         return () => ctx.revert();
@@ -132,11 +137,11 @@ const TestimonialsSec = () => {
     }, []);
 
     return (
-        <section className='testimonial py-[5rem] relative overflow-hidden' ref={mainContainer}>
+        <section className='testimonial py-[5rem] relative overflow-hidden perspective-[500px]' ref={mainContainer}>
             <div className="container perspective-[1000px]">
 
                 <div className="flex justify-center w-full">
-                    <div className='flex justify-between gap-9 justify-center w-max mx-auto'>
+                    <div className='flex gap-9 justify-center w-max mx-auto'>
                         <svg width="486" className="shrink-0" viewBox="0 0 486 670" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.8" filter="url(#filter0_f_2048_969)">
                                 <path ref={pathRef} d="M452.665 5C467.106 119.44 519.548 492.049 409 585C298.452 677.951 166.336 659.658 4 659.658" stroke="url(#paint0_linear_2048_969)" stroke-width="8" />

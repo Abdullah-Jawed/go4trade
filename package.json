@@ -15,7 +15,7 @@
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@tsparticles/react": "^3.0.0",
-    "gsap": "^3.12.7",
+    "gsap": "^3.13.0",
     "gsap-trial": "^3.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -1,10 +1,12 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { Dotsimage } from "../assets";
 import SectionHeading from "./common/SectionHeading";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(DrawSVGPlugin);
 
 const Drawsvg = () => {
     const pathRef = useRef(null);
@@ -27,10 +29,6 @@ const Drawsvg = () => {
             }
             gsap.set([containerRef.current, pinContainer.current], { opacity: 1 });
 
-            if (window.DrawSVGPlugin) {
-                gsap.registerPlugin(window.DrawSVGPlugin);
-            }
-
             const master = gsap.timeline({
                 scrollTrigger: {
                     trigger: containerRef.current,
@@ -44,22 +42,22 @@ const Drawsvg = () => {
                 }
             });
 
-            if (window.DrawSVGPlugin && pathRef.current) {
-                master.from(pathRef.current, {
-                    drawSVG: "0%",
-                    duration: 1
-                }, "one");
 
-                master.from(pathRef1.current, {
-                    drawSVG: "0%",
-                    duration: 1
-                }, "one");
+            master.from(pathRef.current, {
+                drawSVG: "0%",
+                duration: 1
+            }, "one");
 
-                master.from(pathRef2.current, {
-                    drawSVG: "0%",
-                    duration: 1
-                }, "one");
-            }
+            master.from(pathRef1.current, {
+                drawSVG: "0%",
+                duration: 1
+            }, "one");
+
+            master.from(pathRef2.current, {
+                drawSVG: "0%",
+                duration: 1
+            }, "one");
+
 
             if (isDesktop) {
                 master.to(box1.current, {

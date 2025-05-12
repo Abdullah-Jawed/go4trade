@@ -9,9 +9,11 @@ import acedemy6 from '../assets/images/acedemy1.png'
 import acedemy7 from '../assets/images/acedemy2.png'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import SectionHeading from "./common/SectionHeading";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(DrawSVGPlugin);
 
 const AcedemySec = () => {
     const containerRef = useRef(null);
@@ -23,34 +25,30 @@ const AcedemySec = () => {
 
         let ctx = gsap.context(() => {
 
-            if (window.DrawSVGPlugin) {
-                gsap.registerPlugin(window.DrawSVGPlugin);
-            }
 
-            if (window.DrawSVGPlugin) {
-                academyBoxes.forEach((box, boxIndex) => {
+            academyBoxes.forEach((box, boxIndex) => {
 
-                    const paths = box.querySelectorAll('svg path');
+                const paths = box.querySelectorAll('svg path');
 
-                    paths.forEach((path, pathIndex) => {
-                        const animation = gsap.from(path, {
-                            drawSVG: "0%",
-                            duration: 4,
-                            ease: "power2.out",
-                            paused: true // Start paused
-                        });
+                paths.forEach((path, pathIndex) => {
+                    const animation = gsap.from(path, {
+                        drawSVG: "0%",
+                        duration: 4,
+                        ease: "power2.out",
+                        paused: true // Start paused
+                    });
 
-                        ScrollTrigger.create({
-                            trigger: box,
-                            start: "top 80%",
-                            onEnter: () => animation.restart(),
-                            onEnterBack: () => animation.restart(),
-                            // markers: true, // For debugging
-                            id: `path-${boxIndex}-${pathIndex}`
-                        });
+                    ScrollTrigger.create({
+                        trigger: box,
+                        start: "top 80%",
+                        onEnter: () => animation.restart(),
+                        onEnterBack: () => animation.restart(),
+                        // markers: true, // For debugging
+                        id: `path-${boxIndex}-${pathIndex}`
                     });
                 });
-            }
+            });
+
 
 
 
@@ -75,7 +73,7 @@ const AcedemySec = () => {
     return (
         <section className='acedemy pb-[30px] -mt-[33%] relative z-10'>
             <div className="container">
-                
+
                 <SectionHeading badge="Academy" heading="Do more with your spare time" para="We’re one of the few platforms licensed by KHDA in Dubai, ensuring top-tier educational resources." />
 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2" ref={containerRef}>
