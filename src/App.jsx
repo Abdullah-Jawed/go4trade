@@ -1,15 +1,18 @@
-import {Routes, Route} from 'react-router-dom'  
+import { Routes, Route } from 'react-router-dom'
 // import './styles/index.css'
 import Layout from './Layouts/Layout'
-import {Home} from './pages';
+import { Home } from './pages';
+import SmoothLayout from './components/ScrollSmoother';
 function App() {
 
   return (
+    <SmoothLayout >
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<Home />} />
         </Routes>
       </Layout>
+    </SmoothLayout>
   )
 }
 
