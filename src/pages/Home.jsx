@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { bannerVideo, DiscordIcon, LockImg, SecurityVideo, WhatsAppIcon } from '../assets';
 import { VideoSectionVideo } from '../assets';
 import { BubbleButton } from '../components/common';
@@ -145,7 +145,9 @@ const Home = () => {
         </div>
       </section>
 
-      <Lighting />
+      <div className='overflow-hidden'>
+        <Lighting />
+      </div>
 
       <section className='join-us py-[4rem]'>
         <div className="container">

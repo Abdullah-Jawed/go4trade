@@ -1,5 +1,5 @@
 // SmoothLayout.jsx
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
@@ -20,7 +20,7 @@ const SmoothLayout = ({ children }) => {
       smoothTouch: 0.2,
     });
   }, []);
-
+  
   return (
     <div id="smooth-wrapper" ref={wrapperRef}>
       <div id="smooth-content" ref={contentRef}>

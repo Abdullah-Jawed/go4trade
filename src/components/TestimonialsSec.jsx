@@ -34,7 +34,7 @@ const TestimonialsSec = () => {
             gsap.set([box1.current,
             box2.current,
             box3.current,
-            box4.current], { opacity: 0 })
+            box4.current], { opacity: 0 });
 
             const master = gsap.timeline({
                 scrollTrigger: {
