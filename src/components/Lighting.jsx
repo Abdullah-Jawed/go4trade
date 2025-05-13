@@ -12,7 +12,6 @@ const Lighting = () => {
   const canvasRef = useRef(null);
   const text1 = useRef(null);
   const text2 = useRef(null);
-  const triggerRef = useRef(null);
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -63,6 +62,7 @@ const Lighting = () => {
       if (loadedImages === 11 - 1) {
         setIsLoading(false);
         document.body.style.overflow = "unset";
+        ScrollTrigger.refresh();
       }
     };
 
@@ -107,9 +107,9 @@ const Lighting = () => {
 
       const master = gsap.timeline({
         scrollTrigger: {
-          id: "lighting-pin",
           trigger: section,
           pin: true,
+          anticipatePin: true,
           start: "top 0%",
           end: "+=1500",
           scrub: 2,
@@ -136,32 +136,32 @@ const Lighting = () => {
             }
           },
           onEnter: () => {
-            gsap.to(section, {
-              opacity: 1,
-              duration: 0.4,
-            });
-          },
-          onEnterBack: () => {
-            gsap.to(section, {
-              opacity: 1,
-              duration: 0.4,
-            });
-          },
-          onLeave: () => {
-            gsap.to(section, {
-              opacity: 0,
-              duration: 0.4,
-            });
-          },
-          onLeaveBack: () => {
-            gsap.to(section, {
-              opacity: 0,
-              duration: 0.4,
-            });
-          }
+                gsap.to(section, {
+                  opacity: 1,
+                  duration: 0.4,
+                });
+              },
+              onEnterBack: () => {
+                gsap.to(section, {
+                  opacity: 1,
+                  duration: 0.4,
+                });
+              },
+              onLeave: () => {
+                gsap.to(section, {
+                  opacity: 0,
+                  duration: 0.4,
+                });
+              },
+              onLeaveBack: () => {
+                gsap.to(section, {
+                  opacity: 0,
+                  duration: 0.4,
+                });
+              }
         },
         onUpdate: render
-      });
+      })
 
       master.to(imageSeq, {
         frame: frameCount - 1,
@@ -169,9 +169,7 @@ const Lighting = () => {
         ease: "none",
       });
 
-      triggerRef.current = master.scrollTrigger;
-
-    }, section);
+    });
 
     return () => {
       ctx.revert();
@@ -182,7 +180,9 @@ const Lighting = () => {
 
   return (
     <>
-
+      <div className={`preloader fixed h-[100dvh] w-full bg-[#01111F] top-0 left-0 flex items-center justify-center z-[9999] ${(isLoading) ? 'block' : 'hidden'}`}>
+        <img src={logo} alt="logo" />
+      </div>
       <section ref={sectionRef} className="overflow-hidden h-screen w-full relative bg-[#01111F]">
         <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text1}>
           <h1>Looking for a sign?</h1>
