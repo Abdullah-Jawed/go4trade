@@ -32,7 +32,7 @@ const Drawsvg = () => {
             const master = gsap.timeline({
                 scrollTrigger: {
                     trigger: containerRef.current,
-                    start: "10% top",
+                    start: "25% top",
                     end: isDesktop ? "+=4000" : "bottom",
                     scrub: true,
                     pin: isDesktop ? pinContainer.current : false,
