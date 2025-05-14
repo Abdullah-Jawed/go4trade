@@ -525,6 +525,44 @@ unintentional errors.`,
   }
 ]
 
+export const GrowthData = [
+  {
+    buttonName: "Start month",
+    inital: "$400,000",
+    minLoss: "$20,000",
+    maxLoss: "$40,000",
+    account_growth: "-",
+  },
+  {
+    buttonName: "4 months",
+    inital: "$410,000",
+    minLoss: "$21,000",
+    maxLoss: "$41,000",
+    account_growth: "-",
+  },
+  {
+    buttonName: "8 months",
+    inital: "$420,000",
+    minLoss: "$22,000",
+    maxLoss: "$42,000",
+    account_growth: "-",
+  },
+  {
+    buttonName: "12 months",
+    inital: "$420,000",
+    minLoss: "$23,000",
+    maxLoss: "$43,000",
+    account_growth: "-",
+  },
+  {
+    buttonName: "16 months",
+    inital: "$440,000",
+    minLoss: "$24,000",
+    maxLoss: "$44,000",
+    account_growth: "-",
+  },
+]
+
 export const ScalingPlanKeys = [
   {
     heading: "Initial Capital Allocation ",

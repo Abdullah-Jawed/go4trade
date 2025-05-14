@@ -484,6 +484,10 @@ h2 {
   content: "";
 }
 
+.accounts .gradient{
+  background: linear-gradient(86.61deg, #01111F -5.25%, #011221 56.9%, #011221 73.52%, #044985 133.78%);
+}
+
 @keyframes circle {
   100% {
     transform: rotate(1turn);
