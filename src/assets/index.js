@@ -19,6 +19,16 @@ import LightingBlur from '../assets/images/lighting-blur.png';
 import ChallengesImg from '../assets/images/challanges.png';
 import TestiImg from '../assets/images/test-img.png';
 import StarImg from '../assets/images/stars.png';
+import Rules1 from '../assets/images/rules-1.png';
+import Rules5 from '../assets/images/rules-5.png';
+import Rules2 from '../assets/images/rules-2.png';
+import Rules4 from '../assets/images/rules-4.png';
+import Rules6 from '../assets/images/rules-6.png';
+import Rules7 from '../assets/images/rules-7.png';
+import Rules8 from '../assets/images/rules-8.png';
+import Rules9 from '../assets/images/rules-9.png';
+import Rules10 from '../assets/images/rules-10.png';
+import Rules11 from '../assets/images/rules-11.png';
 
 import ParticleOptions from './js/particle.json';
 import EarthParticle from './js/particle1.json';
@@ -49,5 +59,15 @@ export  {
   ChallengesImg,
   ChallengesParticle,
   TestiImg,
-  StarImg
+  StarImg,
+  Rules1,
+  Rules5,
+  Rules2,
+  Rules4,
+  Rules6,
+  Rules7,
+  Rules8,
+  Rules9,
+  Rules10,
+  Rules11,
 }

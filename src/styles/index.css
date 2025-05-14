@@ -437,6 +437,15 @@ h2 {
   background: linear-gradient(179.83deg, #01111F 37.69%, #031F37 220.85%);
   content: "";
 }
+.show-ellipsis::after {
+  content: '...';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-left: 20px;
+  background: linear-gradient(to right, transparent, #01111F 80%);
+  color: #FCFCFC;
+}
 
 @keyframes circle {
   100% {

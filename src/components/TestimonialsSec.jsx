@@ -43,6 +43,7 @@ const TestimonialsSec = () => {
                     end: "+=4000",
                     scrub: 2,
                     pin: true,
+                    pinSpacing: true,
                     onEnter: () => {
                         gsap.to(textBox.current, { opacity: 1, y: "0%", duration: 0.5, })
                         gsap.to([box1.current,
@@ -137,7 +138,7 @@ const TestimonialsSec = () => {
     }, []);
 
     return (
-        <section className='testimonial py-[5rem] relative overflow-hidden perspective-[500px]' ref={mainContainer}>
+        <section className='testimonial py-[5rem] relative overflow-hidden perspective-[500px] pb-0' ref={mainContainer}>
             <div className="container perspective-[1000px]">
 
                 <div className="flex justify-center w-full">
