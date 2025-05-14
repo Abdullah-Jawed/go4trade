@@ -29,6 +29,14 @@ import Rules8 from '../assets/images/rules-8.png';
 import Rules9 from '../assets/images/rules-9.png';
 import Rules10 from '../assets/images/rules-10.png';
 import Rules11 from '../assets/images/rules-11.png';
+import Scaling1 from '../assets/images/scaling-1.png';
+import Scaling2 from '../assets/images/scaling-2.png';
+import ScalingMain from '../assets/images/scaling-main.png';
+import Key1 from '../assets/images/key1.png';
+import Key2 from '../assets/images/key2.png';
+import Key3 from '../assets/images/key3.png';
+import Key4 from '../assets/images/key4.png';
+import Key5 from '../assets/images/key5.png';
 
 import ParticleOptions from './js/particle.json';
 import EarthParticle from './js/particle1.json';
@@ -70,4 +78,12 @@ export  {
   Rules9,
   Rules10,
   Rules11,
+  Scaling1,
+  Scaling2,
+  ScalingMain,
+  Key1,
+  Key2,
+  Key3,
+  Key4,
+  Key5
 }

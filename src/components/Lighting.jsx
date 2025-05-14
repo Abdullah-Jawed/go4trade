@@ -7,7 +7,7 @@ import { CanvasImages } from "../utils/statics";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Lighting = () => {
+const Lighting = (props) => {
   const sectionRef = useRef(null);
   const canvasRef = useRef(null);
   const text1 = useRef(null);
@@ -109,7 +109,7 @@ const Lighting = () => {
         scrollTrigger: {
           trigger: section,
           pin: true,
-          anticipatePin: true,
+          anticipatePin: false,
           start: "top 0%",
           end: "+=1500",
           scrub: 2,
@@ -185,10 +185,10 @@ const Lighting = () => {
       </div>
       <section ref={sectionRef} className="overflow-hidden h-screen w-full relative bg-[#01111F]">
         <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text1}>
-          <h1>Looking for a sign?</h1>
+          <h1>{ (props.text1) ? (props.text1) : "Looking for a sign?"}</h1>
         </div>
         <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text2}>
-          <h1>Another Text will appear here. </h1>
+          <h1>{ (props.text2) ? (props.text2) : "Another Text will appear here." } </h1>
         </div>
         <img src={LightingBlur} alt="image" className="absolute top-0 left-0 w-full h-[102%]" />
         <canvas id="" ref={canvasRef} className="w-full"></canvas>

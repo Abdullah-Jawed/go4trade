@@ -19,7 +19,7 @@ const ChallemgesAnim = () => {
 
     const particlesOptions = ChallengesParticle;
     return (
-        <div className="container relative max-w-max w-full !px-0">
+        <div className="container relative max-w-max w-full !px-0 pointer-events-none select-none">
             {init ? (
                 <Particles
                     id="tsparticles5"

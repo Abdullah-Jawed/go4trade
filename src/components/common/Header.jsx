@@ -47,7 +47,7 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <BubbleButton className="btn btn-primary bg-green-gradient primary-theme hidden lg:block">Get Funded</BubbleButton>
+            <BubbleButton bubbleColor='#0f6540' className="btn btn-primary bg-green-gradient primary-theme hidden lg:block hover:opacity-65">Get Funded</BubbleButton>
           </div>
         </div>
       </div>

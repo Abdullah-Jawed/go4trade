@@ -104,11 +104,21 @@ body {
 .btn {
   @apply rounded-[60px] py-[5px] lg:py-[14px] md:px-[20] px-[10px] lg:px-[32px] font-medium text-[16px] cursor-pointer border-2 border-[#00D177];
   /* border: 2px solid #00D177; */
-  box-shadow: 0px 0px 10px 0px #80DBB440;
+  box-shadow: 0px 0px 22px 0px #03ff93;
+}
+.btn.bg-blue-gradient {
+  box-shadow: none;
 }
 
 .hero-banner {
-  @apply h-[110vh] min-h-[700px] relative;
+  @apply h-[110vh] min-h-[700px] relative z-[2];
+}
+
+.hero-banner::after {
+  @apply absolute top-0 left-0 w-full h-full opacity-75 z-[-1];
+  /* background: #000; */
+  background: linear-gradient(179deg, rgba(0, 0, 0, 1) 63%, rgba(0, 0, 0, 0) 100%);
+  content: "";
 }
 
 .hero-banner video {
@@ -432,11 +442,12 @@ h2 {
   content: "";
 }
 
-.testi-box::after{
+.testi-box::after {
   @apply absolute inset-[1px] z-[-1] rounded-[12px];
   background: linear-gradient(179.83deg, #01111F 37.69%, #031F37 220.85%);
   content: "";
 }
+
 .show-ellipsis::after {
   content: '...';
   position: absolute;
@@ -445,6 +456,32 @@ h2 {
   padding-left: 20px;
   background: linear-gradient(to right, transparent, #01111F 80%);
   color: #FCFCFC;
+}
+
+.text-gradient {
+  background: linear-gradient(88.36deg, #FCFCFC 1.39%, #80DBB4 46.3%, #004986 131.58%);
+  background-clip: text !important;
+}
+
+.gradient-blue {
+  background: linear-gradient(210.95deg, #684BD3 -29.97%, rgba(20, 28, 64, 0.7) 35.39%, #01111F 58.71%);
+}
+
+.gradient-green {
+  background: linear-gradient(19.49deg, #01111F 50.84%, #449774 109.92%);
+}
+
+.gradient-blue-dark {
+  background: linear-gradient(180deg, #01111F 0%, #00182D 100%);
+}
+
+.key-box .image {
+  @apply relative z-[2] w-max;
+}
+
+.key-box .image::before {
+  @apply absolute top-0 left-1/2 -translate-x-1/2 bg-[var(--light-teal)] blur-[45px] w-[36px] h-[36px] rounded-full;
+  content: "";
 }
 
 @keyframes circle {

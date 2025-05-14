@@ -7,7 +7,7 @@ import facebook from '../assets/icons/facebook.png';
 import instagram from '../assets/icons/instagram.png';
 import linkedin from '../assets/icons/linkedin.png';
 import twitter from '../assets/icons/twitter.png';
-import { Rules1, Rules10, Rules11, Rules2, Rules4, Rules5, Rules6, Rules7, Rules8, Rules9 } from '../assets';
+import { Key1, Key2, Key3, Key4, Key5, Rules1, Rules10, Rules11, Rules2, Rules4, Rules5, Rules6, Rules7, Rules8, Rules9 } from '../assets';
 
 export const navs = [
   { id: 0, name: 'Home', path: '/' },
@@ -523,6 +523,34 @@ unintentional errors.`,
       },
     ]
   }
+]
+
+export const ScalingPlanKeys = [
+  {
+    heading: "Initial Capital Allocation ",
+    para: "Your journey begins with a smart starting point. When you showcase your trading skills and strategy in the demo phase, we trust you with capital to grow. Prove your ability, and we'll support your success.",
+    img: Key5
+  },
+  {
+    heading: "Performance Milestones",
+    para: "Reach key targets like profit percentages, drawdown limits, and consistent performance. These milestones aren't just numbers—they’re your ticket to bigger rewards and faster growth.",
+    img: Key4
+  },
+  {
+    heading: "Scaling Increments",
+    para: "As you hit milestones, we increase your capital. It’s like leveling up in a game! A 25% increase every 4 months when you hit a 10% profit target—your progress fuels bigger opportunities.",
+    img: Key3
+  },
+  {
+    heading: "Risk Parameters",
+    para: "Keep your gains protected with smart risk management—only risking 1-2% per trade. This ensures your journey to growth remains steady and controlled, even as you scale.",
+    img: Key2
+  },
+  {
+    heading: "Psychological Preparation",
+    para: "Scaling up isn't just about numbers—it’s about mindset. Stay calm, focused, and disciplined as you grow. You’ve got this! Remember, a strong mind leads to bigger wins.",
+    img: Key1
+  },
 ]
 
 export const CanvasImages = `
