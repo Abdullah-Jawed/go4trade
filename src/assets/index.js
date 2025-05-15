@@ -37,6 +37,8 @@ import Key2 from '../assets/images/key2.png';
 import Key3 from '../assets/images/key3.png';
 import Key4 from '../assets/images/key4.png';
 import Key5 from '../assets/images/key5.png';
+import ChallengesPageVid from '../assets/videos/3fbe128176a0012d063ca6e352eb26cd64f86636.mp4';
+import GameBoxImg from '../assets/images/Vector.png';
 
 import ParticleOptions from './js/particle.json';
 import EarthParticle from './js/particle1.json';
@@ -85,5 +87,7 @@ export  {
   Key2,
   Key3,
   Key4,
-  Key5
+  Key5,
+  ChallengesPageVid,
+  GameBoxImg
 }

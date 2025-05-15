@@ -488,6 +488,35 @@ h2 {
   background: linear-gradient(86.61deg, #01111F -5.25%, #011221 56.9%, #011221 73.52%, #044985 133.78%);
 }
 
+.double-gradient{
+  background: linear-gradient(90deg, #01111F 0%, #001C35 64.22%, #01111F 71.69%);
+}
+
+.become-trader{
+  @apply p-[4rem] pt-[28%] mt-[-21%] relative z-[2];
+  background: linear-gradient(180deg, rgba(1, 17, 31, 0) 0%, #01111F 35.23%);
+}
+
+.game-box .box{
+  @apply relative;
+}
+.game-box .box::before{
+  @apply absolute top-0 left-1/2 -translate-x-1/2 w-[93%] h-[43px] bg-[var(--light-teal)] z-[-2] blur-[10px] rounded-[50%];
+  content: "";
+  animation: pulseBlur 5s linear infinite;
+}
+.game-box .box::after{
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-[93%] h-[43px] bg-[var(--light-teal)] z-[-2] blur-[10px] rounded-[50%];
+  content: "";
+  animation: pulseBlur 5s linear infinite;
+}
+
+
+@keyframes pulseBlur {
+  50%{
+    filter: blur(37px);
+  }
+}
 @keyframes circle {
   100% {
     transform: rotate(1turn);
