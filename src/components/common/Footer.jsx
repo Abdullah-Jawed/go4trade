@@ -6,6 +6,7 @@ import { FooterParticle } from "../../assets";
 import SectionHeading from "./SectionHeading";
 import ArrowSvg from "./ArrowSvg";
 import { FooterSocials, FooterQuickLinks, FooterHelp, FooterLegal } from "../../utils/statics";
+import { Link } from "react-router-dom";
 // import discordi from '../../assets/images/discordi.png';
 
 const Footer = () => {
@@ -59,7 +60,7 @@ const Footer = () => {
               <h6 className="font-light text-[#FCFCFC] text-[16px] mb-4">Quick Links</h6>
               <ul>
                 {FooterQuickLinks.map((item, index) => (
-                  <li key={index} className="mb-3.5"><a href={item.link} className="text-[14px] font-light text-[#A0A0A0] hover:text-[#004986] transition">{item.name}</a></li>
+                  <li key={index} className="mb-3.5"><Link to={item.link} className="text-[14px] font-light text-[#A0A0A0] hover:text-[#004986] transition">{item.name}</Link></li>
                 ))}
               </ul>
             </div>
@@ -67,7 +68,7 @@ const Footer = () => {
               <h6 className="font-light text-[#FCFCFC] text-[16px] mb-4">Help</h6>
               <ul>
                 {FooterHelp.map((item, index) => (
-                  <li key={index} className="mb-3.5"><a href={item.link} className="text-[14px] font-light text-[#A0A0A0] hover:text-[#004986] transition">{item.name}</a></li>
+                  <li key={index} className="mb-3.5"><Link to={item.link} className="text-[14px] font-light text-[#A0A0A0] hover:text-[#004986] transition">{item.name}</Link></li>
                 ))}
               </ul>
             </div>
@@ -75,7 +76,7 @@ const Footer = () => {
               <h6 className="font-light text-[#FCFCFC] text-[16px] mb-4">Legal</h6>
               <ul>
                 {FooterLegal.map((item, index) => (
-                  <li key={index} className="mb-3.5"><a href={item.link} className="text-[14px] font-light text-[#A0A0A0] hover:text-[#004986] transition">{item.name}</a></li>
+                  <li key={index} className="mb-3.5"><Link to={item.link} className="text-[14px] font-light text-[#A0A0A0] hover:text-[#004986] transition">{item.name}</Link></li>
                 ))}
               </ul>
             </div>

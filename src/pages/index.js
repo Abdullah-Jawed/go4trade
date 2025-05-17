@@ -3,11 +3,15 @@ import {default as About} from './About';
 import {default as GeneralRules} from './GeneralRules';
 import {default as ScalingPlan} from './ScalingPlan';
 import {default as Challenges} from './Challenges';
+import {default as PricavyPolicy} from './PrivacyPolicy';
+import {default as TermsCondition} from './TermsCondition';
 
 export {
   Home,
   About,
   GeneralRules,
   ScalingPlan,
-  Challenges
+  Challenges,
+  PricavyPolicy,
+  TermsCondition
 }

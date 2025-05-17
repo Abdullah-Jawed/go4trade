@@ -587,6 +587,20 @@ table tbody tr td {
   background: linear-gradient(164.06deg, #80DBB4 29.44%, #04A661 108.23%);
 }
 
+.policy-pages{
+  @apply pt-[10rem];
+}
+
+.policy-pages h6{
+  @apply text-[#FCFCFC] text-[25px] md:text-[32px] font-medium mb-5 mt-8;
+}
+.policy-pages p, .policy-pages ul li{
+  @apply text-[#FCFCFC] text-[16px] md:text-[18px] font-extralight leading-[27px];
+}
+.policy-pages p a{
+  text-decoration: underline;
+}
+
 
 
 @keyframes pulseBlur {

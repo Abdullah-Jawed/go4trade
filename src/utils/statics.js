@@ -48,8 +48,8 @@ export const FooterHelp = [
 ]
 
 export const FooterLegal = [
-  { name: "Privacy Policy", link: "#" },
-  { name: "Terms & Conditions", link: "#" },
+  { name: "Privacy Policy", link: "/privacy-policy" },
+  { name: "Terms & Conditions", link: "/terms-condition" },
   { name: "AML Policy", link: "#" },
   { name: "Disclaimer", link: "#" },
   { name: "Risk Disclosure Statement", link: "#" },

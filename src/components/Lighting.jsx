@@ -110,7 +110,7 @@ const Lighting = (props) => {
           trigger: section,
           pin: true,
           anticipatePin: false,
-          start: "top 0%",
+          start: "top top",
           end: "+=1500",
           scrub: 2,
           onUpdate: (self) => {
@@ -151,6 +151,7 @@ const Lighting = (props) => {
                 gsap.to(section, {
                   opacity: 0,
                   duration: 0.4,
+                  pinSpacing: false,
                 });
               },
               onLeaveBack: () => {
