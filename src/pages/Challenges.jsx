@@ -1,22 +1,26 @@
 import React, { useEffect } from 'react'
-import { ChallengesPageVid } from '../assets'
+import { ChallengesPageVid, Fund1, Fund2, Fund3, Fund4 } from '../assets'
 import SectionHeading from '../components/common/SectionHeading'
 import GameBox from '../components/GameBox';
+import TickSvg from '../components/common/TickSvg';
+import { ChallengeTable } from '../utils/statics';
+import Infosvg from '../components/common/Infosvg';
+import ImageBox from '../components/common/ImageBox';
 
 const Challenges = () => {
     useEffect(() => {
         const months = ["January", "March", "February", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
         months.sort((a, b) => {
-          return Date.parse(`1 ${a} 2000`) - Date.parse(`1 ${b} 2000`);
+            return Date.parse(`1 ${a} 2000`) - Date.parse(`1 ${b} 2000`);
         });
-        
+
         console.log(months);
     }, []);
-    
+
     return (
         <>
-            <section className='top pt-[12rem]'>
+            <section className='top pt-[20vw] md:pt-[14vw]'>
                 <div className="container relative">
                     <video src={ChallengesPageVid} autoPlay playsInline muted loop className='w-full mx-auto max-w-[1276px]'></video>
                     <div className="text absolute top-[5%] w-full">
@@ -28,12 +32,12 @@ const Challenges = () => {
 
             <section className='become-trader'>
                 <div className="container">
-                    <div className="grid grid-cols-2 w-full max-w-[1140px] mx-auto rounded-[24px] items-center px-9 py-10 border-1 border-[#002E55] double-gradient">
-                        <h4 className='text-[#FCFCFC] text-[30px] md:text-[40px] font-medium leading-[120%]'>Looking <br />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3.5 max-w-[1140px] w-full mx-auto rounded-[24px] items-center px-5 py-6 md:px-9 md:py-10 border-1 border-[#002E55] double-gradient">
+                        <h4 className='text-[#FCFCFC] text-[25px] sm:text-[30px] md:text-[40px] font-medium leading-[120%]'>Looking <br />
                             to become a funded trader? </h4>
 
 
-                        <p className='text-[22px] text-[#FCFCFC] font-extralight'>At Go4Trades, we’re not just funding traders. We’re empowering dreamers, doers, and future market leaders. <br /><br />
+                        <p className='text-[16px] sm:text-[18px] lg:text-[22px] text-[#FCFCFC] font-extralight'>At Go4Trades, we’re not just funding traders. We’re empowering dreamers, doers, and future market leaders. <br /><br />
 
                             Join our simulated capital challenges, prove your skills, and unlock real trading capital with no personal risk. </p>
                     </div>
@@ -41,6 +45,154 @@ const Challenges = () => {
             </section>
 
             <GameBox />
+
+            <section className='challenge-table py-[5rem]'>
+                <div className="container">
+                    <SectionHeading badge="Step 2: " heading="Choose Your Trading Challenge" para="This is your entry point to getting funded with simulated capital. <br />
+                      Pick a challenge based on your goals and trading style:" />
+
+
+                    <div className='max-w-[830px] mx-auto mb-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+                        <div className='challange-box w-full'>
+                            <div className='border-1 border-[#002E55] rounded-[12px] py-4 px-5 bg-[#01111F]'>
+                                <h6 className='text-white text-[18px] font-medium mb-2'>One-Phase Challenge </h6>
+                                <p className='text-[#CCCCCC] text-[14px] font-extralight mb-1.5'><TickSvg /> Build your strategy</p>
+
+                            </div>
+                        </div>
+                        <div className='challange-box w-full'>
+                            <div className='border-1 border-[#002E55] rounded-[12px] py-4 px-5 bg-[#01111F]'>
+                                <h6 className='text-white text-[18px] font-medium mb-2'>Two-Phase Challenge </h6>
+                                <p className='text-[#CCCCCC] text-[14px] font-extralight mb-1.5'><TickSvg /> For quick, confident traders </p>
+
+                            </div>
+                        </div>
+                        <div className='challange-box w-full'>
+                            <div className='border-1 border-[#002E55] rounded-[12px] py-4 px-5 bg-[#01111F]'>
+                                <h6 className='text-white text-[18px] font-medium mb-2'>Instant Funding</h6>
+                                <p className='text-[#CCCCCC] text-[14px] font-extralight mb-1.5'><TickSvg /> Balanced and structured </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center gap-3.5 items-center mb-8">
+                        <p className='text-[#FFFFFF] text-[16px] font-extralight'>Select Preference</p>
+                        <div className="form-group flex items-center gap-2 custom-radio">
+                            <input type="radio" name="step" id="2-step" value="2-step" />
+                            <label htmlFor="2-step" className='text-[#FFFFFF] text-[18px] font-extralight cursor-pointer'>2-step</label>
+                        </div>
+                        <div className="form-group flex items-center gap-2 custom-radio">
+                            <input type="radio" name="step" id="1-step" value="1-step" />
+                            <label htmlFor="1-step" className='text-[#FFFFFF] text-[18px] font-extralight cursor-pointer'>1-step</label>
+                        </div>
+                    </div>
+
+                    <div className="table-parent p-[2px] rounded-[12px] overflow-x-auto overflow-y-visible relative mb-10">
+                        <table class="table w-full border bg-(--base-color) rounded-[12px] overflow-hidden min-w-[1140px]">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">
+                                        <h4>$8,000</h4>
+                                        <a href="#" className='table-btn'>Buy Challenge</a>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>$8,000</h4>
+                                        <a href="#" className='table-btn'>Buy Challenge</a>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>$8,000</h4>
+                                        <a href="#" className='table-btn'>Buy Challenge</a>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>$8,000</h4>
+                                        <a href="#" className='table-btn'>Buy Challenge</a>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>$8,000</h4>
+                                        <a href="#" className='table-btn'>Buy Challenge</a>
+                                    </th>
+                                    <th scope="col">
+                                        <h4>$8,000</h4>
+                                        <a href="#" className='table-btn'>Buy Challenge</a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {ChallengeTable.map((item, index) => (
+                                    <tr key={index}>
+                                        <th scope="row">{item.main} <Infosvg /></th>
+                                        {item.data.map((dataItem, dataIndex) => (
+                                            <td key={dataIndex}>{dataItem}</td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p className='text-[#FCFCFC] text-[17px] md:text-[22px] font-extralight mb-6'>Each challenge tests your ability to manage risk, stay disciplined, and hit realistic targets. </p>
+                    <ul className='flex items-center flex-wrap gap-x-10 gap-y-5 p-0'>
+                        <li>No real money risk </li>
+                        <li>Affordable entry</li>
+                        <li>Instant feedback</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='funds py-[5rem]'>
+                <div className="container">
+
+                    <div className="grid items-center grid-cols-1 lg:grid-cols-2 fund-boxes border-1 border-[#002E55] rounded-[12px] p-5 sm:6 md:p-8 lg:p-10 gap-y-10 mb-6">
+                        <div className='text'>
+                            <SectionHeading className="text-start !mb-2" badge_class="!mx-0" badge="Step 3: " heading="Get Funded by Go4Trades" />
+                            <h6 className='text-[#CCCCCC] text-[22px] font-medium mb-6'>Pass the challenge? Congrats! </h6>
+                            <p className='text-[18px] text-[#CCCCCC] font-extralight mb-8'>You’re now a funded trader. We’ll fund your account with up to $100,000+ simulated capital, giving you the chance to trade live markets without using your own capital. </p>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                                <ImageBox img={Fund3} heading="You trade. 
+                                        We take the risk" />
+
+                                <ImageBox img={Fund3} heading="You keep up to 90% of the profits " />
+
+                            </div>
+
+                            <p className='text-[#CCCCCC] text-[18px] font-extralight'>It’s the smarter, safer way to start your trading career. </p>
+
+                        </div>
+                        <div className='image'>
+                            <img src={Fund1} alt="image" className='mx-auto w-2/3 lg:w-auto' />
+                        </div>
+                    </div>
+
+
+                    <div className="grid items-center grid-cols-1 lg:grid-cols-2 fund-boxes border-1 border-[#002E55] rounded-[12px] p-5 sm:6 md:p-8 lg:p-10 gap-y-10">
+                        <div className='text'>
+                            <SectionHeading className="text-start !mb-2" badge_class="!mx-0" badge="Step 3: " heading="Get Funded by Go4Trades" />
+                            <h6 className='text-[#CCCCCC] text-[22px] font-medium mb-6'>Scale Your Funded Account & Earn More </h6>
+                            <p className='text-[18px] text-[#CCCCCC] font-extralight mb-8'>Consistency gets rewarded. As you prove your skill, we’ll boost your capital and unlock higher payout levels.  </p>
+
+                            <div className="grid grid-cols-1 gap-6">
+
+                                <ImageBox className="flex items-center gap-5" img={Fund4} headingClass="!font-extralight" heading="Up to 90% profit split " />
+
+                                <ImageBox className="flex items-center gap-5" img={Fund4} headingClass="!font-extralight" heading="Fast withdrawals " />
+                                <ImageBox className="flex items-center gap-5" img={Fund4} headingClass="!font-extralight" heading="Performance-based scaling " />
+
+                            </div>
+
+                            <p className='text-[#CCCCCC] text-[18px] font-extralight capitalize'>the more you grow, the more we fund. It’s that simple. </p>
+
+                        </div>
+                        <div className='image'>
+                            <img src={Fund2} alt="image" className='mx-auto w-2/3 lg:w-auto' />
+                        </div>
+                    </div>
+
+                </div>
+            </section>
         </>
     )
 }

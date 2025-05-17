@@ -106,6 +106,7 @@ body {
   /* border: 2px solid #00D177; */
   box-shadow: 0px 0px 22px 0px #03ff93;
 }
+
 .btn.bg-blue-gradient {
   box-shadow: none;
 }
@@ -484,39 +485,116 @@ h2 {
   content: "";
 }
 
-.accounts .gradient{
+.accounts .gradient {
   background: linear-gradient(86.61deg, #01111F -5.25%, #011221 56.9%, #011221 73.52%, #044985 133.78%);
 }
 
-.double-gradient{
+.double-gradient {
   background: linear-gradient(90deg, #01111F 0%, #001C35 64.22%, #01111F 71.69%);
 }
 
-.become-trader{
-  @apply p-[4rem] pt-[28%] mt-[-21%] relative z-[2];
+.become-trader {
+  @apply py-[4rem] pt-[28%] mt-[-21%] relative z-[2];
   background: linear-gradient(180deg, rgba(1, 17, 31, 0) 0%, #01111F 35.23%);
 }
 
-.game-box .box{
+.game-box .box {
   @apply relative;
 }
-.game-box .box::before{
+
+.game-box .box::before {
   @apply absolute top-0 left-1/2 -translate-x-1/2 w-[93%] h-[43px] bg-[var(--light-teal)] z-[-2] blur-[10px] rounded-[50%];
   content: "";
   animation: pulseBlur 5s linear infinite;
 }
-.game-box .box::after{
+
+.game-box .box::after {
   @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-[93%] h-[43px] bg-[var(--light-teal)] z-[-2] blur-[10px] rounded-[50%];
   content: "";
   animation: pulseBlur 5s linear infinite;
 }
 
+.custom-radio {
+  @apply relative cursor-pointer;
+}
+
+.custom-radio input {
+  @apply opacity-5 absolute;
+}
+
+.custom-radio::before {
+  @apply top-0 left-0 w-[15px] h-[15px] bg-transparent border-1 border-[#fff] rounded-full transition-all;
+  content: "";
+}
+
+.custom-radio:has(input:checked)::before {
+  @apply border-[4px] border-[var(--light-teal)];
+}
+
+
+table thead tr th {
+  @apply pb-5 pt-7 px-2
+}
+
+table thead h4 {
+  @apply text-(--light-teal) text-[25px] font-medium mb-3;
+}
+
+table thead .table-btn {
+  @apply text-[#FFFFFF] text-[13px] font-medium border-1 border-(--light-blue) rounded-[24px] px-[.7rem] py-[.6rem] inline-block whitespace-nowrap;
+  background: radial-gradient(45.68% 45.68% at 50.36% 100%, #0065BB 0%, #002E55 100%);
+}
+
+table tbody * {
+  @apply text-[#FCFCFC] font-light text-[14px];
+}
+
+table tbody tr:nth-of-type(even) {
+  background: linear-gradient(90deg, #01111F 0%, #001E37 50%, #01111F 100%);
+}
+
+table tbody tr td,
+table tbody tr th {
+  padding: 1rem;
+}
+
+table tbody tr td:not(:last-child),
+table tbody tr th {
+  @apply border-r-1 border-[#001D35];
+}
+
+table tbody tr th {
+  text-align: left;
+}
+
+table tbody tr td {
+  text-align: center;
+}
+.table-parent {
+  background: linear-gradient(180deg, #80DBB4 -19.48%, #004986 -0.95%, #001220 14.9%, #00213C 97.87%, #004986 102.86%);
+}
+/* .table-parent::before{
+ @apply absolute top-[94%] w-full h-[20px] left-0 bg-[#26D389] blur-[50px] z-[-1]; 
+ content:  "";
+} */
+
+.challenge-table ul li{
+  @apply text-[#B7B7B7] text-[16px] md:text-[20px] font-medium capitalize;
+}
+.challenge-table ul li::before{
+  @apply w-[12px] h-[12px] rounded-full inline-block mr-3;
+  content: "";
+  background: linear-gradient(164.06deg, #80DBB4 29.44%, #04A661 108.23%);
+}
+
+
 
 @keyframes pulseBlur {
-  50%{
+  50% {
     filter: blur(37px);
   }
 }
+
 @keyframes circle {
   100% {
     transform: rotate(1turn);

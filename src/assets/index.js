@@ -39,6 +39,10 @@ import Key4 from '../assets/images/key4.png';
 import Key5 from '../assets/images/key5.png';
 import ChallengesPageVid from '../assets/videos/3fbe128176a0012d063ca6e352eb26cd64f86636.mp4';
 import GameBoxImg from '../assets/images/Vector.png';
+import Fund1 from '../assets/images/fund-1.png';
+import Fund2 from '../assets/images/fund-2.png';
+import Fund3 from '../assets/images/fund-3.png';
+import Fund4 from '../assets/images/fund-4.png';
 
 import ParticleOptions from './js/particle.json';
 import EarthParticle from './js/particle1.json';
@@ -89,5 +93,9 @@ export  {
   Key4,
   Key5,
   ChallengesPageVid,
-  GameBoxImg
+  GameBoxImg,
+  Fund1,
+  Fund2,
+  Fund3,
+  Fund4
 }

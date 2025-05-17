@@ -69,7 +69,7 @@ const GameBox = () => {
         <section className='game-box py-[5rem]' ref={containerRef}>
             <div className="container">
                 <div ref={Box} className="box max-w-[560px] w-full rounded-[42px] bg-[#01111F] border-1 border-[#008AFF] px-9 py-10 mx-auto">
-                    <img src={GameBoxImg} alt="image" className='ms-auto mb-6' />
+                    <img src={GameBoxImg} alt="image" className='ms-auto mb-6 w-1/2 md:w-auto' />
                     <div className="text">
                         <SectionHeading className="text-start !mb-0" badge_class="!mx-0" badge="Step 1" heading="Learn the Game" para="New to trading? We’ve got you <br /><br/ >
 

@@ -6,6 +6,7 @@ import { ScalingPlanKeys } from '../utils/statics'
 import Lighting from '../components/Lighting'
 import JoinBox from '../components/common/JoinBox'
 import AccountsSec from '../components/AccountsSec'
+import ImageBox from '../components/common/ImageBox'
 
 const ScalingPlan = () => {
     return (
@@ -69,15 +70,7 @@ const ScalingPlan = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {ScalingPlanKeys.map((item, index) => (
-                            <div key={index} className="key-box">
-                                <div className="image mb-4">
-                                    <img src={item.img} alt="image" />
-                                </div>
-                                <div className="text">
-                                    <h6 className='text-[#F8F8F8] text-[22px] font-medium mb-4'>{item.heading}</h6>
-                                    <p className='text-[#CCCCCC] text-[18px] font-light'>{item.para}</p>
-                                </div>
-                            </div>
+                            <ImageBox key={index} img={item.img} heading={item.heading} para={item.para} />
                         ))}
 
                     </div>
