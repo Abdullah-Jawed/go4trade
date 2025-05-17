@@ -93,7 +93,7 @@ body {
 }
 
 .primary-navs {
-  @apply max-w-[740px] mx-auto justify-between;
+  @apply max-w-[781px] mx-auto justify-between;
 }
 
 .mobile-navs {

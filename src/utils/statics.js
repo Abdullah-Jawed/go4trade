@@ -11,9 +11,9 @@ import { Key1, Key2, Key3, Key4, Key5, Rules1, Rules10, Rules11, Rules2, Rules4,
 
 export const navs = [
   { id: 0, name: 'Home', path: '/' },
-  { id: 1, name: 'Trade', path: '/about' },
-  { id: 2, name: 'Learn', path: '#' },
-  { id: 3, name: 'Tools', path: '#' },
+  { id: 1, name: 'General Rules', path: '/general-rules' },
+  { id: 2, name: 'Scaling Plan', path: '/scaling-plan' },
+  { id: 3, name: 'Challenges', path: '/challenges' },
   { id: 4, name: 'Help', path: '#' },
   { id: 5, name: 'Partner Up', path: '#' },
   { id: 6, name: 'Explore', path: '#' },
