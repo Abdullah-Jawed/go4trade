@@ -43,11 +43,11 @@ const Home = () => {
 
       <section className='key-highlights'>
         <div className="container">
-          <div className="heading text-center">
 
-            <SectionHeading badge="Key Highlights" heading="Change the way you trade" />
 
-          </div>
+          <SectionHeading className="max-md:!mb-0" badge="Key Highlights" heading="Change the way you trade" />
+
+
           <HighlightBox />
         </div>
       </section>

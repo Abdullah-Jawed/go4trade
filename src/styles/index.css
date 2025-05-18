@@ -177,13 +177,13 @@ h2 {
 }
 
 .video-box::before {
-  @apply absolute top-0 left-[-10%] w-[270px] h-[493px] z-[-1];
+  @apply absolute top-0 left-[-10%] w-[19%] h-[78.5%] z-[-1];
   content: "";
   background-image: url('../assets/images/video-before.png');
 }
 
 .video-box::after {
-  @apply absolute top-0 right-[-10%] w-[270px] h-[493px] z-[-1];
+  @apply absolute top-0 right-[-10%] w-[19%] h-[78.5%] z-[-1];
   content: "";
   background-image: url('../assets/images/video-after.png');
 }
@@ -260,7 +260,7 @@ h2 {
 .m-glow-image {
   background-image: url('../assets/images/m-glow.png');
   background-position: center;
-  @apply h-[587px];
+  @apply h-[430px];
 }
 
 .steps {
