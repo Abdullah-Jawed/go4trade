@@ -127,8 +127,8 @@ const TestimonialsSec = () => {
             }, "one");
 
             master.to(mainContainer.current, {
-                scale: 2,
-                z: 350,
+                scale: 1.5,
+                z: 250,
                 transformOrigin: "center center",
                 ease: "power1.inOut",
                 opacity: 0,
@@ -136,8 +136,10 @@ const TestimonialsSec = () => {
 
             master.from(VideoSec.current, {
                 opacity: 0,
-                y: "20%",
-                scale: 0.8
+                y: "10%",
+                scale: 0.8,
+                z: -100,
+                duration: 0.2,
             });
         }, mainContainer);
 
@@ -147,7 +149,7 @@ const TestimonialsSec = () => {
 
     return (
 
-        <div className="main-div relative z-[2]" ref={mainDiv}>
+        <div className="main-div relative z-[2] perspective-[1000px]" ref={mainDiv}>
             <section className='testimonial py-[5rem] relative overflow-hidden perspective-[500px] pb-0' ref={mainContainer}>
                 <div className="container perspective-[1000px]">
 
