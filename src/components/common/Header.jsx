@@ -16,13 +16,13 @@ const Header = () => {
           <div className="logo">
             <img src={logo} alt="logo" />
           </div>
-          <div className='grow lg:block hidden'>
+          <div className='grow lg:block hidden shrink-0'>
             <ul className='all-center primary-navs'>
               {navs.map((nav) => (
                 <li key={nav.id}>
                   <Link
                     to={nav.path}
-                    className="text-white transition nav-link  px-[20px] py-[14px] rounded-[60px] hover:font-medium text-[15px]"
+                    className="text-white transition nav-link px-[15px] xl:px-[20px] py-[14px] rounded-[60px] hover:font-medium text-[13px] xl:text-[15px]"
                   >
                     {nav.name}
                   </Link>
