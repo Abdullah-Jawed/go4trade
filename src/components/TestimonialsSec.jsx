@@ -149,7 +149,7 @@ const TestimonialsSec = () => {
 
     return (
 
-        <div className="main-div relative z-[2] perspective-[1000px] flex items-center justify-center h-screen" ref={mainDiv}>
+        <div className="main-div relative z-[2] perspective-[1000px] flex items-top 2xl:items-center justify-center h-screen" ref={mainDiv}>
             <section className='testimonial py-[5rem] relative overflow-hidden perspective-[500px] pb-0' ref={mainContainer}>
                 <div className="container perspective-[1000px]">
 
