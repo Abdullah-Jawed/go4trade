@@ -3,6 +3,7 @@ import PackagesBox from './common/PackagesBox'
 import SectionHeading from './common/SectionHeading'
 import { packagesData } from '../utils/statics'
 import TickSvg from './common/TickSvg'
+import AnimatedBorder from './common/AnimatedBorder'
 
 const ChallengesSec = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -65,11 +66,13 @@ const ChallengesSec = () => {
                             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start mb-5"
                         >
                             {item.packages.map((pkg, pkgIndex) => (
-                                <PackagesBox
-                                    className={`${pkg.gradient ? 'gradient' : ''}`}
-                                    key={pkgIndex}
-                                    data={pkg}
-                                />
+                                <AnimatedBorder>
+                                    <PackagesBox
+                                        className={`${pkg.gradient ? 'gradient' : 'bg-(--base-color)'}`}
+                                        key={pkgIndex}
+                                        data={pkg}
+                                    />
+                                </AnimatedBorder>
                             ))}
                         </div>
                     ) : null

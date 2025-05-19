@@ -4,7 +4,7 @@ import { WhatsAppIcon } from '../../assets'
 const JoinBox = (props) => {
     return (
         <a href={props.link}>
-            <div className="join-box border-[#004986] border-1 rounded-[12px] p-[30px]">
+            <div className="join-box border-[#004986] base-color border-1 rounded-[12px] p-[30px]">
                 <div className="image-group w-[50%] lg:w-[30%] mx-auto mb-[30px]">
                     <img src={props.img} alt="image" className='w-full' />
                     <div className="dots">

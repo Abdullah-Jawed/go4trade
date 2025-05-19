@@ -25,7 +25,7 @@ const RulesBox = (props) => {
 
     return (
 
-        <div className="rules-box flex py-10 px-7 max-w-[1140px] flex-col md:flex-row mx-auto mb-5 w-full items-start gap-6 border-1 border-[#004986] rounded-[32px]">
+        <div className="rules-box flex py-10 px-7 max-w-[1140px] flex-col md:flex-row mx-auto w-full items-start gap-6 border-1 border-[#004986] bg-(--base-color) rounded-[32px]">
             <div className='text md:flex-2/3'>
                 <h2 className='text-[#FCFCFC] text-[42px] font-medium mb-6 leading-[100%]'>{props.heading}</h2>
                 <p ref={paraRef} style={{

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import SectionHeading from '../components/common/SectionHeading'
 import RulesBox from '../components/common/RulesBox'
 import { generalRules } from '../utils/statics';
+import AnimatedBorder from '../components/common/AnimatedBorder';
 
 const GeneralRules = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -35,9 +36,11 @@ const GeneralRules = () => {
 
                 {generalRules.map((item, index) =>
                     activeIndex === index ? (
-                        <div key={index} id={index}>
+                        <div key={index} id={index} className='max-w-[1140px] mx-auto w-full'>
                             {item.boxes.map((rules, rulesIndex) => (
-                                <RulesBox key={rulesIndex} heading={rules.heading} para={rules.para} img={rules.img} />
+                                <AnimatedBorder padding="mb-5 !rounded-[32px]">
+                                    <RulesBox key={rulesIndex} heading={rules.heading} para={rules.para} img={rules.img} />
+                                </AnimatedBorder>
                             ))}
                         </div>
                     ) : null

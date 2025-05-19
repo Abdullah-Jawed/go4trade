@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { bannerVideo, DiscordIcon, LockImg, SecurityVideo, WhatsAppIcon } from '../assets';
-import { VideoSectionVideo } from '../assets';
+import { bannerVideo } from '../assets';
 import { BubbleButton } from '../components/common';
 import { Badge } from '../components/common';
 import HighlightBox from '../components/HighlightBox';
@@ -12,18 +11,19 @@ import EarthAnim from '../components/EarthAnim';
 import CountrySlider from '../components/CountrySlider';
 import WhatsAppicon from '../components/common/WhatsAppicon';
 import CardAnim from '../components/common/CardAnim';
-import JoinBox from '../components/common/JoinBox';
 import Lighting from '../components/Lighting';
 import ChallemgesAnim from '../components/ChallemgesAnim';
 import ChallengesSec from '../components/ChallengesSec';
 import VideoSec from '../components/VideoSec';
 import TestimonialsSec from '../components/TestimonialsSec';
+import AnimatedBorder from '../components/common/AnimatedBorder';
+import JoinUsSec from '../components/JoinUsSec';
 
 const Home = () => {
   return (
     <>
       <section className='hero-banner bg-[#01111F] flex items-center'>
-        <video autoPlay muted loop playsInline src={bannerVideo} className='w-full h-[70%] md:h-full object-bottom object-cover'></video>
+        <video autoPlay muted loop playsInline src={bannerVideo} className='w-full h-[70%] md:h-full object-cover'></video>
 
         <div className="container px-[10px] text-center absolute left-0 top-1/2 transform -translate-y-1/2 right-0">
           <div className="all-center flex-wrap gap-6 mb-8">
@@ -74,44 +74,49 @@ const Home = () => {
           <CountrySlider />
 
           <div className="grid lg:grid-cols-2 my-10 gap-6">
+            <AnimatedBorder>
+              <div className='social-box w-full min-h-[290px] base-color rounded-[12px] border-[#002E55] border-1 p-[25px] flex flex-col justify-end'>
+                <h5 className='text-[#CCCCCC] text-[22px] font-medium mb-4'>We’re here for you</h5>
 
-            <div className='social-box w-full min-h-[290px] base-color rounded-[12px] border-[#002E55] border-1 p-[25px] flex flex-col justify-end'>
-              <h5 className='text-[#CCCCCC] text-[22px] font-medium mb-4'>We’re here for you</h5>
+                <div className="flex gap-x-12 gap-y-3 flex-wrap">
 
-              <div className="flex gap-x-12 gap-y-3 flex-wrap">
+                  <div className="count">
+                    <h6 className='text-[20px] font-medium text-[#CCCCCC]'>$105M+</h6>
+                    <p className='text-[14px] font-extralight text-[#CCCCCC]'>Total Rewards</p>
+                  </div>
 
-                <div className="count">
-                  <h6 className='text-[20px] font-medium text-[#CCCCCC]'>$105M+</h6>
-                  <p className='text-[14px] font-extralight text-[#CCCCCC]'>Total Rewards</p>
+                  <div className="count">
+                    <h6 className='text-[20px] font-medium text-[#CCCCCC]'>$105M+</h6>
+                    <p className='text-[14px] font-extralight text-[#CCCCCC]'>Total Rewards</p>
+                  </div>
+
+                  <div className="count">
+                    <h6 className='text-[20px] font-medium text-[#CCCCCC]'>$105M+</h6>
+                    <p className='text-[14px] font-extralight text-[#CCCCCC]'>Total Rewards</p>
+                  </div>
+
                 </div>
-
-                <div className="count">
-                  <h6 className='text-[20px] font-medium text-[#CCCCCC]'>$105M+</h6>
-                  <p className='text-[14px] font-extralight text-[#CCCCCC]'>Total Rewards</p>
-                </div>
-
-                <div className="count">
-                  <h6 className='text-[20px] font-medium text-[#CCCCCC]'>$105M+</h6>
-                  <p className='text-[14px] font-extralight text-[#CCCCCC]'>Total Rewards</p>
-                </div>
-
               </div>
-            </div>
+            </AnimatedBorder>
 
             <div className='grid md:grid-cols-2 gap-6'>
 
-              <div className='social-box min-h-[290px] base-color rounded-[12px] border-[#002E55] border-1 p-[25px] flex flex-col justify-end discord'>
-                <h6 className='text-[20px] font-medium text-[#CCCCCC]'>Connect with fellow traders</h6>
-              </div>
+              <AnimatedBorder>
+                <div className='social-box min-h-[290px] base-color rounded-[12px] border-[#002E55] border-1 p-[25px] flex flex-col justify-end discord'>
+                  <h6 className='text-[20px] font-medium text-[#CCCCCC]'>Connect with fellow traders</h6>
+                </div>
+              </AnimatedBorder>
 
-              <div className='social-box min-h-[290px] base-color rounded-[12px] border-[#002E55] border-1 p-[25px] flex flex-col justify-end whatsapp'>
-                <h6 className='text-[20px] font-medium text-[#CCCCCC] mb-2'>Instant support</h6>
-                <BubbleButton className="btn btn-primary bg-green-gradient primary-theme hidden lg:block">
-                  <WhatsAppicon />
+              <AnimatedBorder>
+                <div className='social-box min-h-[290px] base-color rounded-[12px] border-[#002E55] border-1 p-[25px] flex flex-col justify-end whatsapp'>
+                  <h6 className='text-[20px] font-medium text-[#CCCCCC] mb-2'>Instant support</h6>
+                  <BubbleButton bubbleColor='#0f6540' className="btn btn-primary bg-green-gradient primary-theme hidden lg:block hover:opacity-65">
+                    <WhatsAppicon />
 
-                  Chat Now
-                </BubbleButton>
-              </div>
+                    Chat Now
+                  </BubbleButton>
+                </div>
+              </AnimatedBorder>
 
             </div>
 
@@ -142,16 +147,7 @@ const Home = () => {
         <Lighting />
       </div>
 
-      <section className='join-us py-[4rem]'>
-        <div className="container">
-          <div className='grid md:grid-cols-2 gap-6'>
-
-            <JoinBox heading="Join us on Whatsapp Channel" para="Get insights from other users about Go4trades and our experience" img={WhatsAppIcon} link="#" />
-            <JoinBox heading="Join Discord Community" para="Get insights from other users about Go4trades and our experience" img={DiscordIcon} link="#" />
-
-          </div>
-        </div>
-      </section>
+      <JoinUsSec />
     </>
   )
 }

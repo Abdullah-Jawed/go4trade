@@ -191,7 +191,7 @@ const Lighting = (props) => {
         <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text2}>
           <h1>{ (props.text2) ? (props.text2) : "Another Text will appear here." } </h1>
         </div>
-        <img src={LightingBlur} alt="image" className="absolute top-0 left-0 w-full h-[102%]" />
+        {/* <img src={LightingBlur} alt="image" className="absolute top-0 left-0 w-full h-[102%]" /> */}
         <canvas id="" ref={canvasRef} className="w-full"></canvas>
       </section>
     </>

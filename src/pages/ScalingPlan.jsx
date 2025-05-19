@@ -1,12 +1,13 @@
 import React from 'react'
 import ChallemgesAnim from '../components/ChallemgesAnim'
 import SectionHeading from '../components/common/SectionHeading'
-import { DiscordIcon, Scaling1, Scaling2, ScalingMain, WhatsAppIcon } from '../assets'
+import { Scaling1, Scaling2, ScalingMain } from '../assets'
 import { ScalingPlanKeys } from '../utils/statics'
 import Lighting from '../components/Lighting'
-import JoinBox from '../components/common/JoinBox'
 import AccountsSec from '../components/AccountsSec'
 import ImageBox from '../components/common/ImageBox'
+import AnimatedBorder from '../components/common/AnimatedBorder'
+import JoinUsSec from '../components/JoinUsSec'
 
 const ScalingPlan = () => {
     return (
@@ -25,41 +26,56 @@ const ScalingPlan = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-                        <div className="scaling-box border-1 border-[#002E55] rounded-[12px] px-6 py-5 gradient-blue">
-                            <img src={Scaling1} className='mb-5' alt="image" />
-                            <div className="text">
-                                <h5 className='text-[#F8F8F8] text-[20px] lg:text-[32px] font-medium'>Push Your Limits, Reap the Benefits</h5>
-                                <p className='text-[#CCCCCC] text-[16px] lg:text-[20px] font-light'>With a Go4Trades account, you can claim up to 85% of your simulated profits as a reward. The reward is granted once the required conditions are met and success is achieved. It is processed bi-weekly and delivered within an average of 8 hours, so our traders can enjoy fast access to the profits they’ve earned.</p>
-                            </div>
-                        </div>
 
-                        <div className="scaling-box border-1 border-[#002E55] rounded-[12px] px-6 py-5 gradient-green">
-                            <img src={Scaling2} className='mb-5' alt="image" />
-                            <div className="text">
-                                <h5 className='text-[#F8F8F8] text-[20px] lg:text-[32px] font-medium'>Scale Your Account</h5>
-                                <p className='text-[#CCCCCC] text-[16px] lg:text-[20px] font-light'>At Go4Trades, we believe in rewarding your dedication. Meet the criteria of our Scaling Plan and get a 25% increase in your account balance, along with the chance to earn up to 95% of your rewards. Scale your account to a maximum of $2 Million and turn your hard work into bigger rewards. Take a look at the detailed breakdown below and start scaling today!</p>
+                        <AnimatedBorder>
+                            <div className="scaling-box border-1 border-[#002E55] rounded-[12px] px-6 py-5 gradient-blue">
+                                <img src={Scaling1} className='mb-5' alt="image" />
+                                <div className="text">
+                                    <h5 className='text-[#F8F8F8] text-[20px] lg:text-[32px] font-medium'>Push Your Limits, Reap the Benefits</h5>
+                                    <p className='text-[#CCCCCC] text-[16px] lg:text-[20px] font-light'>With a Go4Trades account, you can claim up to 85% of your simulated profits as a reward. The reward is granted once the required conditions are met and success is achieved. It is processed bi-weekly and delivered within an average of 8 hours, so our traders can enjoy fast access to the profits they’ve earned.</p>
+                                </div>
                             </div>
-                        </div>
+                        </AnimatedBorder>
+
+
+                        <AnimatedBorder>
+                            <div className="scaling-box border-1 border-[#002E55] h-full rounded-[12px] px-6 py-5 gradient-green">
+                                <img src={Scaling2} className='mb-5' alt="image" />
+                                <div className="text">
+                                    <h5 className='text-[#F8F8F8] text-[20px] lg:text-[32px] font-medium'>Scale Your Account</h5>
+                                    <p className='text-[#CCCCCC] text-[16px] lg:text-[20px] font-light'>At Go4Trades, we believe in rewarding your dedication. Meet the criteria of our Scaling Plan and get a 25% increase in your account balance, along with the chance to earn up to 95% of your rewards. Scale your account to a maximum of $2 Million and turn your hard work into bigger rewards. Take a look at the detailed breakdown below and start scaling today!</p>
+                                </div>
+                            </div>
+                        </AnimatedBorder>
+
                     </div>
 
                     <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_2fr_1fr]">
-                        <div className='border-1 border-[#004986] rounded-[12px] p-4 gradient-blue-dark text-center self-end'>
-                            <h6 className='text-[#F8F8F8] text-[20px] xl:text-[27px] font-medium mb-6'>What You’ll Get</h6>
-                            <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Upgrade your reward to <strong>95%</strong></p>
-                            <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Scale your account up to <strong>$2M</strong></p>
-                            <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Keep growing as you meet the criteria</p>
-                            <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Fast access to payouts</p>
-                        </div>
+
+                        <AnimatedBorder padding="self-end">
+                            <div className='border-1 border-[#004986] rounded-[12px] p-4 gradient-blue-dark text-center'>
+                                <h6 className='text-[#F8F8F8] text-[20px] xl:text-[27px] font-medium mb-6'>What You’ll Get</h6>
+                                <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Upgrade your reward to <strong>95%</strong></p>
+                                <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Scale your account up to <strong>$2M</strong></p>
+                                <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Keep growing as you meet the criteria</p>
+                                <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Fast access to payouts</p>
+                            </div>
+                        </AnimatedBorder>
+
                         <div className='col-span-1'>
                             <img src={ScalingMain} className='mx-auto w-1/2 lg:w-auto' alt="image" />
                         </div>
-                        <div className='border-1 border-[#004986] rounded-[12px] p-4 gradient-blue-dark text-center self-start'>
-                            <h6 className='text-[#F8F8F8] text-[20px] xl:text-[27px] font-medium mb-6'>What You’ll Need</h6>
-                            <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Complete a minimum of a 4-month trading cycle</p>
-                            <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Achieve at least <strong> 10%</strong> of the total net simulated profit</p>
-                            <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Successfully process a minimum of 2 rewards</p>
-                            <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Maintain a positive account balance at scale-up</p>
-                        </div>
+
+                        <AnimatedBorder padding="self-start">
+                            <div className='border-1 border-[#004986] rounded-[12px] p-4 gradient-blue-dark text-center'>
+                                <h6 className='text-[#F8F8F8] text-[20px] xl:text-[27px] font-medium mb-6'>What You’ll Need</h6>
+                                <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Complete a minimum of a 4-month trading cycle</p>
+                                <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Achieve at least <strong> 10%</strong> of the total net simulated profit</p>
+                                <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Successfully process a minimum of 2 rewards</p>
+                                <p className='text-[#F8F8F8] text-[17px] xl:text-[20px] font-extralight mb-4'>Maintain a positive account balance at scale-up</p>
+                            </div>
+                        </AnimatedBorder>
+
                     </div>
                 </div>
             </section>
@@ -77,22 +93,13 @@ const ScalingPlan = () => {
                 </div>
             </section>
 
-           <AccountsSec />
+            <AccountsSec />
 
             <div className='overflow-hidden'>
                 <Lighting text1="Your journey starts with one dive!" text2="Another Text will appear here." />
             </div>
 
-            <section className='join-us py-[4rem]'>
-                <div className="container">
-                    <div className='grid md:grid-cols-2 gap-6'>
-
-                        <JoinBox heading="Join us on Whatsapp Channel" para="Get insights from other users about Go4trades and our experience" img={WhatsAppIcon} link="#" />
-                        <JoinBox heading="Join Discord Community" para="Get insights from other users about Go4trades and our experience" img={DiscordIcon} link="#" />
-
-                    </div>
-                </div>
-            </section>
+            <JoinUsSec />
         </>
     )
 }
