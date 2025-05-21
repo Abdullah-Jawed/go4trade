@@ -47,7 +47,7 @@ const TestimonialsSec = () => {
                     pin: mainDiv.current,
                     pinSpacing: true,
                     onEnter: () => {
-                        gsap.to(textBox.current, { opacity: 1, y: "0%", duration: 0.5, })
+                        gsap.to(textBox.current, { opacity: 1, y: "-50%", duration: 0.5, })
                         gsap.to([box1.current,
                         box2.current,
                         box3.current,
@@ -68,7 +68,7 @@ const TestimonialsSec = () => {
                         box4.current], { opacity: 0, duration: 0.5 })
                     },
                     onEnterBack: () => {
-                        gsap.to(textBox.current, { opacity: 1, y: "0%", duration: 0.5, })
+                        gsap.to(textBox.current, { opacity: 1, y: "-50%", duration: 0.5, })
                         gsap.to([box1.current,
                         box2.current,
                         box3.current,
@@ -291,7 +291,7 @@ const TestimonialsSec = () => {
 
                     </div>
 
-                    <div className="text text-center absolute top-[60%] left-1/2 -translate-1/2 w-full" ref={textBox}>
+                    <div className="text text-center absolute top-[90%] left-1/2 -translate-1/2 w-full" ref={textBox}>
                         <SectionHeading badge="Wall of love" heading="What Traders Are Saying" para="Simplicity is easy when you just skip tons of mission-critical features." className="!mb-5" />
                         <BubbleButton Tag='a' href='#' className='my-btn text-white font-medium bg-blue-gradient hover:opacity-60 transition inline-block'>Review us on Trust index</BubbleButton>
                     </div>
