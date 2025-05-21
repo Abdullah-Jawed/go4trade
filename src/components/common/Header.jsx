@@ -14,7 +14,9 @@ const Header = () => {
       <div className="container">
         <div className="all-between">
           <div className="logo">
-            <img src={logo} alt="logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
           <div className='grow lg:block hidden shrink-0'>
             <ul className='all-center primary-navs'>

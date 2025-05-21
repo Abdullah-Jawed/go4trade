@@ -136,30 +136,29 @@ const Lighting = (props) => {
             }
           },
           onEnter: () => {
-                gsap.to(section, {
-                  opacity: 1,
-                  duration: 0.4,
-                });
-              },
-              onEnterBack: () => {
-                gsap.to(section, {
-                  opacity: 1,
-                  duration: 0.4,
-                });
-              },
-              onLeave: () => {
-                gsap.to(section, {
-                  opacity: 0,
-                  duration: 0.4,
-                  pinSpacing: false,
-                });
-              },
-              onLeaveBack: () => {
-                gsap.to(section, {
-                  opacity: 0,
-                  duration: 0.4,
-                });
-              }
+            gsap.to(section, {
+              opacity: 1,
+              duration: 0.4,
+            });
+          },
+          onEnterBack: () => {
+            gsap.to(section, {
+              opacity: 1,
+              duration: 0.4,
+            });
+          },
+          onLeave: () => {
+            gsap.to(section, {
+              opacity: 0,
+              duration: 0.4,
+            });
+          },
+          onLeaveBack: () => {
+            gsap.to(section, {
+              opacity: 0,
+              duration: 0.4,
+            });
+          }
         },
         onUpdate: render
       })
@@ -186,10 +185,10 @@ const Lighting = (props) => {
       </div>
       <section ref={sectionRef} className="overflow-hidden h-screen w-full relative bg-[#01111F]">
         <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text1}>
-          <h1>{ (props.text1) ? (props.text1) : "Looking for a sign?"}</h1>
+          <h1>{(props.text1) ? (props.text1) : "Looking for a sign?"}</h1>
         </div>
         <div className="text text-center px-10 absolute top-1/2 left-1/2 -translate-1/2" ref={text2}>
-          <h1>{ (props.text2) ? (props.text2) : "Another Text will appear here." } </h1>
+          <h1>{(props.text2) ? (props.text2) : "Another Text will appear here."} </h1>
         </div>
         {/* <img src={LightingBlur} alt="image" className="absolute top-0 left-0 w-full h-[102%]" /> */}
         <canvas id="" ref={canvasRef} className="w-full"></canvas>

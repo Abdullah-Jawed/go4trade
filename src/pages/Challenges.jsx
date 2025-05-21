@@ -9,16 +9,6 @@ import ImageBox from '../components/common/ImageBox';
 import AnimatedBorder from '../components/common/AnimatedBorder';
 
 const Challenges = () => {
-    useEffect(() => {
-        const months = ["January", "March", "February", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        months.sort((a, b) => {
-            return Date.parse(`1 ${a} 2000`) - Date.parse(`1 ${b} 2000`);
-        });
-
-        console.log(months);
-    }, []);
-
     return (
         <>
             <section className='top pt-[20vw] md:pt-[14vw]'>
