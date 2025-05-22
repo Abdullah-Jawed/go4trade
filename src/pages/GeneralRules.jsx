@@ -38,8 +38,8 @@ const GeneralRules = () => {
                     activeIndex === index ? (
                         <div key={index} id={index} className='max-w-[1140px] mx-auto w-full'>
                             {item.boxes.map((rules, rulesIndex) => (
-                                <AnimatedBorder padding="mb-5 !rounded-[32px]">
-                                    <RulesBox key={rulesIndex} heading={rules.heading} para={rules.para} img={rules.img} />
+                                <AnimatedBorder key={rulesIndex} padding="mb-5 !rounded-[32px]">
+                                    <RulesBox heading={rules.heading} para={rules.para} img={rules.img} />
                                 </AnimatedBorder>
                             ))}
                         </div>

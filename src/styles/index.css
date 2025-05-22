@@ -618,6 +618,10 @@ table tbody tr td {
   animation: circle 5s linear infinite;
 }
 
+/* .magnet-image{
+  transition: transform .3s ease-in-out;
+} */
+
 @keyframes pulseBlur {
   50% {
     filter: blur(37px);
