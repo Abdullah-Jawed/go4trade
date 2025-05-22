@@ -136,16 +136,10 @@ const Home = () => {
         </div>
       </section>
 
-      <div className='overflow-hidden w-full'>
-        <TestimonialsSec />
-
-      </div>
+      <TestimonialsSec />
 
 
-
-      <div className='overflow-hidden'>
-        <Lighting />
-      </div>
+      <Lighting />
 
       <JoinUsSec />
     </>
