@@ -74,12 +74,12 @@ const Drawsvg = () => {
                     ease: "none"
                 }, 0.20);
 
-                master.to(box1.current, {
-                    y: "20%",
-                    duration: 0.09,
-                    opacity: 0,
-                    ease: "none",
-                }, 0.20);
+                // master.to(box1.current, {
+                //     y: "20%",
+                //     duration: 0.09,
+                //     opacity: 0,
+                //     ease: "none",
+                // }, 0.20);
 
                 master.to(box3.current, {
                     y: "-20%",
@@ -88,12 +88,12 @@ const Drawsvg = () => {
                     ease: "none"
                 }, 0.7);
 
-                master.to(box2.current, {
-                    y: "20%",
-                    duration: 0.09,
-                    opacity: 0,
-                    ease: "none"
-                }, 0.7);
+                // master.to(box2.current, {
+                //     y: "20%",
+                //     duration: 0.09,
+                //     opacity: 0,
+                //     ease: "none"
+                // }, 0.7);
             }
 
             const handleResize = () => {
