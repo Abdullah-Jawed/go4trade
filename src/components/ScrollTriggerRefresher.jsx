@@ -5,6 +5,8 @@ export default function ScrollTriggerRefresher() {
   useEffect(() => {
     const handleRefresh = () => {
       ScrollTrigger.refresh();
+      console.log("refreshed");
+      
     };
 
     // Run after all images, fonts, etc. are fully loaded
