@@ -113,6 +113,7 @@ const Lighting = (props) => {
           start: "top top",
           end: "+=1500",
           scrub: 2,
+          markers: true,
           onUpdate: (self) => {
             if (self.progress.toFixed(1) == '0.5' && self.direction == 1) {
               gsap.to(text1.current, {
