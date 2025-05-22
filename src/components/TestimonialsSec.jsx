@@ -44,7 +44,6 @@ const TestimonialsSec = () => {
                     trigger: mainDiv.current,
                     start: "top top",
                     end: "+=6000",
-                    markers: true,
                     scrub: 2,
                     pin: pinContainer.current,
                     onEnter: () => {
