@@ -141,6 +141,20 @@ const TestimonialsSec = () => {
                 z: -100,
                 duration: 0.2,
             });
+
+            const handleResize = () => {
+                ScrollTrigger.refresh();
+            };
+
+            setTimeout(() => {
+                ScrollTrigger.refresh();
+                requestAnimationFrame(() => ScrollTrigger.refresh());
+            }, 100);
+
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
+
         }, mainContainer);
 
         return () => ctx.revert();

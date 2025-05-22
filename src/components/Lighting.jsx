@@ -169,6 +169,19 @@ const Lighting = (props) => {
         ease: "none",
       });
 
+      const handleResize = () => {
+        ScrollTrigger.refresh();
+      };
+
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+        requestAnimationFrame(() => ScrollTrigger.refresh());
+      }, 100);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+
     });
 
     return () => {
