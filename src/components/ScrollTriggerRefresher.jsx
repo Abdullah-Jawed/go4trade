@@ -7,15 +7,24 @@ export default function ScrollTriggerRefresher() {
     const location = useLocation();
 
     useEffect(() => {
-        // Delay the refresh slightly to let the DOM fully render
-        const timeout = setTimeout(() => {
+        const handleRefresh = () => {
             ScrollTrigger.refresh();
             console.log("refreshed");
 
-        }, 300); // You can adjust this delay as needed
+        };
 
-        return () => clearTimeout(timeout);
-    }, [location.pathname]); // Run on every route change
+        if (document.readyState === "complete") {
+            const timeout = setTimeout(() => {
+                handleRefresh();
+            }, 500);
+        } else {
+            window.addEventListener("load", handleRefresh);
+        }
+
+        return () => {
+            window.removeEventListener("load", handleRefresh);
+        };
+    }, [location.pathname]);
 
     return null;
 }
