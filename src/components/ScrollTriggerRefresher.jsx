@@ -16,9 +16,6 @@ export default function ScrollTriggerRefresher() {
             const images = Array.from(document.images);
             const unloaded = images.filter(img => !img.complete);
 
-            console.log(unloaded);
-            
-
             if (unloaded.length === 0) {
                 // All images already loaded
                 setTimeout(refreshScrollTrigger, 300); // give layout time to settle
