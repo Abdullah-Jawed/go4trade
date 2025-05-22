@@ -20,7 +20,6 @@ const GameBox = () => {
 
             const paths = Box.current.querySelectorAll('path');
 
-            console.log(paths);
             const master = gsap.timeline({ paused: true })
 
             ScrollTrigger.create({
@@ -32,8 +31,6 @@ const GameBox = () => {
 
             paths.forEach((path, pathIndex) => {
                 var timing = (pathIndex !== 2 && pathIndex !== 5) ? "one" : 0.5;
-
-                console.log(timing);
 
                 master.from(path, {
                     drawSVG: "0%",

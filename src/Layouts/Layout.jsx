@@ -4,7 +4,7 @@ import ScrollTriggerRefresher from '../components/ScrollTriggerRefresher'
 const Layout = ({ children }) => {
   return (
     <div>
-      <ScrollTriggerRefresher />
+      
       <Header />
       {children}
       <Footer />

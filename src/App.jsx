@@ -4,10 +4,12 @@ import Layout from './Layouts/Layout'
 import { Challenges, GeneralRules, Home, PricavyPolicy, ScalingPlan, TermsCondition } from './pages';
 import { About } from './pages';
 import SmoothLayout from './components/ScrollSmoother';
+import ScrollTriggerRefresher from './components/ScrollTriggerRefresher';
 function App() {
   return (
     <SmoothLayout >
       <Layout>
+        <ScrollTriggerRefresher />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

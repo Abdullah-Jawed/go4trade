@@ -1,25 +1,21 @@
+// ScrollTriggerRefresher.jsx
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function ScrollTriggerRefresher() {
+  const location = useLocation();
+
   useEffect(() => {
-    const handleRefresh = () => {
+    // Delay the refresh slightly to let the DOM fully render
+    const timeout = setTimeout(() => {
       ScrollTrigger.refresh();
       console.log("refreshed");
       
-    };
+    }, 100); // You can adjust this delay as needed
 
-    // Run after all images, fonts, etc. are fully loaded
-    if (document.readyState === "complete") {
-      handleRefresh();
-    } else {
-      window.addEventListener("load", handleRefresh);
-    }
+    return () => clearTimeout(timeout);
+  }, [location.pathname]); // Run on every route change
 
-    return () => {
-      window.removeEventListener("load", handleRefresh);
-    };
-  }, []);
-
-  return null; // This component doesn't render anything
+  return null;
 }
