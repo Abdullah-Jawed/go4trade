@@ -16,7 +16,7 @@ export default function ScrollTriggerRefresher() {
         if (document.readyState === "complete") {
             const timeout = setTimeout(() => {
                 handleRefresh();
-            }, 500);
+            }, 700);
         } else {
             window.addEventListener("load", handleRefresh);
         }
