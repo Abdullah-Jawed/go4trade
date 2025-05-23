@@ -3,9 +3,6 @@ import { useEffect } from 'react';
 
 export default function MagneticEffect(power) {
 
-
-    console.log(power);
-
     const handleMouseMove = (e) => {
 
         const box = e.currentTarget;
