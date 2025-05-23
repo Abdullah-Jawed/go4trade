@@ -593,41 +593,89 @@ export const ScalingPlanKeys = [
 
 export const ChallengeTable = [
   {
-    main: "Profit Target in %",
-    data: ["10", "10", "10", "10", "10", "10"]
+    ButtonName: "2-step",
+    TableHeadContent: [ "$8,000", "$8,000", "$8,000", "$8,000", "$8,000", "$8,000" ],
+    TableContent: [
+      {
+        main: "Profit Target in %",
+        data: ["10", "10", "10", "10", "10", "10"]
+      },
+      {
+        main: "Leverage",
+        data: ["30", "30", "30", "30", "30", "30"]
+      },
+      {
+        main: "Max Drawdown in %",
+        data: ["8", "8", "8", "8", "8", "8"]
+      },
+      {
+        main: "Daily Drawdown in %",
+        data: ["4", "4", "4", "4", "4", "4"]
+      },
+      {
+        main: "Profit share from chall. phase",
+        data: ["40%", "40%", "40%", "40%", "40%", "40%"]
+      },
+      {
+        main: "Reset discount",
+        data: ["YES", "YES", "YES", "YES", "YES", "YES"]
+      },
+      {
+        main: "Payouts",
+        data: ["weekly", "weekly", "weekly", "weekly", "weekly", "weekly"]
+      },
+      {
+        main: "Profit Split up to",
+        data: ["85%", "85%", "85%", "85%", "85%", "85%"]
+      },
+      {
+        main: "Refund",
+        data: ["70%", "70%", "70%", "70%", "70%", "70%"]
+      },
+    ]
   },
   {
-    main: "Leverage",
-    data: ["30", "30", "30", "30", "30", "30"]
-  },
-  {
-    main: "Max Drawdown in %",
-    data: ["8", "8", "8", "8", "8", "8"]
-  },
-  {
-    main: "Daily Drawdown in %",
-    data: ["4", "4", "4", "4", "4", "4"]
-  },
-  {
-    main: "Profit share from chall. phase",
-    data: ["40%", "40%", "40%", "40%", "40%", "40%"]
-  },
-  {
-    main: "Reset discount",
-    data: ["YES", "YES", "YES", "YES", "YES", "YES"]
-  },
-  {
-    main: "Payouts",
-    data: ["weekly", "weekly", "weekly", "weekly", "weekly", "weekly"]
-  },
-  {
-    main: "Profit Split up to",
-    data: ["85%", "85%", "85%", "85%", "85%", "85%"]
-  },
-  {
-    main: "Refund",
-    data: ["70%", "70%", "70%", "70%", "70%", "70%"]
-  },
+    ButtonName: "1-step",
+    TableHeadContent: [ "$9,000", "$9,000", "$9,000", "$9,000", "$9,000", "$9,000" ],
+    TableContent: [
+      {
+        main: "Profit Target in %",
+        data: ["20", "20", "20", "20", "20", "20"]
+      },
+      {
+        main: "Leverage",
+        data: ["30", "30", "30", "30", "30", "30"]
+      },
+      {
+        main: "Max Drawdown in %",
+        data: ["8", "8", "8", "8", "8", "8"]
+      },
+      {
+        main: "Daily Drawdown in %",
+        data: ["4", "4", "4", "4", "4", "4"]
+      },
+      {
+        main: "Profit share from chall. phase",
+        data: ["40%", "40%", "40%", "40%", "40%", "40%"]
+      },
+      {
+        main: "Reset discount",
+        data: ["YES", "YES", "YES", "YES", "YES", "YES"]
+      },
+      {
+        main: "Payouts",
+        data: ["weekly", "weekly", "weekly", "weekly", "weekly", "weekly"]
+      },
+      {
+        main: "Profit Split up to",
+        data: ["85%", "85%", "85%", "85%", "85%", "85%"]
+      },
+      {
+        main: "Refund",
+        data: ["70%", "70%", "70%", "70%", "70%", "70%"]
+      },
+    ]
+  }
 ]
 
 export const CanvasImages = `

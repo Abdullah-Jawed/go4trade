@@ -8,13 +8,14 @@ import Infosvg from '../components/common/Infosvg';
 import ImageBox from '../components/common/ImageBox';
 import AnimatedBorder from '../components/common/AnimatedBorder';
 import MagneticEffect from '../components/common/MagneticEffect';
+import ChallengesTable from '../components/ChallengesTable';
 
 const Challenges = () => {
 
     useEffect(() => {
 
         MagneticEffect(0.1);
-        
+
     }, []);
 
     return (
@@ -78,68 +79,7 @@ const Challenges = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-center gap-3.5 items-center mb-8">
-                        <p className='text-[#FFFFFF] text-[16px] font-extralight'>Select Preference</p>
-                        <div className="form-group flex items-center gap-2 custom-radio">
-                            <input type="radio" name="step" id="2-step" value="2-step" />
-                            <label htmlFor="2-step" className='text-[#FFFFFF] text-[18px] font-extralight cursor-pointer'>2-step</label>
-                        </div>
-                        <div className="form-group flex items-center gap-2 custom-radio">
-                            <input type="radio" name="step" id="1-step" value="1-step" />
-                            <label htmlFor="1-step" className='text-[#FFFFFF] text-[18px] font-extralight cursor-pointer'>1-step</label>
-                        </div>
-                    </div>
-
-                    <div className="table-parent p-[2px] rounded-[12px] overflow-x-auto overflow-y-visible relative mb-10">
-                        <table class="table w-full border bg-(--base-color) rounded-[12px] overflow-hidden min-w-[1140px]">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">
-                                        <h4>$8,000</h4>
-                                        <a href="#" className='table-btn'>Buy Challenge</a>
-                                    </th>
-                                    <th scope="col">
-                                        <h4>$8,000</h4>
-                                        <a href="#" className='table-btn'>Buy Challenge</a>
-                                    </th>
-                                    <th scope="col">
-                                        <h4>$8,000</h4>
-                                        <a href="#" className='table-btn'>Buy Challenge</a>
-                                    </th>
-                                    <th scope="col">
-                                        <h4>$8,000</h4>
-                                        <a href="#" className='table-btn'>Buy Challenge</a>
-                                    </th>
-                                    <th scope="col">
-                                        <h4>$8,000</h4>
-                                        <a href="#" className='table-btn'>Buy Challenge</a>
-                                    </th>
-                                    <th scope="col">
-                                        <h4>$8,000</h4>
-                                        <a href="#" className='table-btn'>Buy Challenge</a>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {ChallengeTable.map((item, index) => (
-                                    <tr key={index}>
-                                        <th scope="row">{item.main} <Infosvg /></th>
-                                        {item.data.map((dataItem, dataIndex) => (
-                                            <td key={dataIndex}>{dataItem}</td>
-                                        ))}
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <p className='text-[#FCFCFC] text-[17px] md:text-[22px] font-extralight mb-6'>Each challenge tests your ability to manage risk, stay disciplined, and hit realistic targets. </p>
-                    <ul className='flex items-center flex-wrap gap-x-10 gap-y-5 p-0'>
-                        <li>No real money risk </li>
-                        <li>Affordable entry</li>
-                        <li>Instant feedback</li>
-                    </ul>
+                    <ChallengesTable />
                 </div>
             </section>
 

@@ -9,7 +9,6 @@ export default function ScrollTriggerRefresher() {
     useEffect(() => {
         const refreshScrollTrigger = () => {
             ScrollTrigger.refresh();
-            console.log("ScrollTrigger refreshed on route change.");
         };
 
         const waitForImagesToLoad = () => {
