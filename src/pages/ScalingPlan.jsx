@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ChallemgesAnim from '../components/ChallemgesAnim'
 import SectionHeading from '../components/common/SectionHeading'
 import { Scaling1, Scaling2, ScalingMain } from '../assets'
@@ -8,8 +8,15 @@ import AccountsSec from '../components/AccountsSec'
 import ImageBox from '../components/common/ImageBox'
 import AnimatedBorder from '../components/common/AnimatedBorder'
 import JoinUsSec from '../components/JoinUsSec'
+import MagneticEffect from '../components/common/MagneticEffect'
 
 const ScalingPlan = () => {
+    useEffect(() => {
+
+        MagneticEffect(0.1);
+
+    }, [])
+
     return (
         <>
             <section className='top pt-[12rem] text-center mb-[-26%] relative z-[2]'>
@@ -29,7 +36,9 @@ const ScalingPlan = () => {
 
                         <AnimatedBorder>
                             <div className="scaling-box border-1 border-[#002E55] rounded-[12px] px-6 py-5 gradient-blue">
-                                <img src={Scaling1} className='mb-5' alt="image" />
+                                <div className="magnet-box">
+                                    <img src={Scaling1} className='mb-5 magnet-element' alt="image" />
+                                </div>
                                 <div className="text">
                                     <h5 className='text-[#F8F8F8] text-[20px] lg:text-[32px] font-medium'>Push Your Limits, Reap the Benefits</h5>
                                     <p className='text-[#CCCCCC] text-[16px] lg:text-[20px] font-light'>With a Go4Trades account, you can claim up to 85% of your simulated profits as a reward. The reward is granted once the required conditions are met and success is achieved. It is processed bi-weekly and delivered within an average of 8 hours, so our traders can enjoy fast access to the profits they’ve earned.</p>
@@ -40,7 +49,9 @@ const ScalingPlan = () => {
 
                         <AnimatedBorder>
                             <div className="scaling-box border-1 border-[#002E55] h-full rounded-[12px] px-6 py-5 gradient-green">
-                                <img src={Scaling2} className='mb-5' alt="image" />
+                                <div className='magnet-box'>
+                                    <img src={Scaling2} className='mb-5 magnet-element' alt="image" />
+                                </div>
                                 <div className="text">
                                     <h5 className='text-[#F8F8F8] text-[20px] lg:text-[32px] font-medium'>Scale Your Account</h5>
                                     <p className='text-[#CCCCCC] text-[16px] lg:text-[20px] font-light'>At Go4Trades, we believe in rewarding your dedication. Meet the criteria of our Scaling Plan and get a 25% increase in your account balance, along with the chance to earn up to 95% of your rewards. Scale your account to a maximum of $2 Million and turn your hard work into bigger rewards. Take a look at the detailed breakdown below and start scaling today!</p>

@@ -375,6 +375,10 @@ h2 {
   content: "";
 }
 
+.key-box .image-group .dots span{
+  @apply w-[3px] h-[3px];
+}
+
 .join-box .image-group .dots span:nth-child(2) {
   @apply bottom-0 top-[unset];
 }
@@ -618,9 +622,6 @@ table tbody tr td {
   animation: circle 5s linear infinite;
 }
 
-/* .magnet-image{
-  transition: transform .3s ease-in-out;
-} */
 
 @keyframes pulseBlur {
   50% {

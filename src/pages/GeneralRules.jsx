@@ -14,11 +14,14 @@ const GeneralRules = () => {
     const container = useRef(null);
 
     useEffect(() => {
+
+        MagneticEffect(0.2);
         var clickedBtn = container.current.querySelector(`#button-${activeIndex}`);
         if (clickedBtn && span.current) {
             span.current.style.left = `${clickedBtn.offsetLeft}px`;
             span.current.style.width = `${clickedBtn.offsetWidth}px`;
         }
+
     }, [activeIndex])
 
     return (

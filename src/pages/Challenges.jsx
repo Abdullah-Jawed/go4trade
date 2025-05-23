@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { ChallengesPageVid, Fund1, Fund2, Fund3, Fund4 } from '../assets'
+import { ChallengesPageVid, Fund1, Fund2, Fund3, Fund4, Key5 } from '../assets'
 import SectionHeading from '../components/common/SectionHeading'
 import GameBox from '../components/GameBox';
 import TickSvg from '../components/common/TickSvg';
@@ -10,7 +10,13 @@ import AnimatedBorder from '../components/common/AnimatedBorder';
 import MagneticEffect from '../components/common/MagneticEffect';
 
 const Challenges = () => {
-    MagneticEffect(0.1);
+
+    useEffect(() => {
+
+        MagneticEffect(0.1);
+        
+    }, []);
+
     return (
         <>
             <section className='top pt-[20vw] md:pt-[14vw]'>
@@ -149,10 +155,10 @@ const Challenges = () => {
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-                                    <ImageBox img={Fund3} heading="You trade. 
+                                    <ImageBox img={Key5} heading="You trade. 
                                         We take the risk" />
 
-                                    <ImageBox img={Fund3} heading="You keep up to 90% of the profits " />
+                                    <ImageBox img={Key5} heading="You keep up to 90% of the profits " />
 
                                 </div>
 
@@ -174,10 +180,10 @@ const Challenges = () => {
 
                                 <div className="grid grid-cols-1 gap-6">
 
-                                    <ImageBox className="flex items-center gap-5" img={Fund4} headingClass="!font-extralight" heading="Up to 90% profit split " />
+                                    <ImageBox className="flex items-center gap-5" img={Key5} headingClass="!font-extralight" heading="Up to 90% profit split " />
 
-                                    <ImageBox className="flex items-center gap-5" img={Fund4} headingClass="!font-extralight" heading="Fast withdrawals " />
-                                    <ImageBox className="flex items-center gap-5" img={Fund4} headingClass="!font-extralight" heading="Performance-based scaling " />
+                                    <ImageBox className="flex items-center gap-5" img={Key5} headingClass="!font-extralight" heading="Fast withdrawals " />
+                                    <ImageBox className="flex items-center gap-5" img={Key5} headingClass="!font-extralight" heading="Performance-based scaling " />
 
                                 </div>
 
