@@ -83,7 +83,7 @@ body {
 /* .backdrop-blur-12 {
   @apply backdrop-blur-12;
 } */
-.primary-navs .nav-link:hover {
+.primary-navs .nav-link:hover, .primary-navs .nav-link.active {
   background-color: var(--primary-theme);
 }
 

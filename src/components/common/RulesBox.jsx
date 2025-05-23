@@ -23,8 +23,8 @@ const RulesBox = (props) => {
             const bounds = box.getBoundingClientRect();
             const move = e.clientX - bounds.left - bounds.width / 2;
             const moveY = e.clientY - bounds.top - bounds.width / 2;
-
-
+        
+    
             gsap.to(img, {
                 x: move * 0.2, // Adjust the multiplier for effect strength
                 y: moveY * 0.2,

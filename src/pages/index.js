@@ -5,6 +5,7 @@ import {default as ScalingPlan} from './ScalingPlan';
 import {default as Challenges} from './Challenges';
 import {default as PricavyPolicy} from './PrivacyPolicy';
 import {default as TermsCondition} from './TermsCondition';
+import {default as NotFound} from './NotFount';
 
 export {
   Home,
@@ -13,5 +14,6 @@ export {
   ScalingPlan,
   Challenges,
   PricavyPolicy,
-  TermsCondition
+  TermsCondition,
+  NotFound
 }

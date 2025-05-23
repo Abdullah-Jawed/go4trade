@@ -14,9 +14,9 @@ export const navs = [
   { id: 1, name: 'General Rules', path: '/general-rules' },
   { id: 2, name: 'Scaling Plan', path: '/scaling-plan' },
   { id: 3, name: 'Challenges', path: '/challenges' },
-  { id: 4, name: 'Help', path: '#' },
-  { id: 5, name: 'Partner Up', path: '#' },
-  { id: 6, name: 'Explore', path: '#' },
+  { id: 4, name: 'Help', path: '/help' },
+  { id: 5, name: 'Partner Up', path: '/partner' },
+  { id: 6, name: 'Explore', path: '/explore' },
 ]
 
 export const countrySlider = [

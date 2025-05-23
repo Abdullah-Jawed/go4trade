@@ -1,7 +1,7 @@
 import { useState, React } from 'react'
 import { navs } from '../../utils/statics';
 import { logo } from '../../assets'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { BubbleButton, Button } from './';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,12 +22,12 @@ const Header = () => {
             <ul className='all-center primary-navs'>
               {navs.map((nav) => (
                 <li key={nav.id}>
-                  <Link
+                  <NavLink
                     to={nav.path}
-                    className="text-white transition nav-link px-[15px] xl:px-[20px] py-[14px] rounded-[60px] hover:font-medium text-[13px] xl:text-[15px]"
+                    className={ ({ isActive }) => `text-white transition nav-link px-[15px] xl:px-[20px] py-[14px] rounded-[60px] hover:font-medium text-[13px] xl:text-[15px] ${ (isActive) ? 'active' : null }`}
                   >
                     {nav.name}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>

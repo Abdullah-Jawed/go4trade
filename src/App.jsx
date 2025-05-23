@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 // import './styles/index.css'
 import Layout from './Layouts/Layout'
-import { Challenges, GeneralRules, Home, PricavyPolicy, ScalingPlan, TermsCondition } from './pages';
+import { Challenges, GeneralRules, Home, NotFound, PricavyPolicy, ScalingPlan, TermsCondition } from './pages';
 import { About } from './pages';
 import SmoothLayout from './components/ScrollSmoother';
 import ScrollTriggerRefresher from './components/ScrollTriggerRefresher';
@@ -18,6 +18,7 @@ function App() {
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/privacy-policy" element={<PricavyPolicy />} />
           <Route path="/terms-condition" element={<TermsCondition />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </SmoothLayout>
