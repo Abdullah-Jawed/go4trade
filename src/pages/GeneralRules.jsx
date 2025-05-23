@@ -3,8 +3,12 @@ import SectionHeading from '../components/common/SectionHeading'
 import RulesBox from '../components/common/RulesBox'
 import { generalRules } from '../utils/statics';
 import AnimatedBorder from '../components/common/AnimatedBorder';
+import MagneticEffect from '../components/common/MagneticEffect';
 
 const GeneralRules = () => {
+    
+    MagneticEffect(0.2);
+
     const [activeIndex, setActiveIndex] = useState(0);
     const span = useRef(null);
     const container = useRef(null);

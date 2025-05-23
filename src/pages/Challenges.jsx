@@ -7,8 +7,10 @@ import { ChallengeTable } from '../utils/statics';
 import Infosvg from '../components/common/Infosvg';
 import ImageBox from '../components/common/ImageBox';
 import AnimatedBorder from '../components/common/AnimatedBorder';
+import MagneticEffect from '../components/common/MagneticEffect';
 
 const Challenges = () => {
+    MagneticEffect(0.1);
     return (
         <>
             <section className='top pt-[20vw] md:pt-[14vw]'>
@@ -157,8 +159,8 @@ const Challenges = () => {
                                 <p className='text-[#CCCCCC] text-[18px] font-extralight'>It’s the smarter, safer way to start your trading career. </p>
 
                             </div>
-                            <div className='image'>
-                                <img src={Fund1} alt="image" className='mx-auto w-2/3 lg:w-auto' />
+                            <div className='image magnet-box'>
+                                <img src={Fund1} alt="image" className='mx-auto w-2/3 lg:w-auto magnet-element' />
                             </div>
                         </div>
                     </AnimatedBorder>
@@ -182,8 +184,8 @@ const Challenges = () => {
                                 <p className='text-[#CCCCCC] text-[18px] font-extralight capitalize'>the more you grow, the more we fund. It’s that simple. </p>
 
                             </div>
-                            <div className='image'>
-                                <img src={Fund2} alt="image" className='mx-auto w-2/3 lg:w-auto' />
+                            <div className='image magnet-box'>
+                                <img src={Fund2} alt="image" className='mx-auto w-2/3 lg:w-auto magnet-element' />
                             </div>
                         </div>
                     </AnimatedBorder>
