@@ -164,9 +164,9 @@ const TestimonialsSec = () => {
     return (
 
         <div className="main-div" ref={mainDiv}>
-            <div className="pincontainer relative z-[2] perspective-[1000px] flex max-2xl:items-top items-center justify-center h-screen" ref={pinContainer}>
+            <div className="pincontainer relative z-[2] perspective-[1000px] max-2xl:items-top h-screen" ref={pinContainer}>
                 <section className='testimonial py-[5rem] relative overflow-hidden perspective-[500px] pb-0 h-full' ref={mainContainer}>
-                    <div className="container perspective-[1000px] h-full">
+                    <div className="container perspective-[1000px] h-full flex items-center">
 
                         <div className="flex justify-center w-full">
                             <div className='flex gap-9 justify-center w-max mx-auto'>
@@ -238,7 +238,7 @@ const TestimonialsSec = () => {
                             </div>
                         </div>
 
-                        <div className="div box-wrapper absolute top-0 left-1/2 -translate-x-1/2 max-w-[1223px] w-full h-[60%] md:h-full grid grid-cols-2 md:grid-cols-4 items-start perspective-[1000px]">
+                        <div className="div box-wrapper absolute top-0 2xl:top-1/2 2xl:-translate-y-1/2 left-1/2 -translate-x-1/2 max-w-[1223px] w-full h-[60%] md:h-full max-h-[700px] grid grid-cols-2 md:grid-cols-4 items-start perspective-[1000px]">
 
                             <div className="testi-box p-4 md:p-5 px-4 md:px-6 max-w-[243px] rounded-[12px]" ref={box1}>
                                 <div className="name flex items-center gap-4 mb-4">

@@ -57,7 +57,7 @@ const Header = () => {
       <ul className={`mobile-navs overflow-hidden transition-all duration-500 ease-in-out lg:hidden ${isMenuOpen ? 'max-h-[500px] py-4' : 'max-h-0 p-0'}`}>
         {navs.map((nav) => (
           <li key={nav.id} className='mb-4'>
-            <Link
+            <Link onClick={toggleMenu}
               to={nav.path}
               className="text-white transition nav-link  px-[20px] py-[14px] rounded-[60px] hover:font-medium text-[15px]"
             >

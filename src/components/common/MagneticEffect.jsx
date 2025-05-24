@@ -1,5 +1,4 @@
 import gsap from 'gsap';
-import { useEffect } from 'react';
 
 export default function MagneticEffect(power) {
 

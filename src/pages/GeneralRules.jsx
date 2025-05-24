@@ -32,7 +32,7 @@ const GeneralRules = () => {
                 <div className="package-navs max-w-[663px] w-full mx-auto mb-20">
                     <ul className='flex items-center justify-between relative z-[2] border-1 border-[#004986] rounded-full'>
                         {generalRules.map((item, index) => (
-                            <li key={index} className='w-full'><button id={`button-${index}`} onClick={() => setActiveIndex(index)} type='button' className={`text-[12px] sm:text-[16px] lg:text-[22px] text-[#FFFFFF] font-normal cursor-pointer rounded-full w-full py-3 px-4 transition ${activeIndex === index
+                            <li key={index} className='w-full'><button id={`button-${index}`} onClick={() => setActiveIndex(index)} type='button' className={`text-[12px] sm:text-[16px] lg:text-[22px] text-[#FFFFFF] font-normal cursor-pointer rounded-full w-full py-3 px-2 md:px-4 transition ${activeIndex === index
                                 ? 'active'
                                 : ''
                                 }`}>{item.buttonName}</button></li>

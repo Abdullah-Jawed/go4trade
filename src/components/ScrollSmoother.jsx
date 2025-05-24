@@ -17,7 +17,7 @@ const SmoothLayout = ({ children }) => {
       content: contentRef.current,
       smooth: 1.7,
       effects: false,
-      smoothTouch: 0.2,
+      smoothTouch: 0.01,
     });
   }, []);
   

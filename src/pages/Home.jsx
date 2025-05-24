@@ -132,6 +132,8 @@ const Home = () => {
           </div>
 
 
+        </div>
+        <div className="container max-md:!px-0">
           <CardAnim />
         </div>
       </section>
